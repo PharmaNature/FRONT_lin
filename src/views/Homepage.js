@@ -1,5 +1,4 @@
 import React from 'react';
-import Video from '../assets/videos/videoTest.mov'
 
 function Homepage() {
   return (
