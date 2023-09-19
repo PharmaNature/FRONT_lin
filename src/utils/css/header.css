@@ -1,16 +1,16 @@
 /* header.css */
 
 .header {
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    height: 80px;
-  }
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ajoutez cette ligne */
+  padding: 20px;
+  height: 80px;
+}
   
-  .logo img {
-    max-height: 40px;
+  .logoDiv img {
+    width: 200px;
     margin-right: 20px;
   }
   
