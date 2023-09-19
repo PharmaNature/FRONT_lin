@@ -1,6 +1,11 @@
 import React from 'react';
 import '../utils/css/footer.css';
-import Logo from "../assets/images/logoSVG.svg"
+import Logo from "../assets/images/logoSVG.svg";
+import { Link } from 'react-router-dom';
+import items from '../utils/other/links';
+import countries from 'country-list';
+
+const countryList = countries.getData();
 
 function Footer() {
   return (
@@ -15,11 +20,17 @@ function Footer() {
       </div>
       <div className="menu">
             <ul className="menu-list">
-              <li><a href="#">NOTRE LABORATOIRE</a></li>
-              <li><a href="#">NOS FORMULES EN MARQUE BLANCHE</a></li>
-              <li><a href="#">NOS FORMULES SUR MESURE</a></li>
-              <li><a href="#">QUALITE ET ENGAGEMENT</a></li>
-            </ul>
+            {items.map(item => {
+             if (item.link !== "contact") {
+              return (
+                  <li key={item.id}>
+              <Link to={item.link}>{item.name}</Link>
+            </li>
+                      );
+                }
+              return null; 
+            })}
+             </ul>
       </div>
 
     </div>
@@ -54,10 +65,13 @@ function Footer() {
       <div className="form-group">
          <label htmlFor="country">Pays *</label>
              <select id="country" name="country" defaultValue="" required>
-                <option value="" disabled hidden>Sélectionnez un pays</option>
-                <option value="france">France</option>
-                <option value="canada">Canada</option>
-                {/* Ajoutez d'autres options de pays ici */}
+                <option value="" disabled hidden>-Sélectionner un pays-</option>
+               
+                {countryList.map((country, index) => (
+                  <option key={index} value={country.code}>
+                    {country.name}
+                  </option>
+                ))}
               </select>
       </div>
       <div className="form-group">

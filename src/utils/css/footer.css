@@ -1,3 +1,4 @@
+
 .footer {
     display: flex;
     justify-content: space-evenly;
@@ -13,13 +14,48 @@
 }
 .menu-list{
     list-style-type: none;
+    margin-top: 34px;
+    
 }
+.menu-list a{
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #6D6869;
+}
+
+.menu {
+    margin-left: -42px;
+}
+
+
 .form-group{
-    display:table-caption;
+    display:grid;
+    width: 386px;
+    
 }
-/*input#subject {
-    background-color: #ECECEC;
-}*/
+.form{
+    width: 396.67px;
+}
+input#subject {
+    width: 395px;
+    height: 41px;
+    border-radius: 10px;
+}
+select#country {
+    height: 41px;
+    border-radius: 20px;
+}
+/* 
+#country option[disabled] {
+    text-align: center;
+    font-family:'Poppins', sans-serif; 
+    font-size: 16px;
+    color: #6D6869;
+  }*/
+  option{
+    text-align: center;
+  }
 .contact-form {
     margin-top: 108px;
 }
@@ -29,6 +65,9 @@
 }
 .address{
     margin-top: inherit;
+    font-size: 18px;
+    font-family: 'lato', sans-serif;
+    color: #111426;
 }
 h2{
     font-size: 35px;
