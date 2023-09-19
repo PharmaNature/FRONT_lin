@@ -1,10 +1,11 @@
 import React from 'react';
+import Video from '../assets/videos/videoTest.mov'
 
 function Homepage() {
   return (
     <div>
-            <h1>Welcome to My Homepage</h1>
-            <p>This is a basic homepage for your application.</p>
+        <h1>Welcome to My Homepage</h1>
+        <p>This is a basic homepage for your application.</p>
     </div>
   );
 }

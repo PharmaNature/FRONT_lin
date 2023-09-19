@@ -4,7 +4,7 @@
   background: transparent;
   display: flex;
   justify-content: center;
-  align-items: center; /* Ajoutez cette ligne */
+  align-items: center; 
   padding: 20px;
   height: 80px;
 }
@@ -35,11 +35,51 @@
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
+    position: relative;
   }
-  
-  .navigation a:hover {
-    color: none;
-  }
+
+/* Style du lien actif */
+.navigation a.active {
+  border-bottom: 2px solid #000;
+  padding-bottom: 4px;
+}
+
+/* Style des liens non actifs */
+.navigation a:not(.active) {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+}
+
+.navigation a:not(.active)::before,
+.navigation a:not(.active)::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  bottom: -4px;
+  transition: width 0.3s ease-in-out;
+}
+
+.navigation a:not(.active)::before {
+  left: 0;
+}
+
+.navigation a:not(.active)::after {
+  right: 100%; 
+}
+
+/* Animation au survol */
+.navigation a:not(.active):hover::before {
+  width: 100%;
+}
+
+.navigation a:not(.active):hover::after {
+  width: 0; 
+}
+
+
 
   .logo {
     width: 200px;

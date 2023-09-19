@@ -1,10 +1,12 @@
 import React from 'react';
 import '../utils/css/header.css'
 import Logo from '../assets/images/logoSVG.svg';
-import { Link } from 'react-router-dom';
+import { Link, useLocation  } from 'react-router-dom';
 import items from '../utils/other/links'
 
 function Header() {
+  const location = useLocation();
+  console.log(location)
 
   return (   
     <div className="header">
@@ -17,7 +19,7 @@ function Header() {
         <ul>
           {items.map(item => (
           <li key={item.id}>
-            <Link to={item.link}>{item.name}</Link>
+            <Link to={item.link} dangerouslySetInnerHTML={{ __html: item.name }} className={"/"+item.link === location.pathname ? 'active' : ''}/>
           </li>
           ))}
         </ul>
