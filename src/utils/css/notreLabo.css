@@ -1,0 +1,50 @@
+/* notreLabo.css */
+.img-bg-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 45vh; 
+}
+
+.imgBG {
+    position: absolute;
+    z-index: -999;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.text-container {
+    z-index: 1;
+    position: absolute;
+    left: 25%;
+}
+
+.titleBG {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3vw;
+}
+
+.titleBG-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+.container-1 {
+    display: flex;
+}
+
+@media (max-width: 600px) {
+    .img-bg-container {
+        justify-content: center;
+    }
+
+    .text-container {
+        left: 50%; 
+        top: 30%;
+        transform: translateX(-50%); 
+        text-align: center;
+    }
+}
+
