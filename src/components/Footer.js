@@ -68,7 +68,7 @@ function Footer() {
                 <option value="" disabled hidden>-Sélectionner un pays-</option>
                
                 {countryList.map((country, index) => (
-                  <option key={index} value={country.code}>
+                  <option key={index} value={country.name}>
                     {country.name}
                   </option>
                 ))}

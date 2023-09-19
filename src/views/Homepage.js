@@ -2,7 +2,7 @@ import React from 'react';
 
 function Homepage() {
   return (
-    <div>
+    <div className="homepage">
             <h1>Welcome to My Homepage</h1>
             <p>This is a basic homepage for your application.</p>
     </div>
