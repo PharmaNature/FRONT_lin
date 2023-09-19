@@ -3,8 +3,7 @@ import '../utils/css/header.css'
 import Logo from '../assets/images/logo_lin.svg';
 
 function Header() {
-  return (
-    
+  return (   
     <div className="header">
       <div className="logo">
         <a href='/'>
