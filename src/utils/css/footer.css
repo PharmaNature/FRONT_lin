@@ -6,10 +6,10 @@
     background-color: #F7F7F7;
     padding: 2%; /* 20px / largeur de la fenêtre */
     /* height: 100%; Ajusté pour remplir la hauteur de la fenêtre */
-    position: absolute;
+    /* position: fixed;
     left: 0;
-    right: 0;
-    bottom: 0;
+    right: 0;*/
+    bottom: 0; 
 }
 
 .logo {
@@ -114,7 +114,7 @@ textarea#message, input#phone, input#email, input#company {
         margin-left: 74%;
     }
     .address{
-        font-size: 4.1vw;
+        font-size: 3.1vw;
         margin-bottom: 11vw;
         margin-top: 12.1vw;
     }
@@ -125,3 +125,18 @@ textarea#message, input#phone, input#email, input#company {
         font-size: 2.9vw;
     }
 }
+
+/* Styles pour tablette */
+
+@media screen and (min-width: 769px) and (max-width: 1100px) {
+
+    .menu-list a{
+        font-size: 1.9vw;
+    }
+    .address{
+        font-size: 2.1vw;
+    }
+
+}
+    
+

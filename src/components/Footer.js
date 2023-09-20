@@ -15,7 +15,7 @@ function Footer() {
   <div className="contact-info">
     <div className="logo-menu">
       <div className="logo">
-        <a href="#">
+      <a href="/">
           <img src={Logo} alt="Logo de l'entreprise"/>
           {/* LOGO */}
         </a>
