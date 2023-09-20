@@ -6,7 +6,7 @@
     background-color: #F7F7F7;
     padding: 2%; /* 20px / largeur de la fenêtre */
     /* height: 100%; Ajusté pour remplir la hauteur de la fenêtre */
-    position: fixed;
+    position: absolute;
     left: 0;
     right: 0;
     bottom: 0;

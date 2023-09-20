@@ -167,7 +167,7 @@
 }
 
 /* Media query pour afficher le menu burger sur les téléphones */
-@media (max-width: 850px) {
+@media (max-width: 915px) {
   /* Styles pour le header */
   .header {
     background: transparent;
