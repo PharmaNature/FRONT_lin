@@ -47,23 +47,23 @@ function Footer() {
     <h2>CONTACTEZ-NOUS</h2>
     <form>
       <div className="form-group">
-          <label htmlFor="subject">Sujet *</label>
+          <label htmlFor="subject">Sujet </label>
           <input type="text" id="subject" name="subject" required />
       </div>
       <div className="form-group">
-              <label htmlFor="name">Nom *</label>
+              <label htmlFor="name">Nom </label>
               <input type="text" id="name" name="name" required />
       </div>
       <div className="form-group">
-            <label htmlFor="lastname">Prénom *</label>
+            <label htmlFor="lastname">Prénom </label>
            <input type="text" id="lastname" name="lastname" required />
      </div>
      <div className="form-group">
-          <label htmlFor="company">Société *</label>
+          <label htmlFor="company">Société </label>
           <input type="text" id="company" name="company" required />
       </div>
       <div className="form-group">
-         <label htmlFor="country">Pays *</label>
+         <label htmlFor="country">Pays </label>
              <select id="country" name="country" defaultValue="" required>
                 <option value="" disabled hidden>-Sélectionner un pays-</option>
                
@@ -75,18 +75,18 @@ function Footer() {
               </select>
       </div>
       <div className="form-group">
-          <label htmlFor="phone">Téléphone * </label>
+          <label htmlFor="phone">Téléphone  </label>
           <input type="tel" id="phone" name="phone" required />
       </div>
       <div className="form-group">
-          <label htmlFor="email">Email *</label>
+          <label htmlFor="email">Email </label>
           <input type="email" id="email" name="email" required />
       </div>
       <div className="form-group">
-          <label htmlFor="message">Message *</label>
+          <label htmlFor="message">Message </label>
           <textarea id="message" name="message" rows="4" required></textarea>
       </div>
-      <button type='submit'>Envoyer</button>
+      <button className="button-send" type='submit'>Envoyer</button>
     </form>
   </div>
      
