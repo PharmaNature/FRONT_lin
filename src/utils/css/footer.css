@@ -112,6 +112,8 @@ textarea#message, input#phone, input#email, input#company {
     }
     .address{
         font-size: 4.1vw;
+        margin-bottom: 11vw;
+        margin-top: 12.1vw;
     }
     .menu-list{
         line-height: 1;
