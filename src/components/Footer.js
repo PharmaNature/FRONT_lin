@@ -4,6 +4,7 @@ import Logo from "../assets/images/logoSVG.svg";
 import { Link } from 'react-router-dom';
 import items from '../utils/other/links';
 import countries from 'country-list';
+import ContactForm from './ContactFormFooter';
 
 const countryList = countries.getData();
 
@@ -45,50 +46,7 @@ function Footer() {
     </div>
   </div>
   <div className="contact-form">
-    <h2>CONTACTEZ-NOUS</h2>
-    <form>
-      <div className="form-group">
-          <label htmlFor="subject">Sujet </label>
-          <input type="text" id="subject" name="subject" required />
-      </div>
-      <div className="form-group">
-              <label htmlFor="name">Nom </label>
-              <input type="text" id="name" name="name" required />
-      </div>
-      <div className="form-group">
-            <label htmlFor="lastname">Prénom </label>
-           <input type="text" id="lastname" name="lastname" required />
-     </div>
-     <div className="form-group">
-          <label htmlFor="company">Société </label>
-          <input type="text" id="company" name="company" required />
-      </div>
-      <div className="form-group">
-         <label htmlFor="country">Pays </label>
-             <select id="country" name="country" defaultValue="" required>
-                <option value="" disabled hidden>-Sélectionner un pays-</option>
-               
-                {countryList.map((country, index) => (
-                  <option key={index} value={country.name}>
-                    {country.name}
-                  </option>
-                ))}
-              </select>
-      </div>
-      <div className="form-group">
-          <label htmlFor="phone">Téléphone  </label>
-          <input type="tel" id="phone" name="phone" required />
-      </div>
-      <div className="form-group">
-          <label htmlFor="email">Email </label>
-          <input type="email" id="email" name="email" required />
-      </div>
-      <div className="form-group">
-          <label htmlFor="message">Message </label>
-          <textarea id="message" name="message" rows="4" required></textarea>
-      </div>
-      <button className="button-send" type='submit'>Envoyer</button>
-    </form>
+    <ContactForm />
   </div>
      
  </div>
