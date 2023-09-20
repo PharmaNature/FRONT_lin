@@ -4,12 +4,38 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    position: relative; /* Ajoutez ceci pour que les éléments enfants soient positionnés par rapport à ce conteneur */
+    position: relative; 
+    overflow-x: hidden;
   }
-  
+
   .centered-title {
     position: absolute; 
     top: 50%; 
     transform: translateY(-50%); 
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
   }
+
+  .title-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+  }
+
+  /* Taille de title par taille écran */
+  .telSize {
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .verticalTabSize {
+    font-size: 2.1em;
+  }
+  .horizontalTabSize {
+    font-size: 4em;
+  }
+  .desktopSize {
+    font-size: 4em;
+  }
+
+
+
   

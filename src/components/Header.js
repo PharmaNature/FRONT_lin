@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../utils/css/header.css';
 import Logo from '../assets/images/logoSVG.svg';
 import LogoLIN from '../assets/images/logoLIN.svg';
@@ -8,6 +8,28 @@ import items from '../utils/other/links';
 function Header() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
+
+  useEffect(() => {
+    // Fonction pour gérer le défilement
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        // Si l'utilisateur a fait défiler de plus de 20 pixels, activez le défilement
+        setScrolling(true);
+      } else {
+        // Sinon, désactivez le défilement
+        setScrolling(false);
+      }
+    };
+
+    // Ajoutez un écouteur d'événements pour le défilement
+    window.addEventListener('scroll', handleScroll);
+
+    // Retirez l'écouteur d'événements lorsque le composant est démonté
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -18,7 +40,7 @@ function Header() {
   };
 
   return (
-    <div className={`header ${menuOpen ? 'menu-open' : ''}`}>
+    <div className={`header ${menuOpen ? 'menu-open' : ''} ${scrolling ? 'scrolling' : ''}`}>
       <div className="logoDiv">
         <a href="/">
           <img src={Logo} className="logo" alt="Logo" />
