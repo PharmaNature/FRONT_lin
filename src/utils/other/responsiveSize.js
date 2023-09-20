@@ -1,4 +1,4 @@
-import data from "../json/imagesURL.js"
+import data from "../other/imagesURL"
 
 function ResponsiveSize() {
 
