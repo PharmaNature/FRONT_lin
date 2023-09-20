@@ -1,0 +1,15 @@
+.centered-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: relative; /* Ajoutez ceci pour que les éléments enfants soient positionnés par rapport à ce conteneur */
+  }
+  
+  .centered-title {
+    position: absolute; 
+    top: 50%; 
+    transform: translateY(-50%); 
+  }
+  

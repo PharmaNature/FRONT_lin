@@ -1,10 +1,21 @@
 import React from 'react';
+import '../utils/css/notreLabo.css';
+
+// Imports de toutes les images
+import imgBG from '../assets/images/notre-laboratoire/laboratoire.jpg'
+import machine1 from '../assets/images/notre-laboratoire/machine1.jpg'
 
 function NotreLabo() {
   return (
-    <div>
-            <h1>Welcome to My NotreLabo</h1>
-            <p>This is a basic homepage for your application.</p>
+    <div className='big-container'>
+      <div className='centered-image'>
+        <img src={imgBG} className='imgBG' alt="Laboratoire" />
+          <h1 className='centered-title'>
+            <span className='title-bold'>LE FAÇONNIER</span> <br />
+            DE VOS COMPLÉMENTS <br />
+            ALIMENTAIRES
+          </h1>
+      </div>
     </div>
   );
 }
