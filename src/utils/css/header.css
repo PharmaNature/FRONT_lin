@@ -102,7 +102,7 @@
 
 /* Styles pour le logo mobile (au-dessus des liens) */
 .logo-mobile {
-  display: none; /* Masque le logo par défaut */
+  display: none; 
 }
 
 /* Styles pour le logo mobile (au-dessus des liens) lorsque le menu est ouvert */
@@ -113,7 +113,7 @@
   background-color: #fff;
   padding: 10px; 
   position: absolute;
-  top: 120px; 
+  top: 10%; 
   left: 0;
   width: 100%;
 }

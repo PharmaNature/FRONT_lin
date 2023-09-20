@@ -7,24 +7,14 @@ import machine1 from '../assets/images/notre-laboratoire/machine1.jpg'
 
 function NotreLabo() {
   return (
-    <div>
-      <div className='img-bg-container'>
-        <img src={imgBG} className='imgBG'/>
-        <div className='text-container'>
-          <h1 className='titleBG'>
-            <span className='titleBG-bold'>LE FAÇONNIER</span> <br />
+    <div className='big-container'>
+      <div className='centered-image'>
+        <img src={imgBG} className='imgBG' alt="Laboratoire" />
+          <h1 className='centered-title'>
+            <span className='title-bold'>LE FAÇONNIER</span> <br />
             DE VOS COMPLÉMENTS <br />
             ALIMENTAIRES
           </h1>
-        </div>
-      </div>
-      <div className='container-1'>
-          <div className='container-1-img'>
-            {/* <img src={machine1} /> */}
-          </div>
-          <div className='container-1-text'>
-
-          </div>
       </div>
     </div>
   );
