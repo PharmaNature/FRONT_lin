@@ -26,7 +26,7 @@ function Footer() {
              if (item.link !== "contact") {
               return (
                   <li key={item.id}>
-              <Link to={item.link}>{item.name}</Link>
+              <Link to={item.link}>{item.name.replace(/<br\/>/g, " ")}</Link>
             </li>
                       );
                 }

@@ -80,9 +80,9 @@ select#country {
     line-height: 0.4;
 }
 
-h2 {
-    font-size: 2.5vw; /* 35px / largeur de la fenêtre * 100 */
-}
+/* h2 {
+    font-size: 2.5vw; 
+} */
 
 textarea#message {
     height: 8vh; /* 80px / hauteur de la fenêtre * 100 */
