@@ -1,5 +1,3 @@
-/* AHHHHH */
-
 .footer {
     display: flex;
     justify-content: space-evenly;
@@ -41,20 +39,18 @@
     width: 39.667%; /* 396.67px / largeur de la fenêtre */
 }
  /* Colorer * en rouge sur les labels du form */
-label::after {
-    content: " *";
+ .required-label {
     color: red;
   }
-  
 
-input#subject {
+#subject {
     width: auto; /* 395px / largeur de la fenêtre */
     height: 4.1vh; /* 41px / hauteur de la fenêtre * 100 */
     border-radius: 1vh; /* 10px / hauteur de la fenêtre * 100 */
     border-width: thin;
 }
 
-select#country {
+#country {
     height: 4.1vh; /* 41px / hauteur de la fenêtre * 100 */
     border-radius: 2vh; /* 20px / hauteur de la fenêtre * 100 */
 }
@@ -80,15 +76,15 @@ select#country {
     line-height: 0.4;
 }
 
-/* h2 {
-    font-size: 2.5vw; 
-} */
+.contactUs {
+    font-size: 2.5vw; /* 35px / largeur de la fenêtre * 100 */
+}
 
-textarea#message {
+#message {
     height: 8vh; /* 80px / hauteur de la fenêtre * 100 */
 }
 
-textarea#message, input#phone, input#email, input#company {
+#message, #phone, #email, #company {
     background-color: #ECECEC;
     border-width: thin;
 }

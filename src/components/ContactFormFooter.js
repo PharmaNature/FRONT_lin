@@ -32,10 +32,10 @@ function ContactForm() {
 
   return (
     <div>
-      <h2>CONTACTEZ-NOUS</h2>
+      <h2 className="contactUs">CONTACTEZ-NOUS</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="subject">Sujet </label>
+          <label className="label-form" htmlFor="subject">Sujet <span className="required-label">*</span></label>
           <input
             type="text"
             id="subject"
@@ -46,7 +46,7 @@ function ContactForm() {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="name">Nom </label>
+          <label className="label-form" htmlFor="name">Nom <span className="required-label">*</span></label>
           <input
             type="text"
             id="name"
@@ -57,7 +57,7 @@ function ContactForm() {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="lastname">Prénom </label>
+          <label className="label-form" htmlFor="lastname">Prénom <span className="required-label">*</span> </label>
           <input
             type="text"
             id="lastname"
@@ -68,7 +68,7 @@ function ContactForm() {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="company">Société </label>
+          <label className="label-form" htmlFor="company">Société <span className="required-label">*</span> </label>
           <input
             type="text"
             id="company"
@@ -79,7 +79,7 @@ function ContactForm() {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="country">Pays </label>
+          <label className="label-form" htmlFor="country">Pays<span className="required-label">*</span> </label>
           <select
             id="country"
             name="country"
@@ -98,7 +98,7 @@ function ContactForm() {
           </select>
         </div>
         <div className="form-group">
-          <label htmlFor="phone">Téléphone </label>
+          <label className="label-form" htmlFor="phone">Téléphone <span className="required-label">*</span> </label>
           <input
             type="tel"
             id="phone"
@@ -109,7 +109,7 @@ function ContactForm() {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email </label>
+          <label className="label-form" htmlFor="email">Email <span className="required-label">*</span></label>
           <input
             type="email"
             id="email"
@@ -120,7 +120,7 @@ function ContactForm() {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="message">Message </label>
+          <label className="label-form" htmlFor="message">Message <span className="required-label">*</span> </label>
           <textarea
             id="message"
             name="message"
