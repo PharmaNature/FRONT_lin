@@ -14,7 +14,7 @@ import formationIMG from '../assets/pictogrammes/formation.png'
 
 const dataTest = {
     1 : {
-        "name" : "Production",
+        "name" : "PRODUCTION",
         "urlImage" : require("../assets/images/notre-laboratoire/production.png"),
         "description" : {
             "3 mélangeurs" : ["— Capacité de 20 kilos à 1 tonne/jour —"],
@@ -24,7 +24,7 @@ const dataTest = {
         }
     },
     2 : {
-        "name" : "Conditionnement",
+        "name" : "CONDITIONNEMENT",
         "urlImage" : require("../assets/images/notre-laboratoire/conditionnement.png"),
         "description" : {
             "1 ligne de mise en pilulier avec bouchage et étiquetage  pour flacons en verre, plastique " : [" — Capacité de 10.000 unités/jour —"],
@@ -33,7 +33,7 @@ const dataTest = {
         }
     },
     3 : {
-        "name" : "Qualité",
+        "name" : "QUALITÉ",
         "urlImage" : require("../assets/images/notre-laboratoire/qualite.png"),
         "description" : {
             "Contrôle qualité garanti" : ["— Dispose de plusieurs certifications —", "(BIO, HACCP, GMP FOOD…)"],
