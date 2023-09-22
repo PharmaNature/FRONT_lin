@@ -35,3 +35,82 @@
   .desktopSize {
     font-size: 4em;
   }
+  
+.sub-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.sub-container-text {
+  margin-top: -78px;
+}
+.plus-sign {
+  color: #D9C5C4;
+  font-size: 10em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-top: -21px;
+}
+.equal-sign{
+  
+    color: #D9C5C4;
+    font-size: 10em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+.container-formula {
+  text-align: center;
+}
+h1.NotreFormula {
+  font-family: 'Montserrat', sans-serif;
+  color: #D9C5C4;
+  font-size: 4em;
+  width: 0em;
+  line-height: 52px;
+}
+h1.packaging {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+  width: 0em;
+  margin-top: 2px;
+}
+
+h2.NotreCatalogue {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  width: 11em;
+  line-height: 30px;
+  margin-top: -27px;
+}
+.formula-text {
+  width: 628px;
+   margin-left: 91px; 
+  text-align: justify;
+}
+.vertical-line{
+  border-left: 2px solid #000;
+  display: inline-block;
+  height: 130px;
+  margin: 0 20px;
+}
+.container-process-formes {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+.galenique {
+  display: flex;
+  justify-content: center;
+}
+.g-card {
+  width: 240px;
+  margin-right: 140px;
+ text-align: justify;
+}
