@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../utils/css/formuleSurMesure.css';
 import ResponsiveSize from '../utils/other/responsiveSize'
+import Introduction from '../components/Introduction'
 
 function FormuleSurMesure() {
   const { chooseImage, chooseSizeTitle } = ResponsiveSize();
@@ -22,15 +23,7 @@ function FormuleSurMesure() {
 
   return (
       <div className='big-container'>
-          <div className='centered-image'>
-              <img src={imageChoice} className='imgBG' alt="Laboratoire" />
-              <h1 className={'centered-title ' + titleSizeChoice}>
-                <span className='title-bold'>
-                  NOS FORMULES <br />
-                </span>
-                  SUR MESURE
-              </h1>
-          </div>
+          <Introduction imageChoice={imageChoice} alt={"Formule sur mesure"} titleSizeChoice={titleSizeChoice} />
       </div>
   );
 }
