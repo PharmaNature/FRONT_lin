@@ -1,13 +1,48 @@
 import React, { useState, useEffect } from 'react';
 import '../utils/css/notreLabo.css';
 import ResponsiveSize from '../utils/other/responsiveSize'
-import historyIMG from '../assets/images/notre-laboratoire/history.jpg'
+import MoyenCard from '../components/MoyenCard';
 
-// TEST
+// Images
+import historyIMG from '../assets/images/notre-laboratoire/history.jpg'
 import formulationIMG from '../assets/pictogrammes/formulation.png'
 import reglementationIMG from '../assets/pictogrammes/reglementation.png'
 import productionIMG from '../assets/pictogrammes/production.png'
 import formationIMG from '../assets/pictogrammes/formation.png'
+
+
+
+const dataTest = {
+    1 : {
+        "name" : "Production",
+        "urlImage" : require("../assets/images/notre-laboratoire/production.png"),
+        "description" : {
+            "3 mélangeurs" : ["— Capacité de 20 kilos à 1 tonne/jour —"],
+            "6 géluleuses" : ["— Capacité de 200.000 gélules/heure —"],
+            "6 brosseuses de gélules" : [null],
+            "1 remplisseuse liquide" : ["— De 10 à 30 ml —"]
+        }
+    },
+    2 : {
+        "name" : "Conditionnement",
+        "urlImage" : require("../assets/images/notre-laboratoire/conditionnement.png"),
+        "description" : {
+            "1 ligne de mise en pilulier avec bouchage et étiquetage  pour flacons en verre, plastique " : [" — Capacité de 10.000 unités/jour —"],
+            "1 ligne de blistérisation automatisée" : [" — Capacité de 60.000 unités/jour —"],
+            "2 étuyeuses automatiques" : [null]
+        }
+    },
+    3 : {
+        "name" : "Qualité",
+        "urlImage" : require("../assets/images/notre-laboratoire/qualite.png"),
+        "description" : {
+            "Contrôle qualité garanti" : ["— Dispose de plusieurs certifications —", "(BIO, HACCP, GMP FOOD…)"],
+            "Projet norme ISO 22000" : ["Depuis fin 2022, nous avons entrepris les démarches nécessaires pour l’obtention de la norme ISO 22000. "],
+        }
+    },
+    
+}
+
 
 function NotreLabo() {
   const { chooseImage, chooseSizeTitle } = ResponsiveSize();
@@ -53,76 +88,94 @@ function NotreLabo() {
           <div className='container-metiers'>
             <div className='container-metiers-title'>
                 <h2>NOS MÉTIERS</h2>
-                <div className='cercle'></div>
+                <div className='cercle-metier'></div>
             </div>
 
-            <div className='big-container-card'>
-                <div className='container-card-text-left'>
-                    <h2>
-                        FORMULATION <br/>
-                        & SOURCING
-                    </h2>
-                    <p>
-                        Formulation d’ingrédients innovants, Identification des actifs les plus performants, Analyses d’études cliniques, Sélection d’ingrédients rigoureusement choisis, Exigence de technicité et d’efficacité, Formulation sur mesure ou clef en main.
-                    </p>
+
+
+                <div className='big-container-card-left'>
+                    <div className='container-card-text-left'>
+                        <h2>
+                            FORMULATION <br/>
+                            & SOURCING
+                        </h2>
+                        <p>
+                            Formulation d’ingrédients innovants, Identification des actifs les plus performants, Analyses d’études cliniques, Sélection d’ingrédients rigoureusement choisis, Exigence de technicité et d’efficacité, Formulation sur mesure ou clef en main.
+                        </p>
+                    </div>
+                    <div className='container-card-img'>
+                        <img src={formulationIMG}/>
+                    </div>
                 </div>
-                <div className='container-card-img'>
-                    <img src={formulationIMG}/>
+
+                <span className='vertical-line'></span>
+
+                <div className='big-container-card-right'>
+                    <div className='container-card-img'>
+                        <img src={reglementationIMG}/>
+                    </div>
+                    <div className='container-card-text-right'>
+                        <h2>
+                            RÈGLEMENTATION <br/>
+                            & SOURCING
+                        </h2>
+                        <p>
+                            Allégations santé, Vérification réglementaires des compléments alimentaires, Validation de formules et packagings, Analyses de recommandations méthodes et normes de qualité, Suivi et veille réglementaire, Relation avec les autorités de contrôles (DGCCRF, ANSES, ANSM).
+                        </p>
+                    </div>
                 </div>
+
+                <span className='vertical-line'></span>  
+
+                <div className='big-container-card-left'>
+                    <div className='container-card-text-left'>
+                        <h2>
+                            FAÇONNAGE & <br/>
+                            CONDITIONNEMENT
+                        </h2>
+                        <p>
+                            Outil de production complet adapté aux petites et grandes séries, Micro encapsulation, Large choix de gamme de produits : phytothérapie, nutraceutique, probiotiques, bio… 
+                            Production en marque blanche grâce à notre catalogue dédié, Distribution en centre de répartition (palettes) ou directement en point de vente (colisage)
+                        </p>
+                    </div>
+                    <div className='container-card-img'>
+                        <img src={productionIMG}/>
+                    </div>
+                </div>
+
+                <span className='vertical-line'></span>
+
+                <div className='big-container-card-right'>
+                    <div className='container-card-img'>
+                        <img src={formationIMG}/>
+                    </div>
+                    <div className='container-card-text-right'>
+                        <h2>
+                            FORMATION <br/>
+                            & COMMUNICATION
+                        </h2>
+                        <p>
+                        Formation et communication, élaboration d'outils de ventes pour les commerciaux, vente de produits à distance, formation des équipes de ventes. 
+                        </p>
+                    </div>
+                </div>
+
+
+          </div>
+          <div className='container-moyen'>
+            <div className='container-moyens-title'>
+                <h2>NOS MOYENS</h2>
+                <h3>
+                    Une flexibilité de production pour s’adapter à vos besoins : <br />
+                    des lots de 500 à 50.000 unités !
+                </h3>
+                <div className='cercle-moyen'></div>
             </div>
-
-            <span className='vertical-line'></span>
-
-            <div className='big-container-card'>
-                <div className='container-card-img'>
-                    <img src={reglementationIMG}/>
-                </div>
-                <div className='container-card-text-right'>
-                    <h2>
-                        RÈGLEMENTATION <br/>
-                        & SOURCING
-                    </h2>
-                    <p>
-                        Allégations santé, Vérification réglementaires des compléments alimentaires, Validation de formules et packagings, Analyses de recommandations méthodes et normes de qualité, Suivi et veille réglementaire, Relation avec les autorités de contrôles (DGCCRF, ANSES, ANSM).
-                    </p>
-                </div>
+            <div className='container-moyen-items'>
+            {Object.keys(dataTest).map((id) => (
+                <MoyenCard key={id} dataMoyenCard={dataTest[id]} />
+            ))}
             </div>
-
-            <span className='vertical-line'></span>  
-
-            <div className='big-container-card'>
-                <div className='container-card-text-left'>
-                    <h2>
-                        FAÇONNAGE & <br/>
-                        CONDITIONNEMENT
-                    </h2>
-                    <p>
-                        Outil de production complet adapté aux petites et grandes séries, Micro encapsulation, Large choix de gamme de produits : phytothérapie, nutraceutique, probiotiques, bio… 
-                        Production en marque blanche grâce à notre catalogue dédié, Distribution en centre de répartition (palettes) ou directement en point de vente (colisage)
-                    </p>
-                </div>
-                <div className='container-card-img'>
-                    <img src={productionIMG}/>
-                </div>
-            </div>
-
-            <span className='vertical-line'></span>
-
-            <div className='big-container-card'>
-                <div className='container-card-img'>
-                    <img src={reglementationIMG}/>
-                </div>
-                <div className='container-card-text-right'>
-                    <h2>
-                        FORMATION <br/>
-                        & COMMUNICATION
-                    </h2>
-                    <p>
-                    Formation et communication, élaboration d'outils de ventes pour les commerciaux, vente de produits à distance, formation des équipes de ventes. 
-                    </p>
-                </div>
-            </div>
-
           </div>
       </div>
   );
