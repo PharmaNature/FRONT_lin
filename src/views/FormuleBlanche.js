@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import '../utils/css/formuleBlanche.css';
 import ResponsiveSize from '../utils/other/responsiveSize';
 import GaleniqueCard from '../components/GaleniqueCard';
+import Introduction from '../components/Introduction';
+
+// Imports de toutes les images
 import formulaIMG from '../assets/images/marque-blanche/marqueBlancheFormule.png';
 import poudreImg from '../assets/images/marque-blanche/galenique_poudre.jpg'
 import capsuleImg from '../assets/images/marque-blanche/galenique_capsule.jpg'
@@ -54,16 +57,7 @@ function FormuleBlanche() {
   ]
   return (
       <div className='big-container'>
-          <div className='centered-image'>
-              <img src={imageChoice} className='imgBG' alt="Laboratoire" />
-              <h1 className={'centered-title ' + titleSizeChoice}>
-                  <span className='title-bold'>
-                    NOS FORMULES <br />
-                  </span> 
-                    EN MARQUE <br />
-                    BLANCHE
-              </h1>
-          </div>
+          <Introduction imageChoice={imageChoice} alt={"Marque Blanche"} titleSizeChoice={titleSizeChoice} />
     
           <div className="sub-container">
             <div className='sub-container-text'>
