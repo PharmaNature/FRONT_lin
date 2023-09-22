@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../utils/css/formuleBlanche.css';
 import ResponsiveSize from '../utils/other/responsiveSize'
+import Introduction from '../components/Introduction';
 
 function FormuleBlanche() {
   const { chooseImage, chooseSizeTitle } = ResponsiveSize();
@@ -22,16 +23,7 @@ function FormuleBlanche() {
 
   return (
       <div className='big-container'>
-          <div className='centered-image'>
-              <img src={imageChoice} className='imgBG' alt="Laboratoire" />
-              <h1 className={'centered-title ' + titleSizeChoice}>
-                  <span className='title-bold'>
-                    NOS FORMULES <br />
-                  </span> 
-                    EN MARQUE <br />
-                    BLANCHE
-              </h1>
-          </div>
+          <Introduction imageChoice={imageChoice} alt={"Marque Blanche"} titleSizeChoice={titleSizeChoice} />
       </div>
   );
 }

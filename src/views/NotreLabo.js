@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import '../utils/css/notreLabo.css';
 import ResponsiveSize from '../utils/other/responsiveSize'
 import MoyenCard from '../components/MoyenCard';
+import Introduction from '../components/Introduction';
 
 // Images
 import historyIMG from '../assets/images/notre-laboratoire/history.jpg'
@@ -64,16 +65,7 @@ function NotreLabo() {
 
   return (
       <div className='big-container'>
-          <div className='centered-image'>
-              <img src={imageChoice} className='imgBG' alt="Laboratoire" />
-              <h1 className={'centered-title ' + titleSizeChoice}>
-                  <span className='title-bold'>
-                    LE FAÇONNIER <br />
-                </span> 
-                    DE VOS COMPLÉMENTS <br />
-                    ALIMENTAIRES
-              </h1>
-          </div>
+        <Introduction imageChoice={imageChoice} alt={"Laboratoire"} titleSizeChoice={titleSizeChoice} />
           <div className='container-history'>
             <div className='container-history-img'>
                 <img src={historyIMG} alt='Histoire Laboratoire'/>

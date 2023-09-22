@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../utils/css/qualite.css';
 import ResponsiveSize from '../utils/other/responsiveSize'
+import Introduction from '../components/Introduction';
 
 function Qualite() {
   const { chooseImage, chooseSizeTitle } = ResponsiveSize();
@@ -22,16 +23,7 @@ function Qualite() {
 
   return (
       <div className='big-container'>
-          <div className='centered-image'>
-              <img src={imageChoice} className='imgBG' alt="Laboratoire" />
-              <h1 className={'centered-title ' + titleSizeChoice}>
-                  <span className='title-bold'>
-                      QUALITÉ ET <br />
-                      ENGAGEMENT <br /> 
-                  </span>
-                      CERTIFIÉS
-              </h1>
-          </div>
+          <Introduction imageChoice={imageChoice} alt={"Qualité"} titleSizeChoice={titleSizeChoice} />
       </div>
   );
 }
