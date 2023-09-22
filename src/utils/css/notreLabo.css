@@ -49,7 +49,6 @@
   align-items: center;
   gap: 5%;
   margin-top: 5%;
-  margin-bottom: 5%;
 }
 .container-history-img {
   width: 525px;
@@ -68,4 +67,248 @@
   font-weight: 400;
   }
 
-  /* ---------------------------- FIN HISTORY ----------------------------- */
+
+  /* ---------------------------- NOS MÉTIERS ----------------------------- */
+
+  .container-metiers {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 10%;
+  }
+
+  .container-metiers-title {
+      width: 300px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      margin: 0 auto; 
+      padding: 8%;
+    }
+
+  .cercle-metier {
+      width: 20px;
+      height: 20px;
+      border-radius: 20px;
+      background: black;
+      margin: auto; 
+    }
+
+    
+      .big-container-card-right {
+        width: 100%;
+        height: 220px;
+        display: grid;
+        grid-template-columns: 10% 35% 10% 35% 10%;
+      }
+
+      .big-container-card-left {
+        width: 100%;
+        height: 220px;
+        display: grid;
+        grid-template-columns: 10% 35% 10% 35% 10%;
+      }
+
+      .container-card-text-left {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        text-align: end;
+      }
+      
+      .container-card-text-right {
+          text-align: start;
+          grid-column-start: 4;
+          grid-column-end: 5;
+      }
+      
+      .container-card-img {
+          text-align: center;
+          grid-column-start: 3;
+          grid-column-end: 4;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+
+      .container-card-img img {
+        width: 150px;
+        max-height: 100%;
+      }
+      
+      .vertical-line{
+          border-left: 2px solid #000;
+          display: inline-block;
+          height: 130px;
+          margin: 0 20px;
+      }
+  
+
+    @media screen and (min-width: 460px) and (max-width: 1180px) {
+
+      .big-container-card-left {
+        width: 400px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+      }
+      .container-card-text-left {
+        text-align: justify;
+      }
+      .container-card-text-left h2 {
+        text-align: center;
+      }
+
+      .big-container-card-right {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      } 
+      .container-card-text-right {
+        text-align: justify;
+      }
+      .container-card-text-right h2 {
+        text-align: center;
+      }
+
+      .container-card-img {
+        text-align: center;
+      }
+
+      .vertical-line{
+        display: none;
+    }
+
+
+    }
+
+    @media (max-width: 460px) {
+
+      .big-container-card-left {
+        width: 250px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+      }
+      .container-card-text-left {
+        text-align: justify;
+      }
+      .container-card-text-left h2 {
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .big-container-card-right {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      } 
+      .container-card-text-right {
+        text-align: justify;
+      }
+      .container-card-text-right h2 {
+        text-align: center;
+        font-size: 18px;
+      }
+
+      .container-card-img {
+        text-align: center;
+      }
+
+      .vertical-line{
+        display: none;
+    }
+
+    }
+
+    /* Version carrousel pour NOS MÉTIERS */
+    /* @media (max-width: 1180px) {
+
+      
+
+    } */
+
+
+  /* NOS MOYENS */
+
+  .container-moyens-title {
+    width: 600px;
+    text-align: center;
+    margin: 0 auto; 
+    padding: 2%;
+  }
+
+  .container-moyens-title h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+  }
+
+  .container-moyens-title h3{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+  }
+
+  .container-moyen {
+    background-color: #EBEBE9;
+  }
+
+  .cercle-moyen {
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background: black;
+    margin: auto; 
+  }
+
+  .container-moyen-items {
+    width: 96%;
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    padding: 2%;
+  }
+
+  .moyen-item {
+    width: 27%;
+    text-align: center;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 3%;
+    margin: 0;
+    margin-bottom: 3%;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .moyen-item h3 {
+    font-weight: 800;
+    font-size: 30px;
+  }
+
+  .moyen-item h4 {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  .moyen-item p {
+    font-weight: 400;
+    font-size: 18px;
+  }
+
+  .moyen-item img{
+    width: 60%;
+  }
+
+    @media (max-width: 850px) {
+
+    .container-moyens-title {
+      width: 320px;
+    }
+
+    .cercle-moyen {
+      display: none;
+    }
+  }
+
+  
