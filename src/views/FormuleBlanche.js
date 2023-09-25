@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../utils/css/formuleBlanche.css';
 import ResponsiveSize from '../utils/other/responsiveSize';
-import GaleniqueCard from '../components/GaleniqueCard';
-import Introduction from '../components/Introduction';
+import GaleniqueCard from '../components/Formules/GaleniqueCard';
+import Introduction from '../components/global/Introduction';
 
 // Imports de toutes les images
 import formulaIMG from '../assets/images/marque-blanche/marqueBlancheFormule.png';

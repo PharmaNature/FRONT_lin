@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../utils/css/formuleSurMesure.css';
 import ResponsiveSize from '../utils/other/responsiveSize'
-import Introduction from '../components/Introduction'
+import Introduction from '../components/global/Introduction'
 
 function FormuleSurMesure() {
   const { chooseImage, chooseSizeTitle } = ResponsiveSize();

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import '../utils/css/notreLabo.css';
 import ResponsiveSize from '../utils/other/responsiveSize'
-import MoyenCard from '../components/MoyenCard';
-import Introduction from '../components/Introduction';
-import LateralIconDescription from '../components/LateralIconDescription'
+import MoyenCard from '../components/NotreLaboratoire/BoxMethode';
+import Introduction from '../components/global/Introduction';
+import LateralIconDescription from '../components/NotreLaboratoire/LateralIconDescription'
 
 // Images
 import historyIMG from '../assets/images/notre-laboratoire/history.jpg'
@@ -116,7 +116,7 @@ function NotreLabo() {
                     urlImage={item.urlImage}
                     position={index % 2 === 0 ? "left" : "right"}
                     />
-                    {index == Object.keys(dataMetier).length-1 ? "" : <span className='vertical-line'></span> }
+                    {index === Object.keys(dataMetier).length-1 ? "" : <span className='vertical-line'></span> }
                 </React.Fragment>
                 ))}
 

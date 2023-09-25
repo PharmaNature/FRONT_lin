@@ -1,8 +1,8 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Homepage from './views/Homepage';
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/global/Header'
+import Footer from './components/global/Footer'
 import NotreLabo from './views/NotreLabo';
 import FormuleBlanche from './views/FormuleBlanche'
 import FormuleSurMesure from './views/FormuleSurMesure'

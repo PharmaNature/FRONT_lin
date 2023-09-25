@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import '../utils/css/header.css';
-import Logo from '../assets/images/logoSVG.svg';
-import LogoLIN from '../assets/images/logoLIN.svg';
+import '../../utils/css/header.css';
+import Logo from '../../assets/images/logoSVG.svg';
+import LogoLIN from '../../assets/images/logoLIN.svg';
 import { Link, useLocation } from 'react-router-dom';
-import items from '../utils/other/links';
+import items from '../../utils/other/links';
 
 function Header() {
   const location = useLocation();

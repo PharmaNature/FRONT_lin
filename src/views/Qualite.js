@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../utils/css/qualite.css';
 import ResponsiveSize from '../utils/other/responsiveSize'
-import Introduction from '../components/Introduction';
+import Introduction from '../components/global/Introduction';
 
 function Qualite() {
   const { chooseImage, chooseSizeTitle } = ResponsiveSize();
