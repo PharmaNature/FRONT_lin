@@ -2,7 +2,7 @@ import React from "react";
 
 function LateralIconDescription(props) {
     
-    if (props.position == 'left') {
+    if (props.position === 'left') {
         return(
             <div className={`big-container-card-${props.position}`}>
                         <div className={`container-card-text-${props.position}`}>
