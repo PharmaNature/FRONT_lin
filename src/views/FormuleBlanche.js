@@ -3,6 +3,8 @@ import '../utils/css/formuleBlanche.css';
 import ResponsiveSize from '../utils/other/responsiveSize';
 import GaleniqueCard from '../components/Formules/GaleniqueCard';
 import Introduction from '../components/global/Introduction';
+import TextGroup from '../components/Formules/AreaOfExpertise';
+import plus from '../assets/pictogrammes/plus.svg'
 
 // Imports de toutes les images
 import formulaIMG from '../assets/images/marque-blanche/marqueBlancheFormule.png';
@@ -11,6 +13,9 @@ import capsuleImg from '../assets/images/marque-blanche/galenique_capsule.jpg'
 import geluleImg from '../assets/images/marque-blanche/galenique_gélules.jpg'
 import liquidImg from '../assets/images/marque-blanche/galenique_liquid.jpg'
 import blister from '../assets/images/marque-blanche/blister 2.png';
+import pilulier from'../assets/images/marque-blanche/pilulier.png';
+import flacon from '../assets/images/marque-blanche/flacon.png';
+import pot from '../assets/images/marque-blanche/pot 2.png';
 
 function FormuleBlanche() {
   const { chooseImage, chooseSizeTitle } = ResponsiveSize();
@@ -61,8 +66,30 @@ function FormuleBlanche() {
     {
       title: 'BLISTER',
       img: blister,
+    },
+    {
+      title: 'PILULIER',
+      img: pilulier,
+    },
+    {
+      title: 'FLACON',
+      img: flacon,
+    },
+    {
+      title: 'POT',
+      img: pot,
     }
   ]
+  const textGroups = [
+    { title1: 'BEAUTÉ', title2: 'CANNA' },
+    { title1: 'DOULEURS', title2: 'CIRCULATION' },
+    { title1: 'CONFORT URINAIRE', title2: 'CONFORT & PREVENTION' },
+    { title1: 'CIRCULATION', title2: 'LIPOSOME' },
+    { title1: 'CONFORT & PREVENTION', title2: 'TONIQUES & VITAMINES' },
+    { title1: 'DIGESTION TRANSIT / DETOX', title2: 'SOMMEIL & SERENITE' },
+    { title1: 'GAMME FEMME', title2: 'VOIES RESPIRATOIRES ET IMMUNTE' },
+  ];
+
   return (
       <div className='big-container'>
           <Introduction format='image' imageChoice={imageChoice} alt={"Marque Blanche"} titleSizeChoice={titleSizeChoice} titleBold1="NOS FORMULES" title1="EN MARQUE" title2="BLANCHE"/>
@@ -109,7 +136,7 @@ function FormuleBlanche() {
            <div className='container-formes'>
 
               <div className='container-formes-title'>
-                <h2> NOS DIVERSES <br/><span className='title-bold'></span>FORMES GALÉNIQUES...</h2>
+                <h2> NOS DIVERSES <br/><span className='title-bold'>FORMES GALÉNIQUES...</span></h2>
               </div>
 
               <div className='galenique'>
@@ -125,17 +152,42 @@ function FormuleBlanche() {
            <div className='container-condition'>
             <div className='container-condition-title'>
               <h2>ET NOTRE CHOIX <br/><span className='title-bold'>DE CONDITIONNEMENT </span></h2>
-              <h3>(SOU DIVERS FORMATS)</h3>
+              <h3>(SOUS DIVERS FORMATS)</h3>
             </div>
             
             <div className='container-condition-item'>
-              <div className='condition-item'>
+            {cData.map((item, index) => (
+            <div key={index} className='condition-item'>
+              <p>{item.title}</p>
+            <img src={item.img} alt={item.title} />
+              
+          </div>
+             ))}
+            
+                
 
-              </div>
             </div>
 
            </div>
 
+           <div className='AreaOfExpertise'>
+            <div className='expertise-title'>
+              <h2> NOS <br/> <span className='title-bold' > DOMAINES <br/> D'APPLICATIONS</span></h2>
+            </div>
+
+            <div className='expertise-list'>
+            {textGroups.map((group, index) => (
+        <React.Fragment key={index}>
+          {index > 0 &&   <img
+              className="separator-icon"
+              src={plus}
+              alt="Icône de séparation"
+            />}
+          <TextGroup title1={group.title1} title2={group.title2} />
+        </React.Fragment>
+      ))}
+    </div>
+           </div>
 
 
            </div>
