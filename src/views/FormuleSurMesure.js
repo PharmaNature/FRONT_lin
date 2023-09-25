@@ -23,7 +23,7 @@ function FormuleSurMesure() {
 
   return (
       <div className='big-container'>
-          <Introduction imageChoice={imageChoice} alt={"Formule sur mesure"} titleSizeChoice={titleSizeChoice} titleBold1="NOS FORMULES" title1="SUR MESURE" />
+          <Introduction format='image' imageChoice={imageChoice} alt={"Formule sur mesure"} titleSizeChoice={titleSizeChoice} titleBold1="NOS FORMULES" title1="SUR MESURE" />
       </div>
   );
 }

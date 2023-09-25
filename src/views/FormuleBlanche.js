@@ -65,7 +65,7 @@ function FormuleBlanche() {
   ]
   return (
       <div className='big-container'>
-          <Introduction imageChoice={imageChoice} alt={"Marque Blanche"} titleSizeChoice={titleSizeChoice} titleBold1="NOS FORMULES" title1="EN MARQUE" title2="BLANCHE"/>
+          <Introduction format='image' imageChoice={imageChoice} alt={"Marque Blanche"} titleSizeChoice={titleSizeChoice} titleBold1="NOS FORMULES" title1="EN MARQUE" title2="BLANCHE"/>
     
           <div className="sub-container">
             <div className='sub-container-text'>

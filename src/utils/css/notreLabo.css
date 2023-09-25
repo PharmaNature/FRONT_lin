@@ -144,7 +144,7 @@
     }
   
 
-    /* @media screen and (min-width: 460px) and (max-width: 1180px) {
+    @media screen and (min-width: 460px) and (max-width: 1180px) {
 
       .big-container-card-left {
         width: 400px;
@@ -228,7 +228,7 @@
 
       
 
-    } */
+    }
 
 
   /* NOS MOYENS */

@@ -30,6 +30,15 @@ function ResponsiveSize() {
         }
     };
 
-    return { chooseImage, chooseSizeTitle };
+    const videoResponsive = (windowWidth) => {
+        switch (true) {
+            case windowWidth < 420:
+                return "VideoPhoneSize";
+            default:
+                return "Video";
+        }
+    }
+
+    return { chooseImage, chooseSizeTitle, videoResponsive };
 }
 export default ResponsiveSize;
