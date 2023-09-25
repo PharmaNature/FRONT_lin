@@ -3,17 +3,39 @@ import '../utils/css/notreLabo.css';
 import ResponsiveSize from '../utils/other/responsiveSize'
 import MoyenCard from '../components/MoyenCard';
 import Introduction from '../components/Introduction';
+import LateralIconDescription from '../components/LateralIconDescription'
 
 // Images
 import historyIMG from '../assets/images/notre-laboratoire/history.jpg'
-import formulationIMG from '../assets/pictogrammes/formulation.png'
-import reglementationIMG from '../assets/pictogrammes/reglementation.png'
-import productionIMG from '../assets/pictogrammes/production.png'
-import formationIMG from '../assets/pictogrammes/formation.png'
 
+const dataMetier = {
+    1 : {
+        "titleLine1" : "FORMULATION",
+        "titleLine2" : "& SOURCING",
+        "description" : "Formulation d’ingrédients innovants, Identification des actifs les plus performants, Analyses d’études cliniques, Sélection d’ingrédients rigoureusement choisis, Exigence de technicité et d’efficacité, Formulation sur mesure ou clef en main.",
+        "urlImage" : require("../assets/pictogrammes/formulation.png")
+    },
+    2 : {
+        "titleLine1" : "RÈGLEMENTATION",
+        "titleLine2" : "& SOURCING",
+        "description" : "Allégations santé, Vérification réglementaires des compléments alimentaires, Validation de formules et packagings, Analyses de recommandations méthodes et normes de qualité, Suivi et veille réglementaire, Relation avec les autorités de contrôles (DGCCRF, ANSES, ANSM).",
+        "urlImage" : require("../assets/pictogrammes/reglementation.png")
+    },
+    3 : {
+        "titleLine1" : "FAÇONNAGE &",
+        "titleLine2" : "CONDITIONNEMENT",
+        "description" : "Outil de production complet adapté aux petites et grandes séries, Micro encapsulation, Large choix de gamme de produits : phytothérapie, nutraceutique, probiotiques, bio… Production en marque blanche grâce à notre catalogue dédié, Distribution en centre de répartition (palettes) ou directement en point de vente (colisage)",
+        "urlImage" : require("../assets/pictogrammes/production.png")
+    },
+    4 : {
+        "titleLine1" : "FORMATION",
+        "titleLine2" : "& COMMUNICATION",
+        "description" : "Formation et communication, élaboration d'outils de ventes pour les commerciaux, vente de produits à distance, formation des équipes de ventes.",
+        "urlImage" : require("../assets/pictogrammes/formation.png")
+    },
+}
 
-
-const dataTest = {
+const dataMoyen = {
     1 : {
         "name" : "PRODUCTION",
         "urlImage" : require("../assets/images/notre-laboratoire/production.png"),
@@ -63,6 +85,8 @@ function NotreLabo() {
   const imageChoice = chooseImage("labo", windowWidth);
   const titleSizeChoice = chooseSizeTitle(windowWidth);
 
+  const dataArray = Object.values(dataMetier);
+
   return (
       <div className='big-container'>
         <Introduction imageChoice={imageChoice} alt={"Laboratoire"} titleSizeChoice={titleSizeChoice} titleBold1="LE FAÇONNIER" title1="DE VOS COMPLÉMENTS" title2="ALIMENTAIRES" />
@@ -83,74 +107,18 @@ function NotreLabo() {
                 <div className='cercle-metier'></div>
             </div>
 
-
-
-                <div className='big-container-card-left'>
-                    <div className='container-card-text-left'>
-                        <h2>
-                            FORMULATION <br/>
-                            & SOURCING
-                        </h2>
-                        <p>
-                            Formulation d’ingrédients innovants, Identification des actifs les plus performants, Analyses d’études cliniques, Sélection d’ingrédients rigoureusement choisis, Exigence de technicité et d’efficacité, Formulation sur mesure ou clef en main.
-                        </p>
-                    </div>
-                    <div className='container-card-img'>
-                        <img src={formulationIMG}/>
-                    </div>
-                </div>
-
-                <span className='vertical-line'></span>
-
-                <div className='big-container-card-right'>
-                    <div className='container-card-img'>
-                        <img src={reglementationIMG}/>
-                    </div>
-                    <div className='container-card-text-right'>
-                        <h2>
-                            RÈGLEMENTATION <br/>
-                            & SOURCING
-                        </h2>
-                        <p>
-                            Allégations santé, Vérification réglementaires des compléments alimentaires, Validation de formules et packagings, Analyses de recommandations méthodes et normes de qualité, Suivi et veille réglementaire, Relation avec les autorités de contrôles (DGCCRF, ANSES, ANSM).
-                        </p>
-                    </div>
-                </div>
-
-                <span className='vertical-line'></span>  
-
-                <div className='big-container-card-left'>
-                    <div className='container-card-text-left'>
-                        <h2>
-                            FAÇONNAGE & <br/>
-                            CONDITIONNEMENT
-                        </h2>
-                        <p>
-                            Outil de production complet adapté aux petites et grandes séries, Micro encapsulation, Large choix de gamme de produits : phytothérapie, nutraceutique, probiotiques, bio… 
-                            Production en marque blanche grâce à notre catalogue dédié, Distribution en centre de répartition (palettes) ou directement en point de vente (colisage)
-                        </p>
-                    </div>
-                    <div className='container-card-img'>
-                        <img src={productionIMG}/>
-                    </div>
-                </div>
-
-                <span className='vertical-line'></span>
-
-                <div className='big-container-card-right'>
-                    <div className='container-card-img'>
-                        <img src={formationIMG}/>
-                    </div>
-                    <div className='container-card-text-right'>
-                        <h2>
-                            FORMATION <br/>
-                            & COMMUNICATION
-                        </h2>
-                        <p>
-                        Formation et communication, élaboration d'outils de ventes pour les commerciaux, vente de produits à distance, formation des équipes de ventes. 
-                        </p>
-                    </div>
-                </div>
+                {dataArray.map((item, index) => (
+                <React.Fragment key={index}>
+                    <LateralIconDescription
+                    titleLine1={item.titleLine1}
+                    titleLine2={item.titleLine2}
+                    description={item.description}
+                    urlImage={item.urlImage}
+                    position={index % 2 === 0 ? "left" : "right"}
+                    />
+                    {index == Object.keys(dataMetier).length-1 ? "" : <span className='vertical-line'></span> }
+                </React.Fragment>
+                ))}
 
 
           </div>
@@ -164,8 +132,8 @@ function NotreLabo() {
                 <div className='cercle-moyen'></div>
             </div>
             <div className='container-moyen-items'>
-            {Object.keys(dataTest).map((id) => (
-                <MoyenCard key={id} dataMoyenCard={dataTest[id]} />
+            {Object.keys(dataMoyen).map((id) => (
+                <MoyenCard key={id} dataMoyenCard={dataMoyen[id]} />
             ))}
             </div>
           </div>
