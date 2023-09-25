@@ -10,6 +10,7 @@ import poudreImg from '../assets/images/marque-blanche/galenique_poudre.jpg'
 import capsuleImg from '../assets/images/marque-blanche/galenique_capsule.jpg'
 import geluleImg from '../assets/images/marque-blanche/galenique_gélules.jpg'
 import liquidImg from '../assets/images/marque-blanche/galenique_liquid.jpg'
+import blister from '../assets/images/marque-blanche/blister 2.png';
 
 function FormuleBlanche() {
   const { chooseImage, chooseSizeTitle } = ResponsiveSize();
@@ -55,6 +56,13 @@ function FormuleBlanche() {
       text: "Nous proposons également une gamme d’huile végétales ou huiles essentielles.",
     },
   ]
+
+  const cData = [
+    {
+      title: 'BLISTER',
+      img: blister,
+    }
+  ]
   return (
       <div className='big-container'>
           <Introduction imageChoice={imageChoice} alt={"Marque Blanche"} titleSizeChoice={titleSizeChoice} titleBold1="NOS FORMULES" title1="EN MARQUE" title2="BLANCHE"/>
@@ -80,7 +88,7 @@ function FormuleBlanche() {
           </div>
 
         
-          <div className='container-process-formes'> 
+          <div className='container-process-formes-condition'> 
 
            <div className='container-process'>
 
@@ -101,7 +109,7 @@ function FormuleBlanche() {
            <div className='container-formes'>
 
               <div className='container-formes-title'>
-                <h2> NOS DIVERSES FORMES GALÉNIQUES...</h2>
+                <h2> NOS DIVERSES <br/><span className='title-bold'></span>FORMES GALÉNIQUES...</h2>
               </div>
 
               <div className='galenique'>
@@ -113,6 +121,23 @@ function FormuleBlanche() {
            </div>
           
            <span className='vertical-line'></span>
+
+           <div className='container-condition'>
+            <div className='container-condition-title'>
+              <h2>ET NOTRE CHOIX <br/><span className='title-bold'>DE CONDITIONNEMENT </span></h2>
+              <h3>(SOU DIVERS FORMATS)</h3>
+            </div>
+            
+            <div className='container-condition-item'>
+              <div className='condition-item'>
+
+              </div>
+            </div>
+
+           </div>
+
+
+
            </div>
 
       </div>
