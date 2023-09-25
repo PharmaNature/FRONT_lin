@@ -3,6 +3,7 @@ import '../utils/css/homepage.css';
 import Introduction from '../components/global/Introduction';
 import ResponsiveSize from '../utils/other/responsiveSize'
 import IconDescription from '../components/HomePage/IconDescription'
+import BoxFormule from '../components/HomePage/BoxFormule';
 
 function Homepage() { 
 
@@ -42,6 +43,46 @@ function Homepage() {
       imageURL : require("../assets/pictogrammes/experience.png"),
       title1 : "+ DE 20 ANS",
       title2 : "D'EXPÉRIENCE"
+    }
+  }
+
+  const dataMetier = {
+    1 : {
+        "titleLine1" : "FORMULATION",
+        "titleLine2" : "& SOURCING",
+        "urlImage" : require("../assets/pictogrammes/formulation.png")
+    },
+    2 : {
+        "titleLine1" : "RÈGLEMENTATION",
+        "titleLine2" : "& SOURCING",
+        "urlImage" : require("../assets/pictogrammes/reglementation.png")
+    },
+    3 : {
+        "titleLine1" : "FAÇONNAGE &",
+        "titleLine2" : "CONDITIONNEMENT",
+        "urlImage" : require("../assets/pictogrammes/production.png")
+    },
+    4 : {
+        "titleLine1" : "FORMATION",
+        "titleLine2" : "& COMMUNICATION",
+        "urlImage" : require("../assets/pictogrammes/formation.png")
+    },
+  }
+
+  const nosFormules = {
+    1 : {
+      titleLine1 : "FORMULE",
+      titleLine2 : "EN MARQUE",
+      titleLine3 : "BLANCHE",
+      description : "Vous accédez à des produits clé en main, prêts à être mis sur le marché.",
+      urlImage : require("../assets/pictogrammes/marque-blanche.png")
+    },
+    2 : {
+      titleLine1 : "FORMULE",
+      titleLine2 : "PERSONNALISÉE",
+      titleLine3 : "SUR MESURE",
+      description : "Vous développez vos formules selon votre cahier des charges.",
+      urlImage : require("../assets/pictogrammes/formule-sur-mesure.png")
     }
   }
 
@@ -90,6 +131,23 @@ function Homepage() {
                 </div>
               </div>
           </div>
+        </div>
+
+        <div className='container-intervention'>
+              <h2 className='intervention-title'>
+                NOS INTERVENTIONS
+              </h2>
+            <div className='container-item-intervention'>
+              {Object.values(dataMetier).map((item, index) => (
+                <IconDescription key={index} imageURL={item['urlImage']} title1={item['titleLine1']} title2={item['titleLine2']} />
+              ))}
+            </div>
+        </div>
+
+        <div className='container-nos-formules'>
+          {Object.values(nosFormules).map((item, index) => (
+                <BoxFormule key={index} titleLine1={item['titleLine1']} titleLine2={item['titleLine2']} titleLine3={item['titleLine3']} description={item['description']} urlImage={item['urlImage']} />
+          ))}
         </div>
 
       </div>

@@ -10,7 +10,6 @@
 
 .container-video {
   width: 100%;
-  height: 1079.99px;
   position: relative;
 }
 
@@ -86,9 +85,151 @@
 .objectif-paragraphe1,
 .objectif-paragraphe2 {
   width: 40%;
+  max-width: 400px;
   text-align: justify;
 }
 
 .objectif-paragraphe1 span {
   font-weight: 700;
+}
+
+.container-intervention {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intervention-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  margin: 0 auto;
+  width: 300px;
+  text-align: center;
+}
+
+.container-item-intervention {
+  margin-top: 2%;
+  margin-bottom: 5%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 3%;
+}
+
+.item-icon h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.container-nos-formules {
+  background-color: #EBEBE9;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5%;
+  padding: 1%;
+  padding-top: 13.5%;
+}
+
+.container-formule-item {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 500px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  /* margin-top: 13%; */
+  margin-bottom: 4%;
+
+  position: relative;
+  z-index: 1;
+}
+
+.container-formule-item img {
+  width: 250px;
+  position: absolute;
+  z-index: 999;
+  top: -25%;
+}
+
+.container-formule-item h2 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.container-formule-item h2 span {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.container-formule-item p {
+  width: 80%;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 100px;
+}
+
+
+
+
+
+
+@media (max-width: 850px) {
+
+  .container-on-video {
+    display: none;
+  }
+
+  .objectif-title {
+    text-align: start;
+    width: 80%;
+    margin: 0;
+  }
+
+  .container-objectif-paragraphes {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .objectif-paragraphe1,
+  .objectif-paragraphe2 {
+    width: 100%;
+    max-width: none;
+    text-align: justify;
+  }
+
+  .objectif-paragraphe1 {
+    margin-bottom: 2%;
+  }
+
+  .container-item-intervention {
+    display: none;
+  }
+
+  .container-nos-formules {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-formule-item {
+    margin-top: 35%;
+    width: 90%;
+  }
+
+  .container-formule-item img {
+    width: 230px;
+    top: -20%;
+  }
+
 }
