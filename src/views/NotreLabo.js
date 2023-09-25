@@ -89,7 +89,7 @@ function NotreLabo() {
 
   return (
       <div className='big-container'>
-        <Introduction imageChoice={imageChoice} alt={"Laboratoire"} titleSizeChoice={titleSizeChoice} titleBold1="LE FAÇONNIER" title1="DE VOS COMPLÉMENTS" title2="ALIMENTAIRES" />
+        <Introduction format='image' imageChoice={imageChoice} alt={"Laboratoire"} titleSizeChoice={titleSizeChoice} titleBold1="LE FAÇONNIER" title1="DE VOS COMPLÉMENTS" title2="ALIMENTAIRES" />
           <div className='container-history'>
             <div className='container-history-img'>
                 <img src={historyIMG} alt='Histoire Laboratoire'/>
