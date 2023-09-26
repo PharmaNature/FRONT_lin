@@ -23,7 +23,7 @@ function Qualite() {
 
   return (
       <div className='big-container'>
-          <Introduction imageChoice={imageChoice} alt={"Qualité"} titleSizeChoice={titleSizeChoice} titleBold1="QUALITÉ" titleBold2="ENGAGEMENT" title1="CERTIFIÉS" />
+          <Introduction format='image' imageChoice={imageChoice} alt={"Qualité"} titleSizeChoice={titleSizeChoice} titleBold1="QUALITÉ" titleBold2="ENGAGEMENT" title1="CERTIFIÉS" />
       </div>
   );
 }

@@ -88,20 +88,25 @@ function NotreLabo() {
     const titleSizeChoice = chooseSizeTitle(windowWidth);
 
     const dataArray = Object.values(dataMetier);
-
-    return (
-        <div className='big-container'>
-            <Introduction imageChoice={imageChoice} alt={"Laboratoire"} titleSizeChoice={titleSizeChoice} titleBold1="LE FAÇONNIER" title1="DE VOS COMPLÉMENTS" title2="ALIMENTAIRES" />
-            <div className='container-history'>
-                <div className='container-history-img'>
-                    <img src={historyIMG} alt='Histoire Laboratoire' />
-                </div>
-                <div className='container-history-text'>
-                    <h2>NOTRE HISTOIRE</h2>
-                    <h3>Créé en 2010 LIN, Laboratoire d’Innovation Naturelle est aujourd’hui un des acteurs incontournables dans le monde des compléments alimentaires. </h3>
-                    <p>Nous disposons d'un laboratoire de recherche et développement, d'une installation de production, ainsi que d'un système de contrôle qualité qui assure la traçabilité des matières premières depuis leur réception jusqu'à la production des articles finis. Nous garantissons des produits de haute qualité tout en conservant les propriétés des ingrédients actifs.</p>
-                    <h3>Une équipe composée de 40 professionnels est entièrement dédiée à cette division pour assurer la réalisation réussie de vos projets de fabrication. </h3>
-                </div>
+  
+  return (
+      <div className='big-container'>
+        <Introduction format='image' imageChoice={imageChoice} alt={"Laboratoire"} titleSizeChoice={titleSizeChoice} titleBold1="LE FAÇONNIER" title1="DE VOS COMPLÉMENTS" title2="ALIMENTAIRES" />
+          <div className='container-history'>
+            <div className='container-history-img'>
+                <img src={historyIMG} alt='Histoire Laboratoire'/>
+            </div>
+            <div className='container-history-text'>
+                <h2>NOTRE HISTOIRE</h2>
+                <h3>Créé en 2010 LIN, Laboratoire d’Innovation Naturelle est aujourd’hui un des acteurs incontournables dans le monde des compléments alimentaires. </h3>
+                <p>Nous disposons d'un laboratoire de recherche et développement, d'une installation de production, ainsi que d'un système de contrôle qualité qui assure la traçabilité des matières premières depuis leur réception jusqu'à la production des articles finis. Nous garantissons des produits de haute qualité tout en conservant les propriétés des ingrédients actifs.</p>
+                <h3>Une équipe composée de 40 professionnels est entièrement dédiée à cette division pour assurer la réalisation réussie de vos projets de fabrication. </h3>
+            </div>
+          </div>
+          <div className='container-metiers'>
+            <div className='container-metiers-title'>
+                <h2>NOS MÉTIERS</h2>
+                <div className='cercle-metier'></div>
             </div>
             <MoreInfo />
             <div className='container-metiers'>
