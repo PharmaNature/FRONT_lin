@@ -2,17 +2,13 @@
     display: flex;
     justify-content: space-evenly;
     background-color: #F7F7F7;
-    padding: 2%; /* 20px / largeur de la fenêtre */
-    /* height: 100%; Ajusté pour remplir la hauteur de la fenêtre */
-    /* position: fixed;
-    left: 0;
-    right: 0;*/
+    padding: 2%; 
     bottom: 0; 
 }
 
 .logo {
-    width: 88%; /* 307px / largeur de la fenêtre */
-    height: auto; /* Ajusté pour maintenir le ratio */
+    width: 88%; 
+    height: auto; 
 }
 
 .menu-list {
@@ -27,33 +23,23 @@
 }
 
 .menu {
-    margin-left: -4.2%; /* 42px / largeur de la fenêtre */
+    margin-left: -4.2%; 
 }
 
 
 .form-group {
     display: grid;
     width: auto;
+    margin-bottom: 2%;
 }
 .form {
-    width: 39.667%; /* 396.67px / largeur de la fenêtre */
+    width: 39.667%; 
 }
- /* Colorer * en rouge sur les labels du form */
+ 
  .required-label {
     color: red;
   }
 
-#subject {
-    width: auto; /* 395px / largeur de la fenêtre */
-    height: 4.1vh; /* 41px / hauteur de la fenêtre * 100 */
-    border-radius: 1vh; /* 10px / hauteur de la fenêtre * 100 */
-    border-width: thin;
-}
-
-#country {
-    height: 4.1vh; /* 41px / hauteur de la fenêtre * 100 */
-    border-radius: 2vh; /* 20px / hauteur de la fenêtre * 100 */
-}
 
 .option {
     text-align: center;
@@ -63,13 +49,13 @@
     margin-top: -0.2vh;
 }
 .contact-info {
-    margin-top: 3.1vh; /* 121px / hauteur de la fenêtre * 100 */
+    margin-top: 3.1vh; 
 }
 
 
 .address {
     margin-top: 5.1vw;
-    font-size: 1.1vw; /* 18px / largeur de la fenêtre * 100 */
+    font-size: 1.1vw; 
     font-family: 'lato', sans-serif;
     color: #111426;
     margin-left: 19px;
@@ -77,33 +63,68 @@
 }
 
 .contactUs {
-    font-size: 2.5vw; /* 35px / largeur de la fenêtre * 100 */
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 33px;
 }
 
-#message {
-    height: 8vh; /* 80px / hauteur de la fenêtre * 100 */
-}
-
-#message, #phone, #email, #company {
+.form-group input,
+.form-group select,
+.form-group textarea {
     background-color: #ECECEC;
-    border-width: thin;
+    border: none;
+    height: 25px;
+}
+
+.form-group select {
+    height: 30px;
+}
+
+.form-group textarea {
+    height: 100px;
+    margin-bottom: 60px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group input:valid,
+.form-group select:valid,
+.form-group textarea:valid {
+    background-color: white;
+    outline: none;
+}
+
+.label-form {
+    margin-bottom: 1%;
+}
+
+form {
+    position: relative;
 }
 
 .button-send {
-    margin-left: 89%; /* 322px / largeur de la fenêtre */
-    margin-top: 1.8vh; /* 37px / hauteur de la fenêtre * 100 */
-    height: 3.8vh; /* 38px / hauteur de la fenêtre * 100 */
-    width: 25%; /* 110px / largeur de la fenêtre */
+    margin-top: 1.8vh;
+    height: 40px; 
+    width: 35%; 
     background-color: #ECECEC;
     border: none;
-    box-shadow: 0px 5px 17px 4px #393e4b26;
+    transition: 0.3s ease-in-out;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    color: #484848;
+    position: absolute;
+    right: 0%;
+    bottom: 0;
 }
 
-/* Styles pour les mobiles */
+.button-send:hover {
+    cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
     .footer {
         flex-direction: column;
-        height: auto; /* Réinitialiser la hauteur */
+        height: auto; 
         align-items: center;
     }
     .button-send{
@@ -121,8 +142,6 @@
         font-size: 2.9vw;
     }
 }
-
-/* Styles pour tablette */
 
 @media screen and (min-width: 769px) and (max-width: 1100px) {
 

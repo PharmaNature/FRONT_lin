@@ -130,7 +130,7 @@ function ContactForm() {
             required
           ></textarea>
         </div>
-        <button className="button-send" type="submit">Envoyer</button>
+        <button className="button-send" type="submit"> ENVOYER &gt; </button>
       </form>
     </div>
   );
