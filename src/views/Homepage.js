@@ -4,6 +4,7 @@ import Introduction from '../components/global/Introduction';
 import ResponsiveSize from '../utils/other/responsiveSize'
 import IconDescription from '../components/HomePage/IconDescription'
 import BoxFormule from '../components/HomePage/BoxFormule';
+import MoreInfo from '../components/HomePage/MoreInfo';
 
 function Homepage() { 
 
@@ -75,14 +76,16 @@ function Homepage() {
       titleLine2 : "EN MARQUE",
       titleLine3 : "BLANCHE",
       description : "Vous accédez à des produits clé en main, prêts à être mis sur le marché.",
-      urlImage : require("../assets/pictogrammes/marque-blanche.png")
+      urlImage : require("../assets/pictogrammes/marque-blanche.png"),
+      link : "marque-blanche"
     },
     2 : {
       titleLine1 : "FORMULE",
       titleLine2 : "PERSONNALISÉE",
       titleLine3 : "SUR MESURE",
       description : "Vous développez vos formules selon votre cahier des charges.",
-      urlImage : require("../assets/pictogrammes/formule-sur-mesure.png")
+      urlImage : require("../assets/pictogrammes/formule-sur-mesure.png"),
+      link : "formule-sur-mesure"
     }
   }
 
@@ -130,6 +133,7 @@ function Homepage() {
                   Nos matières premières sont méticuleusement choisies pour satisfaire à toutes les exigences, et notre approche est respectueuse de l'environnement.
                 </div>
               </div>
+            <MoreInfo link="notre-labo" />
           </div>
         </div>
 
@@ -146,7 +150,7 @@ function Homepage() {
 
         <div className='container-nos-formules'>
           {Object.values(nosFormules).map((item, index) => (
-                <BoxFormule key={index} titleLine1={item['titleLine1']} titleLine2={item['titleLine2']} titleLine3={item['titleLine3']} description={item['description']} urlImage={item['urlImage']} />
+                <BoxFormule key={index} titleLine1={item['titleLine1']} titleLine2={item['titleLine2']} titleLine3={item['titleLine3']} description={item['description']} urlImage={item['urlImage']} link={item.link}/>
           ))}
         </div>
 

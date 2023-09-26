@@ -1,4 +1,5 @@
 import React from "react";
+import MoreInfo from "./MoreInfo";
 
 function BoxFormule(props) {
     return (
@@ -14,6 +15,7 @@ function BoxFormule(props) {
             <p>
                 {props.description}
             </p>
+                <MoreInfo link={props.link} />
         </div>
     )
 }

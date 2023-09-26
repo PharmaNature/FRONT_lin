@@ -8,7 +8,6 @@ import LateralIconDescription from '../components/NotreLaboratoire/LateralIconDe
 
 // Images
 import historyIMG from '../assets/images/notre-laboratoire/history.jpg'
-import MoreInfo from '../components/HomePage/MoreInfo';
 
 const dataMetier = {
     1: {
@@ -103,7 +102,6 @@ function NotreLabo() {
                 <h3>Une équipe composée de 40 professionnels est entièrement dédiée à cette division pour assurer la réalisation réussie de vos projets de fabrication. </h3>
             </div>
           </div>
-            <MoreInfo />
             <div className='container-metiers'>
                 <div className='container-metiers-title'>
                     <h2>NOS MÉTIERS</h2>
