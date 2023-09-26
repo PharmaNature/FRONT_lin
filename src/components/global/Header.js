@@ -88,7 +88,6 @@ function Header() {
                         <Link
                           to={item.link}
                           dangerouslySetInnerHTML={{ __html: item.name }}
-                          className={"/" + item.link === location.pathname ? 'active' : ''}
                           onClick={scrollToBottom}
                         />
                       </li>
