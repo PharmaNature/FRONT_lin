@@ -46,13 +46,13 @@ function FormuleBlanche() {
       img: geluleImg,
       alt:'Forme galénique gélule',
       title: 'Gélules',
-      text: "Nous offrons une gamme complète de tailles, que ce soit en version gélatine ou végétale. Nous les proposons en taille O ou taille 1 ",
+      text: "Nous offrons une gamme complète de tailles, que ce soit en version gélatine ou végétale. Nous les proposons en taille O ou taille 1. ",
     },
     {
       img: capsuleImg,
       alt:'Capsule',
       title: 'Capsule',
-      text: "Nous proposons un large éventail d'opportunités, que ce soit dans le cadre de formules standards ou de développements sur mesure,",
+      text: "Nous proposons un large éventail d'opportunités, que ce soit dans le cadre de formules standards ou de développements sur mesure.",
     },
     {
       img: liquidImg,
@@ -90,6 +90,9 @@ function FormuleBlanche() {
     { title1: 'GAMME FEMME', title2: 'VOIES RESPIRATOIRES ET IMMUNTE' },
   ];
 
+  //  Ajout du scroll horizontal
+const horizontalScroll  = windowWidth < 1100;
+
   return (
       <div className='big-container'>
           <Introduction format='image' imageChoice={imageChoice} alt={"Marque Blanche"} titleSizeChoice={titleSizeChoice} titleBold1="NOS FORMULES" title1="EN MARQUE" title2="BLANCHE"/>
@@ -101,19 +104,23 @@ function FormuleBlanche() {
                 <h2 className='NotreCatalogue'>ISSUE DE <br /> NOTRE CATALOGUE</h2>
                </div>
                <div className='plus-sign'> + </div>
+               <div className='container-packaging'>
                <h1 className='packaging'> VOTRE PACKAGING</h1>
+               </div>
             </div>
             <div className='equal-sign'>=</div>
             <div className='sub-container-img'>
                 <img src={formulaIMG} alt='Votre marque blanche'/>
             </div>
             </div>
+            <div className='container-formula-text'>
           <div className='formula-text'>
             <h3>Nous disposons d’un large choix de «formules standards». Ces formulations ont été élaborées par notre équipe de recherche et développement pour répondre aux divers besoins du marché. <br /><br />Vous accédez à des produits clé en main, prêts à être mis sur le marché.</h3>
             <br />
             <p>Le seuil minimum de commande pour cette offre est de 250 unités. Ce service peut être complémentaire à nos services de développement sur mesure, afin de garantir que votre marque conserve son caractère unique.</p>
           </div>
-
+          </div>
+         
         
           <div className='container-process-formes-condition'> 
 
@@ -148,7 +155,7 @@ function FormuleBlanche() {
            </div>
           
            <span className='vertical-line'></span>
-
+ 
            <div className='container-condition'>
             <div className='container-condition-title'>
               <h2>ET NOTRE CHOIX <br/><span className='title-bold'>DE CONDITIONNEMENT </span></h2>
@@ -164,18 +171,18 @@ function FormuleBlanche() {
           </div>
              ))}
             
-                
+               
 
             </div>
 
            </div>
-
+ 
            <div className='AreaOfExpertise'>
             <div className='expertise-title'>
               <h2> NOS <br/> <span className='title-bold' > DOMAINES <br/> D'APPLICATIONS</span></h2>
             </div>
 
-            <div className='expertise-list'>
+            <div className={`expertise-list ${horizontalScroll? 'horizontal-scroll' : ''}`}>
             {textGroups.map((group, index) => (
         <React.Fragment key={index}>
           {index > 0 &&   <img

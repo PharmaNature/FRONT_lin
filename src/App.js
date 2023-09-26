@@ -20,7 +20,7 @@ function App() {
             <Route path="formule-sur-mesure" element={<FormuleSurMesure />} />
             <Route path="qualite" element={<Qualite />} />
           </Routes>
-        <Footer /> 
+         <Footer />  
       </div>
     </Router>
   );

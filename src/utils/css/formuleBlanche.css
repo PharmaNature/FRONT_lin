@@ -37,18 +37,25 @@
   }
   
   /* VOTRE FORMULE */
-.sub-container {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 6%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+
+  .sub-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
+
 .sub-container-text {
   margin-top: -78px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .plus-sign {
   color: #D9C5C4;
@@ -58,7 +65,6 @@
   margin-top: -21px;
 }
 .equal-sign{
-  
     color: #D9C5C4;
     font-size: 10em;
     font-family: 'Montserrat', sans-serif;
@@ -71,34 +77,42 @@ h1.NotreFormula {
   font-family: 'Montserrat', sans-serif;
   color: #D9C5C4;
   font-size: 4em;
-  width: 0em;
+  width: 99%;
   line-height: 52px;
+  text-align: center;
+}
+.container-packaging {
+  display: contents;
 }
 h1.packaging {
-  
   font-size: 3em;
   font-weight: bold;
-  width: 0em;
+  width: 50%;
   margin-top: 2px;
+  text-align: center;
 }
-
 h2.NotreCatalogue {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  width: 11em;
+  width: 100%;
   line-height: 30px;
   margin-top: -27px;
+  text-align: center;
+}
+
+.container-formula-text {
+  text-align: -webkit-center;
+  margin-bottom: 4%;
 }
 .formula-text {
   width: 628px;
-   margin-left: 91px; 
   text-align: justify;
 }
 .vertical-line{
   border-left: 2px solid #000;
   display: inline-block;
   height: 130px;
-  margin: 0 20px;
+  margin: 0 20px;    
 }
 
 
@@ -118,21 +132,23 @@ h2.NotreCatalogue {
 .galenique {
   display: flex;
   justify-content: center;
-  gap: 3%;
+  align-items: center;
+  gap: 6%;
+  flex-wrap: wrap;
 }
 .g-card {
-  width: 240px;
-  margin-right: 140px;
+  width: 284px;
  text-align: justify;
 }
 
   /* NOTRE CHOIX DE CONDITIONNEMENT */
 .container-condition-item {
-  width: 97%;
+  width: 100%;
   display: flex;
   justify-content: center;
   gap: 10%;
-  padding: 2%;
+  margin-top: 4%;
+
 }
 .condition-item p {
   font-family: 'Montserrat', sans-serif;
@@ -169,4 +185,71 @@ h2.NotreCatalogue {
 .text-group {
   width: 253px;
 }
-/* styles.css */
+.horizontal-scroll {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  white-space: nowrap; /* Prevent line breaks for child elements */
+}
+/* Pour masquer la scrollbar dans Google Chrome et Microsoft Edge (basé sur Chromium) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-corner {
+  display: none;
+}
+
+/* Pour masquer la scrollbar dans Mozilla Firefox */
+scrollbar-width: none;
+scrollbar-color: transparent transparent;
+
+/* Pour masquer la scrollbar dans Safari */
+::-webkit-scrollbar {
+  width: 0;
+}
+
+/* FORMAT TABLETTE */
+
+@media screen and (min-width: 768px) and (max-width: 1180px) {
+
+
+  
+.sub-container {
+  margin-top: 10%;
+  width: 100%;
+  gap: 2%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.container-formula {
+  width: 100%;
+  margin-top: 2%;
+}
+h1.NotreFormula {
+  font-size: 3em;
+  width: 100%;
+}
+h2.NotreCatalogue {
+ 
+  width: 100%;
+  font-size: 20px;
+}
+h1.packaging {
+  font-size: 2.5em;
+  width: 100%;
+}
+.equal-sign{
+  width: 20%;
+}
+
+.sub-container-img {
+  width: 30%;
+}
+.sub-container-img img {
+  width: 100%;
+}
+
+.galenique{
+  gap: 14%;
+}
+
+}
