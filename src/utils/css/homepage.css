@@ -131,7 +131,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 3%;
+  gap: 5%;
 }
 
 .item-icon h4 {
