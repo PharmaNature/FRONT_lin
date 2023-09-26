@@ -11,21 +11,16 @@ function Header() {
   const [scrolling, setScrolling] = useState(false);
 
   useEffect(() => {
-    // Fonction pour gérer le défilement
     const handleScroll = () => {
       if (window.scrollY > 20) {
-        // Si l'utilisateur a fait défiler de plus de 20 pixels, activez le défilement
         setScrolling(true);
       } else {
-        // Sinon, désactivez le défilement
         setScrolling(false);
       }
     };
 
-    // Ajoutez un écouteur d'événements pour le défilement
     window.addEventListener('scroll', handleScroll);
 
-    // Retirez l'écouteur d'événements lorsque le composant est démonté
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -36,6 +31,18 @@ function Header() {
   };
 
   const closeMenu = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+    setMenuOpen(false);
+  };
+
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth',
+    });
     setMenuOpen(false);
   };
 
@@ -63,16 +70,31 @@ function Header() {
           </div>
         )}
         <ul>
-          {items.map((item) => (
-            <li key={item.id}>
-              <Link
-                to={item.link}
-                dangerouslySetInnerHTML={{ __html: item.name }}
-                className={"/" + item.link === location.pathname ? 'active' : ''}
-                onClick={closeMenu}
-              />
-            </li>
-          ))}
+        {items.map(item => {
+                  if (item.name !== "CONTACT") {
+                    return (
+                      <li key={item.id}>
+                        <Link
+                          to={item.link}
+                          dangerouslySetInnerHTML={{ __html: item.name }}
+                          className={"/" + item.link === location.pathname ? 'active' : ''}
+                          onClick={closeMenu}
+                        />
+                      </li>
+                    )
+                  } else {
+                    return (
+                      <li key={item.id}>
+                        <Link
+                          to={item.link}
+                          dangerouslySetInnerHTML={{ __html: item.name }}
+                          className={"/" + item.link === location.pathname ? 'active' : ''}
+                          onClick={scrollToBottom}
+                        />
+                      </li>
+                    )
+                  }
+        })}
         </ul>
       </nav>
     </div>

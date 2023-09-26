@@ -3,7 +3,7 @@ const items = [
     { id: 2, name: "FORMULE EN<br/>MARQUE BLANCHE", link: "marque-blanche" },
     { id: 3, name: "FORMULE<br/>SUR MESURE", link: "formule-sur-mesure" },
     { id: 4, name: "QUALITÉ", link: "qualite" },
-    { id: 5, name: "CONTACT", link: "contact" },
+    { id: 5, name: "CONTACT", link: "#contactez-nous" },
   ]
 
   export default items;
