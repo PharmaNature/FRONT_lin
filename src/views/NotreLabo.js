@@ -5,9 +5,12 @@ import ResponsiveSize from '../utils/other/responsiveSize'
 import MoyenCard from '../components/NotreLaboratoire/BoxMethode';
 import Introduction from '../components/global/Introduction';
 import LateralIconDescription from '../components/NotreLaboratoire/LateralIconDescription'
+import { useSwipeable } from 'react-swipeable';
 
 // Images
 import historyIMG from '../assets/images/notre-laboratoire/history.jpg'
+import arrowLeft from '../assets/pictogrammes/arrow_left.svg'
+import arrowRight from '../assets/pictogrammes/arrow_right.svg'
 
 const dataMetier = {
     1: {
@@ -87,6 +90,27 @@ function NotreLabo() {
     const titleSizeChoice = chooseSizeTitle(windowWidth);
 
     const dataArray = Object.values(dataMetier);
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const handleNext = () => {
+        if (currentIndex < dataArray.length - 1) {
+          setCurrentIndex(currentIndex + 1);
+        }
+      };
+    
+      const handlePrev = () => {
+        if (currentIndex > 0) {
+          setCurrentIndex(currentIndex - 1);
+        }
+      };
+
+      const swipeHandlers = useSwipeable({
+        onSwipedLeft: handleNext,
+        onSwipedRight: handlePrev,
+      });
+
+      const indicators = Array.from({ length: dataArray.length }, (_, i) => i);
   
   return (
       <div className='big-container'>
@@ -108,18 +132,45 @@ function NotreLabo() {
                     <div className='cercle-metier'></div>
                 </div>
 
-                {dataArray.map((item, index) => (
+                {windowWidth >= 1179 ? (
+                    dataArray.map((item, index) => (
                     <React.Fragment key={index}>
                         <LateralIconDescription
-                            titleLine1={item.titleLine1}
-                            titleLine2={item.titleLine2}
-                            description={item.description}
-                            urlImage={item.urlImage}
-                            position={index % 2 === 0 ? "left" : "right"}
+                        titleLine1={item.titleLine1}
+                        titleLine2={item.titleLine2}
+                        description={item.description}
+                        urlImage={item.urlImage}
+                        position={index % 2 === 0 ? "left" : "right"}
                         />
-                        {index === Object.keys(dataMetier).length - 1 ? "" : <span className='vertical-line'></span>}
+                        {index === dataArray.length - 1 ? "" : <span className='vertical-line'></span>}
                     </React.Fragment>
-                ))}
+                    ))
+                ) : (
+                    <div {...swipeHandlers} className='container-carrousel'>
+                        <LateralIconDescription
+                            titleLine1={dataArray[currentIndex].titleLine1}
+                            titleLine2={dataArray[currentIndex].titleLine2}
+                            description={dataArray[currentIndex].description}
+                            urlImage={dataArray[currentIndex].urlImage}
+                            position={currentIndex % 2 === 0 ? "left" : "right"}
+                        />
+                        <button onClick={handlePrev} disabled={currentIndex === 0} className='btn-carrousel-left'>
+                            <img src={arrowLeft} alt='arrow left' />
+                        </button>
+                        <button onClick={handleNext} disabled={currentIndex === dataArray.length - 1} className='btn-carrousel-right'>
+                            <img src={arrowRight} alt='arrow right' />
+                        </button>
+                        <div className='pagination'>
+                            {indicators.map((i) => (
+                            <div
+                                key={i}
+                                className={`indicator ${i === currentIndex ? 'active' : ''}`}
+                                onClick={() => setCurrentIndex(i)}
+                            ></div>
+                            ))}
+                        </div>
+                    </div>
+                )}
 
 
             </div>

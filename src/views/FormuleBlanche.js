@@ -128,7 +128,7 @@ const galeniqueScroll = windowWidth <767;
 
            <div className='container-process'>
 
-             <span className='vertical-line'></span>
+             <span className='vertical-line-fb'></span>
 
             <div className='container-process-title'>
               <h2> NOS PROCESSUS DE FABRICATION</h2>
@@ -138,7 +138,7 @@ const galeniqueScroll = windowWidth <767;
              <h1>CAROUSEL</h1>
             </div>
 
-           <span className='vertical-line'></span>
+           <span className='vertical-line-fb'></span>
 
             </div>
 
@@ -155,7 +155,7 @@ const galeniqueScroll = windowWidth <767;
               </div>
            </div>
             
-           <span className='vertical-line'></span>
+           <span className='vertical-line-fb'></span>
   
            <div className='container-condition'>
             <div className='container-condition-title'>

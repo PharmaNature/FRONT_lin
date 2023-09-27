@@ -138,100 +138,11 @@
     
     .vertical-line{
         border-left: 2px solid #000;
-        display: inline-block;
         height: 150px;
         margin: 0 20px;
     }
-  
 
-    @media screen and (min-width: 460px) and (max-width: 1180px) {
-
-      .big-container-card-left {
-        width: 400px;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-      }
-      .container-card-text-left {
-        text-align: justify;
-      }
-      .container-card-text-left h2 {
-        text-align: center;
-      }
-
-      .big-container-card-right {
-        width: 400px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      } 
-      .container-card-text-right {
-        text-align: justify;
-      }
-      .container-card-text-right h2 {
-        text-align: center;
-      }
-
-      .container-card-img {
-        text-align: center;
-      }
-
-      .vertical-line{
-        display: none;
-    }
-
-
-    }
-
-    @media (max-width: 460px) {
-
-      .big-container-card-left {
-        width: 250px;
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: center;
-      }
-      .container-card-text-left {
-        text-align: justify;
-      }
-      .container-card-text-left h2 {
-        text-align: center;
-        font-size: 18px;
-      }
-
-      .big-container-card-right {
-        width: 250px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      } 
-      .container-card-text-right {
-        text-align: justify;
-      }
-      .container-card-text-right h2 {
-        text-align: center;
-        font-size: 18px;
-      }
-
-      .container-card-img {
-        text-align: center;
-      }
-
-      .vertical-line{
-        display: none;
-    }
-
-    } */
-
-    /* Version carrousel pour NOS MÉTIERS */
-    /* @media (max-width: 1180px) {
-
-      
-
-    }
-
-
-  /* NOS MOYENS */
+     /* NOS MOYENS */
 
   .container-moyens-title {
     width: 100%;
@@ -304,15 +215,142 @@
     width: 60%;
   }
 
-    @media (max-width: 850px) {
-
-    .container-moyens-title {
-      width: 100%;
-    }
-
-    .cercle-moyen {
-      display: none;
-    }
+  .container-carrousel {
+    width: auto;
+    height: 450px;
+    position: relative;
   }
 
+  .btn-carrousel-left {
+    position: absolute;
+    left: 5%;
+    top: 40%;
+    background-color: transparent;
+    border: none;
+  }
+
+  .btn-carrousel-right {
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    background-color: transparent;
+    border: none;
+  }
+
+  .pagination {
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .indicator.active {
+    background-color: #000;
+  }
+
+    @media (max-width: 460px) {
+
+      .big-container-card-left {
+        width: 250px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+      }
+      .container-card-text-left {
+        text-align: justify;
+      }
+      .container-card-text-left h2 {
+        text-align: center;
+        font-size: 18px;
+      }
+  
+      .big-container-card-right {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      } 
+      .container-card-text-right {
+        text-align: justify;
+      }
+      .container-card-text-right h2 {
+        text-align: center;
+        font-size: 18px;
+      }
+  
+      .container-card-img {
+        text-align: center;
+      }
+  
+    } 
+
+    @media (max-width: 850px) {
+
+      .container-moyens-title {
+        width: 100%;
+      }
+  
+      .cercle-moyen {
+        display: none;
+      }
+    }  
+
+  
+    @media (max-width: 1179px) {
+      .vertical-line{
+        display: none;
+      }
+
+      .big-container-card-left {
+        width: 400px;
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        margin: 0;
+      }
+
+      .big-container-card-right {
+        width: 400px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+      } 
+
+      .container-card-text-left {
+        padding: 0 5% 0 5%;
+        text-align: justify;
+      }
+
+      .container-card-text-left h2 {
+        text-align: center;
+      }
+
+      .container-card-text-right {
+        padding: 0 5% 0 5%;
+        text-align: justify;
+      }
+
+      .container-card-text-right h2 {
+        text-align: center;
+      }
+
+      .container-card-img {
+        text-align: center;
+      }
+    }
   
