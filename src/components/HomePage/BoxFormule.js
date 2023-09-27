@@ -4,7 +4,7 @@ import MoreInfo from "./MoreInfo";
 function BoxFormule(props) {
     return (
         <div className="container-formule-item">
-            <img src={props.urlImage} />
+            <img src={props.urlImage} alt="Formule"/>
             <h2>
                 {props.titleLine1} <br />
                 <span>
