@@ -131,46 +131,46 @@ function NotreLabo() {
                     <h2>NOS MÉTIERS</h2>
                     <div className='cercle-metier'></div>
                 </div>
-
-                {windowWidth >= 1179 ? (
-                    dataArray.map((item, index) => (
-                    <React.Fragment key={index}>
-                        <LateralIconDescription
-                        titleLine1={item.titleLine1}
-                        titleLine2={item.titleLine2}
-                        description={item.description}
-                        urlImage={item.urlImage}
-                        position={index % 2 === 0 ? "left" : "right"}
-                        />
-                        {index === dataArray.length - 1 ? "" : <span className='vertical-line'></span>}
-                    </React.Fragment>
-                    ))
-                ) : (
-                    <div {...swipeHandlers} className='container-carrousel'>
-                        <LateralIconDescription
-                            titleLine1={dataArray[currentIndex].titleLine1}
-                            titleLine2={dataArray[currentIndex].titleLine2}
-                            description={dataArray[currentIndex].description}
-                            urlImage={dataArray[currentIndex].urlImage}
-                            position={currentIndex % 2 === 0 ? "left" : "right"}
-                        />
-                        <button onClick={handlePrev} disabled={currentIndex === 0} className='btn-carrousel-left'>
-                            <img src={arrowLeft} alt='arrow left' />
-                        </button>
-                        <button onClick={handleNext} disabled={currentIndex === dataArray.length - 1} className='btn-carrousel-right'>
-                            <img src={arrowRight} alt='arrow right' />
-                        </button>
-                        <div className='pagination'>
-                            {indicators.map((i) => (
-                            <div
-                                key={i}
-                                className={`indicator ${i === currentIndex ? 'active' : ''}`}
-                                onClick={() => setCurrentIndex(i)}
-                            ></div>
-                            ))}
+                
+                    {windowWidth >= 1179 ? (
+                        dataArray.map((item, index) => (
+                        <React.Fragment key={index}>
+                            <LateralIconDescription
+                            titleLine1={item.titleLine1}
+                            titleLine2={item.titleLine2}
+                            description={item.description}
+                            urlImage={item.urlImage}
+                            position={index % 2 === 0 ? "left" : "right"}
+                            />
+                            {index === dataArray.length - 1 ? "" : <span className='vertical-line'></span>}
+                        </React.Fragment>
+                        ))
+                    ) : (
+                        <div {...swipeHandlers} className='container-carrousel'>
+                            <LateralIconDescription
+                                titleLine1={dataArray[currentIndex].titleLine1}
+                                titleLine2={dataArray[currentIndex].titleLine2}
+                                description={dataArray[currentIndex].description}
+                                urlImage={dataArray[currentIndex].urlImage}
+                                position={currentIndex % 2 === 0 ? "left" : "right"}
+                            />
+                            <button onClick={handlePrev} disabled={currentIndex === 0} className='btn-carrousel-left'>
+                                <img src={arrowLeft} alt='arrow left' />
+                            </button>
+                            <button onClick={handleNext} disabled={currentIndex === dataArray.length - 1} className='btn-carrousel-right'>
+                                <img src={arrowRight} alt='arrow right' />
+                            </button>
+                            <div className='pagination'>
+                                {indicators.map((i) => (
+                                <div
+                                    key={i}
+                                    className={`indicator ${i === currentIndex ? 'active' : ''}`}
+                                    onClick={() => setCurrentIndex(i)}
+                                ></div>
+                                ))}
+                            </div>
                         </div>
-                    </div>
-                )}
+                    )}
 
 
             </div>
