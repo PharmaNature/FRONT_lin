@@ -96,14 +96,39 @@ function NotreLabo() {
     const handleNext = () => {
         if (currentIndex < dataArray.length - 1) {
           setCurrentIndex(currentIndex + 1);
-        }
+        } else {
+            setCurrentIndex(0);
+          }
       };
-    
+
       const handlePrev = () => {
         if (currentIndex > 0) {
           setCurrentIndex(currentIndex - 1);
-        }
+        } else {
+            setCurrentIndex(dataArray.length - 1);
+          }
       };
+
+      const handleNext2 = () => {
+        if (currentIndex < dataMoyen.length - 1) {
+          setCurrentIndex(currentIndex + 1);
+        } else {
+            setCurrentIndex(0);
+          }
+      };
+
+      const handlePrev2 = () => {
+        if (currentIndex > 0) {
+          setCurrentIndex(currentIndex - 1);
+        } else {
+            setCurrentIndex(dataMoyen.length - 1);
+          }
+      };
+
+      const swipeHandlers2 = useSwipeable({
+        onSwipedLeft: handleNext2,
+        onSwipedRight: handlePrev2,
+      });
 
       const swipeHandlers = useSwipeable({
         onSwipedLeft: handleNext,
@@ -154,10 +179,10 @@ function NotreLabo() {
                                 urlImage={dataArray[currentIndex].urlImage}
                                 position={currentIndex % 2 === 0 ? "left" : "right"}
                             />
-                            <button onClick={handlePrev} disabled={currentIndex === 0} className='btn-carrousel-left'>
+                            <button onClick={handlePrev} className='btn-carrousel-left'>
                                 <img src={arrowLeft} alt='arrow left' />
                             </button>
-                            <button onClick={handleNext} disabled={currentIndex === dataArray.length - 1} className='btn-carrousel-right'>
+                            <button onClick={handleNext} className='btn-carrousel-right'>
                                 <img src={arrowRight} alt='arrow right' />
                             </button>
                             <div className='pagination'>
@@ -184,9 +209,20 @@ function NotreLabo() {
                     <div className='cercle-moyen'></div>
                 </div>
                 <div className='container-moyen-items'>
-                    {Object.keys(dataMoyen).map((id) => (
-                        <MoyenCard key={id} dataMoyenCard={dataMoyen[id]} />
-                    ))}
+                    {windowWidth <= 420 || windowWidth >= 1179 ? (
+                        Object.keys(dataMoyen).map((id, index) => (
+                            <MoyenCard key={id} dataMoyenCard={dataMoyen[id]} />
+                        ))
+                    ) : (
+                        <div className='container-carrousel-moyen'>
+                            {Object.keys(dataMoyen).map((id, index) => (
+                                index++,
+                                // console.log(id),
+                                // console.log(index),
+                                <MoyenCard key={id} dataMoyenCard={dataMoyen[id]} />
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
