@@ -90,8 +90,10 @@ function FormuleBlanche() {
     { title1: 'GAMME FEMME', title2: 'VOIES RESPIRATOIRES ET IMMUNTE' },
   ];
 
-  //  Ajout du scroll horizontal
-const horizontalScroll  = windowWidth < 1100;
+  //  Ajout du scroll horizontal AreaOfExpertise
+const horizontalScroll  = windowWidth < 1500;
+//  Ajout scroll horizontal en mobile Forme Galenique
+const galeniqueScroll = windowWidth <767;
 
   return (
       <div className='big-container'>
@@ -121,7 +123,7 @@ const horizontalScroll  = windowWidth < 1100;
           </div>
           </div>
          
-        
+      
           <div className='container-process-formes-condition'> 
 
            <div className='container-process'>
@@ -146,19 +148,18 @@ const horizontalScroll  = windowWidth < 1100;
                 <h2> NOS DIVERSES <br/><span className='title-bold'>FORMES GALÉNIQUES...</span></h2>
               </div>
 
-              <div className='galenique'>
-
+             <div className='galenique'>
               {gData.map((item, index) => (
           <GaleniqueCard key={index} img={item.img} alt={item.alt} title={item.title} text={item.text} />
         ))}
               </div>
            </div>
-          
+            
            <span className='vertical-line'></span>
- 
+  
            <div className='container-condition'>
             <div className='container-condition-title'>
-              <h2>ET NOTRE CHOIX <br/><span className='title-bold'>DE CONDITIONNEMENT </span></h2>
+              <h2>ET NOS CHOIX <br/><span className='title-bold'>DE CONDITIONNEMENT </span></h2>
               <h3>(SOUS DIVERS FORMATS)</h3>
             </div>
             
@@ -171,12 +172,11 @@ const horizontalScroll  = windowWidth < 1100;
           </div>
              ))}
             
-               
 
             </div>
 
            </div>
- 
+  
            <div className='AreaOfExpertise'>
             <div className='expertise-title'>
               <h2> NOS <br/> <span className='title-bold' > DOMAINES <br/> D'APPLICATIONS</span></h2>
