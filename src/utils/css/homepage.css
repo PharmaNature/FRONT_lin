@@ -151,6 +151,7 @@
 }
 
 .container-nos-formules {
+  width: 100%;
   background-color: #EBEBE9;
   display: flex;
   flex-direction: row;

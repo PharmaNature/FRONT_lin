@@ -150,7 +150,7 @@ const swipeHandlers = useSwipeable({
 
            <div className='container-process'>
 
-             <span className='vertical-line'></span>
+             <span className='vertical-line-fb'></span>
 
             <div className='container-process-title'>
               <h2> NOS PROCESSUS DE FABRICATION</h2>
@@ -160,7 +160,7 @@ const swipeHandlers = useSwipeable({
              <h1>CAROUSEL</h1>
             </div>
 
-           <span className='vertical-line'></span>
+           <span className='vertical-line-fb'></span>
 
             </div>
 
@@ -204,7 +204,7 @@ const swipeHandlers = useSwipeable({
 
            </div>
             
-           <span className='vertical-line'></span>
+           <span className='vertical-line-fb'></span>
   
            <div className='container-condition'>
             <div className='container-condition-title'>

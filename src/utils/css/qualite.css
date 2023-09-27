@@ -132,6 +132,24 @@
     width: 150px;
   }
 
+  @media (max-width: 850px) {
+    .container-service-qualite img {
+      margin: 15px 100px 15px 100px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .container-service-qualite img {
+      margin: 15px 50px 15px 50px;
+    }
+  }
+
+  @media (max-width: 506px) {
+    .container-service-qualite img {
+      width: 75px;
+    }
+  }
+
   @media (max-width: 1000px) {
     .big-container-card-qualite {
       display: flex;
