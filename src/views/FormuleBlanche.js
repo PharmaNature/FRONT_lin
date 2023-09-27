@@ -172,7 +172,6 @@ const galeniqueScroll = windowWidth <767;
           </div>
              ))}
             
-               
 
             </div>
 

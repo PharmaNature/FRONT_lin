@@ -119,6 +119,11 @@ h2.NotreCatalogue {
 
 
   /* NOS DIVERSES FORMES GALENIQUES */
+  .container-formes {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
 .container-process-formes-condition{
   width: 100%;
   text-align: center;
@@ -179,6 +184,10 @@ h2.NotreCatalogue {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Pour masquer la scrollbar dans Mozilla Firefox */
+  scrollbar-width: none;
+  scrollbar-color: transparent transparent;
+
 }
 
   .expertise-title h2 {
@@ -207,11 +216,7 @@ h2.NotreCatalogue {
   overflow-x: auto; /* Enable horizontal scrolling */
   white-space: nowrap; /* Prevent line breaks for child elements */
 }
-.galenique-scroll {
-  overflow-x: auto; 
-  white-space: nowrap;
 
-}
 /* Pour masquer la scrollbar dans Google Chrome et Microsoft Edge (basé sur Chromium) */
 ::-webkit-scrollbar {
   display: none;
@@ -221,9 +226,6 @@ h2.NotreCatalogue {
   display: none;
 }
 
-/* Pour masquer la scrollbar dans Mozilla Firefox */
-scrollbar-width: none;
-scrollbar-color: transparent transparent;
 
 /* Pour masquer la scrollbar dans Safari */
 ::-webkit-scrollbar {
@@ -234,8 +236,6 @@ scrollbar-color: transparent transparent;
 
 @media screen and (min-width: 768px) and (max-width: 1180px) {
 
-
-  
 .sub-container {
   margin-top: 10%;
   width: 100%;
@@ -278,14 +278,33 @@ h1.packaging {
   width: 80%;
 }
 
+
 }
 @media screen and (min-width: 1500px) {
   .expertise-list {
     justify-content: center;
   }
 }
+
+@media screen and (min-width: 1181px) and (max-width: 1478px) {
+  .galenique {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14%;
+    flex-wrap: wrap;
+}
+.container-formes-title {
+  width: 100%;
+}
+.container-formes {
+  align-items: center;
+}
+
+}
 /* FORMAT MOBILE */
-@media screen and (mAX-width: 767px){
+@media screen and (max-width: 767px){
   .sub-container {
     margin-top: 20%;
     flex-direction: column;
@@ -377,5 +396,15 @@ h2.NotreCatalogue {
 }
   .expertise-list {
     width: 80%;
+  }
+}
+@media screen and (min-width: 411px) and (max-width: 588px){
+  .container-condition-item{
+    width: 80%;
+  }
+}
+@media screen and (min-width: 589px) and (max-width: 767px){
+  .container-condition-item{
+    width: 60%;
   }
 }
