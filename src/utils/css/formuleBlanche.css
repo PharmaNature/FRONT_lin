@@ -143,11 +143,18 @@ h2.NotreCatalogue {
   gap: 6%;
   flex-wrap: wrap;
 }
+.galenique.scroll-horizontal {
+  /* Set the container's width and allow horizontal scrolling */
+  overflow-x: scroll;
+  
+
+  /* Optionally, you can define a max-height, overflow-y, or other styles as needed */
+}
 .g-card {
   width: 284px;
- text-align: justify;
+  text-align: justify;
+  height: 450px;
 }
-
   /* NOTRE CHOIX DE CONDITIONNEMENT */
 .container-condition-item {
   width: 100%;
