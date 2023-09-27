@@ -206,8 +206,7 @@
 }
 
 
-
-@media (max-width: 850px) {
+@media (max-width: 1179px) {
 
   .container-on-video {
     display: none;
@@ -236,7 +235,7 @@
   }
 
   .container-item-intervention {
-    display: none;
+    position: relative;
   }
 
   .container-nos-formules {
@@ -253,6 +252,47 @@
   .container-formule-item img {
     width: 230px;
     top: -20%;
+  }
+
+  .btn-metier-left {
+    position: absolute;
+    left: 5%;
+    top: 40%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn-metier-right {
+    position: absolute;
+    right: 5%;
+    top: 40%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .pagination {
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .indicator.active {
+    background-color: #000;
   }
 
 }

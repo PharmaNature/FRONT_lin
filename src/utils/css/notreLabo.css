@@ -166,6 +166,7 @@
   .container-moyen {
     background-color: #EBEBE9;
     padding-top: 2%;
+    width: 100%;
   }
 
   .cercle-moyen {
@@ -197,7 +198,7 @@
 
   .moyen-item h3 {
     font-weight: 800;
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .moyen-item h4 {
@@ -226,6 +227,7 @@
     top: 40%;
     background-color: transparent;
     border: none;
+    cursor: pointer;
   }
 
   .btn-carrousel-right {
@@ -234,6 +236,7 @@
     top: 40%;
     background-color: transparent;
     border: none;
+    cursor: pointer;
   }
 
   .pagination {
@@ -350,6 +353,32 @@
 
       .container-card-img {
         text-align: center;
+      }
+
+    }
+
+    @media (min-width: 420px) and (max-width: 1179px) {
+      .container-carrousel-moyen {
+        display: flex;
+        gap: 5%;
+      }
+      
+      
+    }
+
+    @media (max-width: 420px) {
+      .container-moyen-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .moyen-item {
+        width: 90%;
+      }
+
+      .moyen-item h3 {
+        font-size: 15px;
       }
     }
   

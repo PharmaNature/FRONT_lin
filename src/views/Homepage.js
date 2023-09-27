@@ -5,6 +5,9 @@ import ResponsiveSize from '../utils/other/responsiveSize'
 import IconDescription from '../components/HomePage/IconDescription'
 import BoxFormule from '../components/HomePage/BoxFormule';
 import MoreInfo from '../components/HomePage/MoreInfo';
+import { useSwipeable } from 'react-swipeable';
+import arrowLeft from '../assets/pictogrammes/arrow_left.svg'
+import arrowRight from '../assets/pictogrammes/arrow_right.svg'
 
 function Homepage() { 
 
@@ -23,6 +26,8 @@ function Homepage() {
   }, []);
 
   const videoChoice = videoResponsive(windowWidth);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const iconData = {
     1 : {
@@ -89,6 +94,24 @@ function Homepage() {
     }
   }
 
+  const handleNext = () => {
+    if (currentIndex < dataArray.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    } else {
+        setCurrentIndex(0);
+      }
+  };
+
+  const handlePrev = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    } else {
+        setCurrentIndex(dataArray.length - 1);
+      }
+  };
+
+  const dataArray = Object.values(dataMetier);
+
   return (
       <div className='big-container'>
         <div className='container-video'>
@@ -141,11 +164,26 @@ function Homepage() {
               <h2 className='intervention-title'>
                 NOS INTERVENTIONS
               </h2>
-            <div className='container-item-intervention'>
-              {Object.values(dataMetier).map((item, index) => (
-                <IconDescription key={index} imageURL={item['urlImage']} title1={item['titleLine1']} title2={item['titleLine2']} />
-              ))}
-            </div>
+
+            {windowWidth >= 1179 ? (
+                      <div className='container-item-intervention'>
+                        {Object.values(dataMetier).map((item, index) => (
+                          <IconDescription key={index} imageURL={item['urlImage']} title1={item['titleLine1']} title2={item['titleLine2']} />
+                        ))}
+                      </div>
+                    ) : (
+                      <div {...useSwipeable} className='container-item-intervention'>
+                        <IconDescription key={currentIndex} imageURL={dataArray[currentIndex].urlImage} title1={dataArray[currentIndex].titleLine1} title2={dataArray[currentIndex].titleLine2} />
+                        <button onClick={handlePrev} className='btn-metier-left'>
+                            <img src={arrowLeft} alt='arrow left' />
+                        </button>
+                        <button onClick={handleNext} className='btn-metier-right'>
+                            <img src={arrowRight} alt='arrow right' />
+                        </button>
+                        
+                  </div>
+                    )}
+
         </div>
 
         <div className='container-nos-formules'>
