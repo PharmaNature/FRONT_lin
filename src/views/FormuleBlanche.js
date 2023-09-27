@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react'; 
+import { useSwipeable } from 'react-swipeable';
 import '../utils/css/formuleBlanche.css';
 import ResponsiveSize from '../utils/other/responsiveSize';
 import GaleniqueCard from '../components/Formules/GaleniqueCard';
@@ -93,7 +94,28 @@ function FormuleBlanche() {
   //  Ajout du scroll horizontal AreaOfExpertise
 const horizontalScroll  = windowWidth < 1500;
 //  Ajout scroll horizontal en mobile Forme Galenique
-const galeniqueScroll = windowWidth <767;
+const isMobile = windowWidth < 767;
+
+const [currentIndex, setCurrentIndex] = useState(0);
+
+
+const handleNext = () => {
+  if (currentIndex < gData.length - 1) {
+    setCurrentIndex(currentIndex + 1);
+  }
+};
+
+const handlePrev = () => {
+  if (currentIndex > 0) {
+    setCurrentIndex(currentIndex - 1);
+  }
+};
+
+const swipeHandlers = useSwipeable({
+  onSwipedLeft: handleNext,
+  onSwipedRight: handlePrev,
+});
+
 
   return (
       <div className='big-container'>
@@ -147,12 +169,39 @@ const galeniqueScroll = windowWidth <767;
               <div className='container-formes-title'>
                 <h2> NOS DIVERSES <br/><span className='title-bold'>FORMES GALÉNIQUES...</span></h2>
               </div>
+            
 
-             <div className='galenique'>
-              {gData.map((item, index) => (
-          <GaleniqueCard key={index} img={item.img} alt={item.alt} title={item.title} text={item.text} />
+            {windowWidth >= 768 ? (
+        // Afficher toutes les formes galeniques
+        <div className='galenique'  >
+        {gData.map((item, index) => (
+          <GaleniqueCard
+            key={index}
+            img={item.img}
+            alt={item.alt}
+            title={item.title}
+            text={item.text} 
+            />
+          
         ))}
-              </div>
+  </div>
+      ) : (
+        // Afficher une seule forme à la fois avec des flèches
+        <div {...swipeHandlers}>
+{/* 
+          <button onClick={handlePrev} disabled={currentIndex === 0}>Précédent</button>
+          <button onClick={handleNext} disabled={currentIndex === gData.length - 1}>Suivant</button> */}
+             <GaleniqueCard
+            img={gData[currentIndex].img}
+            alt={gData[currentIndex].alt}
+            title={gData[currentIndex].title}
+            text={gData[currentIndex].text} 
+            />
+        </div>
+      )}
+
+
+
            </div>
             
            <span className='vertical-line'></span>

@@ -1,6 +1,8 @@
 import React from 'react';
 
-function GaleniqueCard({ img, alt, title, text }) {
+
+function GaleniqueCard({ img, alt, title, text}) {
+
   return (
     <div className='g-card'>
       <div className='card-content'>
@@ -13,4 +15,3 @@ function GaleniqueCard({ img, alt, title, text }) {
 }
 
 export default GaleniqueCard;
-
