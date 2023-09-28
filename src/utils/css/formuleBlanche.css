@@ -39,7 +39,7 @@
   font-size: 4em;
 }
 
-/* VOTRE FORMULE */
+/* NOTRE FORMULE */
 
 .sub-container {
   width: 100%;
@@ -162,7 +162,7 @@ h2.NotreCatalogue {
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   font-weight: bold;
-  line-height: 65px;
+  line-height: 45px;
 }
 .btn-pcarousel-left {
   position: absolute;
@@ -170,6 +170,7 @@ h2.NotreCatalogue {
     top: 12%;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 .btn-pcarousel-right {
   position: absolute;
@@ -177,6 +178,7 @@ h2.NotreCatalogue {
     top: 12%;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 /* NOS DIVERSES FORMES GALENIQUES */
 .container-formes {
@@ -522,21 +524,6 @@ h2.NotreCatalogue {
     background-color: transparent;
     border: none;
   }
-/* 
-  .indicator {
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .indicator.active {
-    background-color: #000;
-  } */
-
   .AreaOfExpertise {
     width: 100%;
   }
@@ -570,6 +557,9 @@ h2.NotreCatalogue {
     font-size: 23px;
     line-height: 45px;
   }
+  .g-card {
+    width: 265px;
+}
 }
 @media screen and (min-width: 501px)and (max-width: 686px) {
   .container-process-carousel {

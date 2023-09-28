@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import '../utils/css/formuleBlanche.css';
 import ResponsiveSize from '../utils/other/responsiveSize';
@@ -20,6 +20,8 @@ import flacon from '../assets/images/marque-blanche/flacon.png';
 import pot from '../assets/images/marque-blanche/pot 2.png';
 import arrowLeft from '../assets/pictogrammes/arrow_left.svg'
 import arrowRight from '../assets/pictogrammes/arrow_right.svg'
+import arrowLeftMb from '../assets/images/marque-blanche/arrow_left_marque_blanche.svg'
+import arrowRightMb from '../assets/images/marque-blanche/arrow_right_marque_blanche.svg'
 import production from '../assets/pictogrammes/formule-blanche-production.png';
 import envoi from '../assets/pictogrammes/formule-blanche-envoi.png';
 import condition from '../assets/pictogrammes/formule-blanche-conditionnement.png';
@@ -58,17 +60,17 @@ function FormuleBlanche(props) {
     },
     {
       img: production,
-      alt: 'Forme galénique gélule',
+      alt: 'Production',
       title: 'PRODUCTION',
     },
     {
       img: condition,
-      alt: 'Capsule',
+      alt: 'Conditionnement personnalisé',
       title: 'CONDITIONNEMENT<br />PERSONNALISÉ',
     },
     {
       img: envoi,
-      alt: 'Liquide',
+      alt: 'Envoi du produit',
       title: 'ENVOI<br />PRODUIT',
     },
   ]
@@ -118,6 +120,7 @@ function FormuleBlanche(props) {
       img: pot,
     }
   ]
+
   const textGroups = [
     { title1: 'BEAUTÉ', title2: 'CANNA' },
     { title1: 'DOULEURS', title2: 'CIRCULATION' },
@@ -129,12 +132,12 @@ function FormuleBlanche(props) {
   ];
 
   //  Ajout du scroll horizontal AreaOfExpertise
+
   const horizontalScroll = windowWidth < 1500;
+
   //  Ajout scroll horizontal en mobile Forme Galenique
 
-
   const [currentIndex, setCurrentIndex] = useState(0);
-
 
   const handleNext = () => {
     if (currentIndex < gData.length - 1) {
@@ -157,16 +160,7 @@ function FormuleBlanche(props) {
     onSwipedRight: handlePrev,
   });
 
-  
-
-
-
-
-
-
-
   const [currentPIndex, setCurrentPIndex] = useState(0);
-
 
   const handleNextp = () => {
     if (currentPIndex < pData.length - 1) {
@@ -218,7 +212,6 @@ function FormuleBlanche(props) {
         </div>
       </div>
 
-
       <div className='container-process-formes-condition'>
 
         <div className='container-process'>
@@ -231,17 +224,18 @@ function FormuleBlanche(props) {
           <div {...swipeHandlersP} className='container-process-carousel'>
 
             <ProcessCard
+               key={currentPIndex}
+              index={currentPIndex}
               img={pData[currentPIndex].img}
               alt={pData[currentPIndex].alt}
               title={pData[currentPIndex].title}
             />
             <button onClick={handlePrevp} className='btn-pcarousel-left'>
-              <img src={arrowLeft} alt='arrow left' />
+              <img src={arrowLeftMb} alt='arrow left' />
             </button>
             <button onClick={handleNextp} className='btn-pcarousel-right'>
-              <img src={arrowRight} alt='arrow right' />
+              <img src={arrowRightMb} alt='arrow right' />
             </button>
-
 
           </div>
           <span className='vertical-line-fb'></span>
@@ -253,7 +247,6 @@ function FormuleBlanche(props) {
           <div className='container-formes-title'>
             <h2> NOS DIVERSES <br /><span className='title-bold'>FORMES GALÉNIQUES...</span></h2>
           </div>
-
 
           {windowWidth >= 768 ? (
             // Afficher toutes les formes galeniques
@@ -286,7 +279,6 @@ function FormuleBlanche(props) {
                 <img src={arrowRight} alt='arrow right' />
               </button>
 
-
             </div>
           )}
 
@@ -308,7 +300,6 @@ function FormuleBlanche(props) {
 
               </div>
             ))}
-
 
           </div>
 
@@ -332,7 +323,6 @@ function FormuleBlanche(props) {
             ))}
           </div>
         </div>
-
 
       </div>
 
