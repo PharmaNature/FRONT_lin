@@ -229,6 +229,7 @@ function FormuleBlanche(props) {
               img={pData[currentPIndex].img}
               alt={pData[currentPIndex].alt}
               title={pData[currentPIndex].title}
+              couleur={"rose"}
             />
             <button onClick={handlePrevp} className='btn-pcarousel-left'>
               <img src={arrowLeftMb} alt='arrow left' />
