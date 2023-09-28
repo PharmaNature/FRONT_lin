@@ -20,6 +20,8 @@ import flacon from '../assets/images/marque-blanche/flacon.png';
 import pot from '../assets/images/marque-blanche/pot 2.png';
 import arrowLeft from '../assets/pictogrammes/arrow_left.svg'
 import arrowRight from '../assets/pictogrammes/arrow_right.svg'
+import arrowLeftMesure from '../assets/images/formule-sur-mesure/arrow_left_formule_sur_mesure.svg'
+import arrowRightMesure from '../assets/images/formule-sur-mesure/arrow_right_formule_sur_mesure.svg'
 import cCharges from '../assets/pictogrammes/cahier-des-charges.png';
 import production from '../assets/pictogrammes/production.png';
 import dev from '../assets/pictogrammes/developpement.png';
@@ -53,6 +55,7 @@ function FormuleSurMesure(props) {
       img: cCharges,
       alt: 'Cahier des Charges',
       title: "CAHIER <br /> DES CHARGES",
+      
     },
     {
         img: dev,
@@ -226,15 +229,18 @@ function FormuleSurMesure(props) {
           <div {...swipeHandlersP} className='container-process-carousel'>
 
               <ProcessCard
-              img={pData[currentPIndex].img}
-              alt={pData[currentPIndex].alt}
-              title={pData[currentPIndex].title}
+             key={currentPIndex}
+             index={currentPIndex}
+             img={pData[currentPIndex].img}
+             alt={pData[currentPIndex].alt}
+             title={pData[currentPIndex].title}
+             data-index={`${currentPIndex + 1}`}
             />
             <button onClick={handlePrevp} className='btn-pcarousel-left'>
-              <img src={arrowLeft} alt='arrow left' />
+              <img src={arrowLeftMesure} alt='arrow left' />
             </button>
             <button onClick={handleNextp} className='btn-pcarousel-right'>
-              <img src={arrowRight} alt='arrow right' />
+              <img src={arrowRightMesure} alt='arrow right' />
             </button>
 
           </div>

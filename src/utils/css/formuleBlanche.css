@@ -162,7 +162,7 @@ h2.NotreCatalogue {
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   font-weight: bold;
-  line-height: 65px;
+  line-height: 45px;
 }
 .btn-pcarousel-left {
   position: absolute;
@@ -557,6 +557,9 @@ h2.NotreCatalogue {
     font-size: 23px;
     line-height: 45px;
   }
+  .g-card {
+    width: 265px;
+}
 }
 @media screen and (min-width: 501px)and (max-width: 686px) {
   .container-process-carousel {

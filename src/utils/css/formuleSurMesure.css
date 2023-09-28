@@ -63,4 +63,30 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
   }
+
+  .index {
+    position: absolute;
+    left: 37%;
+    font-size: 23px;
+    font-family: montserrat;
+    font-weight: bold;
+    content: attr(data-index) '.';
+}
   
+@media screen and (max-width: 1000px) {
+  .index{
+    left: 20%;
+  }
+}
+ 
+@media screen and (min-width: 1001px) and (max-width: 1300px) {
+  .index{
+    left: 25%;
+  }
+}
+ 
+@media screen and (min-width: 1301px) and (max-width: 1600px) {
+  .index{
+    left: 28%;
+  }
+}

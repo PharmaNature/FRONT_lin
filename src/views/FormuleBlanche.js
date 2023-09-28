@@ -20,6 +20,8 @@ import flacon from '../assets/images/marque-blanche/flacon.png';
 import pot from '../assets/images/marque-blanche/pot 2.png';
 import arrowLeft from '../assets/pictogrammes/arrow_left.svg'
 import arrowRight from '../assets/pictogrammes/arrow_right.svg'
+import arrowLeftMb from '../assets/images/marque-blanche/arrow_left_marque_blanche.svg'
+import arrowRightMb from '../assets/images/marque-blanche/arrow_right_marque_blanche.svg'
 import production from '../assets/pictogrammes/formule-blanche-production.png';
 import envoi from '../assets/pictogrammes/formule-blanche-envoi.png';
 import condition from '../assets/pictogrammes/formule-blanche-conditionnement.png';
@@ -222,15 +224,17 @@ function FormuleBlanche(props) {
           <div {...swipeHandlersP} className='container-process-carousel'>
 
             <ProcessCard
+               key={currentPIndex}
+              index={currentPIndex}
               img={pData[currentPIndex].img}
               alt={pData[currentPIndex].alt}
               title={pData[currentPIndex].title}
             />
             <button onClick={handlePrevp} className='btn-pcarousel-left'>
-              <img src={arrowLeft} alt='arrow left' />
+              <img src={arrowLeftMb} alt='arrow left' />
             </button>
             <button onClick={handleNextp} className='btn-pcarousel-right'>
-              <img src={arrowRight} alt='arrow right' />
+              <img src={arrowRightMb} alt='arrow right' />
             </button>
 
           </div>
