@@ -114,8 +114,9 @@
     height: 150px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
+    margin-top: 1%;
   }
 
   .container-service-qualite {

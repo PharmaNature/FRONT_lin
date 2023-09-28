@@ -3,7 +3,10 @@ import '../utils/css/formuleSurMesure.css';
 import ResponsiveSize from '../utils/other/responsiveSize'
 import Introduction from '../components/global/Introduction'
 
-function FormuleSurMesure() {
+function FormuleSurMesure(props) {
+
+    document.title = props.pageName;
+
   const { chooseImage, chooseSizeTitle } = ResponsiveSize();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 

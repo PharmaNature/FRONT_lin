@@ -7,7 +7,10 @@ import BoxQualite from '../components/Qualite/BoxQualite'
 // Imports des images
 import formeGalenique from '../assets/images/qualite/formes-galeniques.png'
 
-function Qualite() {
+function Qualite(props) {
+
+    document.title = props.pageName;
+
   const { chooseImage, chooseSizeTitle } = ResponsiveSize();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 

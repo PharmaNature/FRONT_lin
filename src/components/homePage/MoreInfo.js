@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 function MoreInfo(props) {
   const myParagraphRef = useRef(null);
+  const lineRef = useRef(null);
   const [paragraphSize, setParagraphSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
@@ -23,27 +24,41 @@ function MoreInfo(props) {
     });
   };
 
+  const handleMouseEnter = () => {
+    if (lineRef.current) {
+      lineRef.current.style.strokeDashoffset = "0";
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (lineRef.current) {
+      lineRef.current.style.strokeDashoffset = "1000";
+    }
+  };
+
   return (
-    <Link className="link-more-info" to={props.link} onClick={scrollToTop}>
+    <Link
+      className="link-more-info"
+      to={props.link}
+      onClick={scrollToTop}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className="container-more-info">
-        <p
-          ref={myParagraphRef}
-          className="text"
-        >
+        <p ref={myParagraphRef} className="text">
           EN SAVOIR +
         </p>
         <div className="line-container">
-          <svg
-            width={lineLength}
-            xmlns="http://www.w3.org/2000/svg"
-          >
+          <svg width={lineLength} xmlns="http://www.w3.org/2000/svg">
             <line
+              ref={lineRef}
               x1={(paragraphSize.width - paragraphSize.width) / 2}
               y1="0"
               x2={(paragraphSize.width + paragraphSize.width * 3) / 2}
               y2="0"
               stroke="black"
               strokeWidth="2"
+              className="line-svg"
             />
           </svg>
         </div>

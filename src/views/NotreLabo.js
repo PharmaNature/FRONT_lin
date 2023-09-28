@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import '../utils/css/notreLabo.css';
-import Row from '../components/global/Row';
 import ResponsiveSize from '../utils/other/responsiveSize'
 import MoyenCard from '../components/NotreLaboratoire/BoxMethode';
 import Introduction from '../components/global/Introduction';
@@ -71,7 +70,10 @@ const dataMoyen = {
 }
 
 
-function NotreLabo() {
+function NotreLabo(props) {
+
+    document.title = props.pageName;
+
     const { chooseImage, chooseSizeTitle } = ResponsiveSize();
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -108,27 +110,6 @@ function NotreLabo() {
             setCurrentIndex(dataArray.length - 1);
           }
       };
-
-      const handleNext2 = () => {
-        if (currentIndex < dataMoyen.length - 1) {
-          setCurrentIndex(currentIndex + 1);
-        } else {
-            setCurrentIndex(0);
-          }
-      };
-
-      const handlePrev2 = () => {
-        if (currentIndex > 0) {
-          setCurrentIndex(currentIndex - 1);
-        } else {
-            setCurrentIndex(dataMoyen.length - 1);
-          }
-      };
-
-      const swipeHandlers2 = useSwipeable({
-        onSwipedLeft: handleNext2,
-        onSwipedRight: handlePrev2,
-      });
 
       const swipeHandlers = useSwipeable({
         onSwipedLeft: handleNext,
@@ -209,20 +190,9 @@ function NotreLabo() {
                     <div className='cercle-moyen'></div>
                 </div>
                 <div className='container-moyen-items'>
-                    {windowWidth <= 420 || windowWidth >= 1179 ? (
-                        Object.keys(dataMoyen).map((id, index) => (
+                        {Object.keys(dataMoyen).map((id, index) => (
                             <MoyenCard key={id} dataMoyenCard={dataMoyen[id]} />
-                        ))
-                    ) : (
-                        <div className='container-carrousel-moyen'>
-                            {Object.keys(dataMoyen).map((id, index) => (
-                                index++,
-                                // console.log(id),
-                                // console.log(index),
-                                <MoyenCard key={id} dataMoyenCard={dataMoyen[id]} />
-                            ))}
-                        </div>
-                    )}
+                        ))}
                 </div>
             </div>
         </div>

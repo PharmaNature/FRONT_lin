@@ -9,7 +9,8 @@ import { useSwipeable } from 'react-swipeable';
 import arrowLeft from '../assets/pictogrammes/arrow_left.svg'
 import arrowRight from '../assets/pictogrammes/arrow_right.svg'
 
-function Homepage() { 
+function Homepage(props) { 
+  document.title = props.pageName;
 
   const { videoResponsive } = ResponsiveSize();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -142,7 +143,7 @@ function Homepage() {
                   Nous concevons nos produits sur l’alliance de deux éléments :
                   <br />
                   <br />
-                  • Les bienfaits offerts par la Nature
+                  • Les bienfaits offerts par la Nature.
                   <br />
                   • Les avancées pertinentes de la Science.
                 </div>
