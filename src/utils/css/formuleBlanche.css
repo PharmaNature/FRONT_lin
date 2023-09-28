@@ -170,6 +170,7 @@ h2.NotreCatalogue {
     top: 12%;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 .btn-pcarousel-right {
   position: absolute;
@@ -177,6 +178,7 @@ h2.NotreCatalogue {
     top: 12%;
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 /* NOS DIVERSES FORMES GALENIQUES */
 .container-formes {
@@ -522,21 +524,6 @@ h2.NotreCatalogue {
     background-color: transparent;
     border: none;
   }
-/* 
-  .indicator {
-    width: 10px;
-    height: 10px;
-    background-color: #ccc;
-    border-radius: 50%;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .indicator.active {
-    background-color: #000;
-  } */
-
   .AreaOfExpertise {
     width: 100%;
   }

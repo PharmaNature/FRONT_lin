@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import '../utils/css/formuleBlanche.css';
 import ResponsiveSize from '../utils/other/responsiveSize';
@@ -58,17 +58,17 @@ function FormuleBlanche(props) {
     },
     {
       img: production,
-      alt: 'Forme galénique gélule',
+      alt: 'Production',
       title: 'PRODUCTION',
     },
     {
       img: condition,
-      alt: 'Capsule',
+      alt: 'Conditionnement personnalisé',
       title: 'CONDITIONNEMENT<br />PERSONNALISÉ',
     },
     {
       img: envoi,
-      alt: 'Liquide',
+      alt: 'Envoi du produit',
       title: 'ENVOI<br />PRODUIT',
     },
   ]
@@ -118,6 +118,7 @@ function FormuleBlanche(props) {
       img: pot,
     }
   ]
+
   const textGroups = [
     { title1: 'BEAUTÉ', title2: 'CANNA' },
     { title1: 'DOULEURS', title2: 'CIRCULATION' },
@@ -129,12 +130,12 @@ function FormuleBlanche(props) {
   ];
 
   //  Ajout du scroll horizontal AreaOfExpertise
+
   const horizontalScroll = windowWidth < 1500;
+
   //  Ajout scroll horizontal en mobile Forme Galenique
 
-
   const [currentIndex, setCurrentIndex] = useState(0);
-
 
   const handleNext = () => {
     if (currentIndex < gData.length - 1) {
@@ -157,16 +158,7 @@ function FormuleBlanche(props) {
     onSwipedRight: handlePrev,
   });
 
-  
-
-
-
-
-
-
-
   const [currentPIndex, setCurrentPIndex] = useState(0);
-
 
   const handleNextp = () => {
     if (currentPIndex < pData.length - 1) {
@@ -218,7 +210,6 @@ function FormuleBlanche(props) {
         </div>
       </div>
 
-
       <div className='container-process-formes-condition'>
 
         <div className='container-process'>
@@ -242,7 +233,6 @@ function FormuleBlanche(props) {
               <img src={arrowRight} alt='arrow right' />
             </button>
 
-
           </div>
           <span className='vertical-line-fb'></span>
 
@@ -253,7 +243,6 @@ function FormuleBlanche(props) {
           <div className='container-formes-title'>
             <h2> NOS DIVERSES <br /><span className='title-bold'>FORMES GALÉNIQUES...</span></h2>
           </div>
-
 
           {windowWidth >= 768 ? (
             // Afficher toutes les formes galeniques
@@ -286,7 +275,6 @@ function FormuleBlanche(props) {
                 <img src={arrowRight} alt='arrow right' />
               </button>
 
-
             </div>
           )}
 
@@ -308,7 +296,6 @@ function FormuleBlanche(props) {
 
               </div>
             ))}
-
 
           </div>
 
@@ -332,7 +319,6 @@ function FormuleBlanche(props) {
             ))}
           </div>
         </div>
-
 
       </div>
 
