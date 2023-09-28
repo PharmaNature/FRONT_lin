@@ -67,11 +67,14 @@
   .index {
     position: absolute;
     left: 37%;
-    font-size: 23px;
+    font-size: 30px;
     font-family: montserrat;
     font-weight: bold;
-    content: attr(data-index) '.';
-}
+  }
+
+  .bleu {
+    color: #B9E8E8;
+  }
   
 @media screen and (max-width: 1000px) {
   .index{

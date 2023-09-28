@@ -311,6 +311,10 @@ h2.NotreCatalogue {
   width: 0;
 }
 
+.rose {
+  color: #D9C5C4;
+}
+
 /* FORMAT TABLETTE */
 
 @media screen and (min-width: 768px) and (max-width: 1180px) {
