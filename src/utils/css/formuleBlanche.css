@@ -363,6 +363,11 @@ h2.NotreCatalogue {
   }
 
 
+}@media screen and (min-width: 1180px) and (max-width: 1300px){
+  .sub-container{
+    flex-direction: column;
+  }
+
 }
 
 @media screen and (min-width: 1500px) {
@@ -517,7 +522,7 @@ h2.NotreCatalogue {
     background-color: transparent;
     border: none;
   }
-
+/* 
   .indicator {
     width: 10px;
     height: 10px;
@@ -530,7 +535,7 @@ h2.NotreCatalogue {
 
   .indicator.active {
     background-color: #000;
-  }
+  } */
 
   .AreaOfExpertise {
     width: 100%;
