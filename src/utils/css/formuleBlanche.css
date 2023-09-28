@@ -192,6 +192,7 @@ h2.NotreCatalogue {
 }
 
 .container-formes-title h2 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 45px;
   font-weight: 100;
 }
@@ -206,10 +207,7 @@ h2.NotreCatalogue {
 }
 
 .galenique.scroll-horizontal {
-
   overflow-x: scroll;
-
-
 }
 
 .g-card {
@@ -219,6 +217,7 @@ h2.NotreCatalogue {
 }
 
 /* NOTRE CHOIX DE CONDITIONNEMENT */
+
 .container-condition-item {
   width: 100%;
   display: flex;
@@ -241,6 +240,7 @@ h2.NotreCatalogue {
 }
 
 .container-condition-title h2 {
+  font-family: 'Montserrat', sans-serif;
   font-size: 50px;
   font-weight: 100;
 }
@@ -554,5 +554,20 @@ h2.NotreCatalogue {
 @media screen and (min-width: 589px) and (max-width: 767px) {
   .container-condition-item {
     width: 60%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .container-process-carousel {
+    width: 94%;
+  }
+  .container-pCard h2 {
+    font-size: 23px;
+    line-height: 45px;
+  }
+}
+@media screen and (min-width: 501px)and (max-width: 686px) {
+  .container-process-carousel {
+    width: 70%;
   }
 }

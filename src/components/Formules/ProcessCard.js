@@ -7,7 +7,7 @@ function ProcessCard({ img, alt, title}) {
     <div className='p-card'>
       <div className='container-pCard'>
         <img src={img} alt={alt} />
-        <h2>{title}</h2>
+        <h2 dangerouslySetInnerHTML={{ __html: title }} />
       </div>
     </div>
   );

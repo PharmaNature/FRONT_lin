@@ -51,7 +51,7 @@ function FormuleBlanche() {
     {
       img: formulation,
       alt: 'Formule standard',
-      title: "CHOIX D'UNE FORMULE STANDARD",
+      title: "CHOIX D'UNE <br /> FORMULE STANDARD",
     },
     {
       img: production,
@@ -61,12 +61,12 @@ function FormuleBlanche() {
     {
       img: condition,
       alt: 'Capsule',
-      title: 'CONDITIONNEMENT PERSONNALISÉ',
+      title: 'CONDITIONNEMENT<br />PERSONNALISÉ',
     },
     {
       img: envoi,
       alt: 'Liquide',
-      title: 'ENVOI PRODUIT',
+      title: 'ENVOI<br />PRODUIT',
     },
   ]
 
