@@ -24,11 +24,50 @@ function ContactForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form data submitted:', formData);
-    // Ajout ici  pour envoyer le formulaire, vers un backend ou une API.
+  
+    // Préparation des données pour la requête POST
+    const postData = {
+      to: 'cgras@pharmanature.fr', // Remplacez par l'adresse e-mail de destination
+      subject: formData.subject,
+      text: `Nom: ${formData.lastname}\nPrénom: ${formData.name}\nSociété: ${formData.company}\nPays: ${formData.country}\nTéléphone: ${formData.phone}\nEmail: ${formData.email}\nMessage: ${formData.message}`
+    };
+  
+    try {
+      const response = await fetch('http://localhost:5000/envoyer-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(postData),
+      });
+  
+      switch (response.status) {
+        case 200:
+          console.log('E-mail envoyé avec succès.');
+          // Réinitialisez le formulaire ou effectuez toute autre action souhaitée après l'envoi réussi.
+          break;
+        case 400:
+          console.error('Erreur de validation des données.');
+          // Gérer les erreurs de validation des données ici, par exemple, si le serveur renvoie un 400 Bad Request.
+          break;
+        case 500:
+          console.error('Erreur interne du serveur.');
+          // Gérer les erreurs internes du serveur ici, par exemple, si le serveur renvoie un 500 Internal Server Error.
+          break;
+        default:
+          console.error('Erreur inattendue lors de l\'envoi de l\'e-mail.');
+          // Gérer les autres erreurs inattendues ici.
+          break;
+      }
+    } catch (error) {
+      console.error('Erreur réseau lors de l\'envoi de l\'e-mail :', error);
+      // Gérer les erreurs de réseau ici, par exemple, si la connexion au serveur a échoué.
+    }
   };
+  
+  
 
   return (
     <div>
