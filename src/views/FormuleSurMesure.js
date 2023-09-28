@@ -234,7 +234,6 @@ function FormuleSurMesure(props) {
              img={pData[currentPIndex].img}
              alt={pData[currentPIndex].alt}
              title={pData[currentPIndex].title}
-             data-index={`${currentPIndex + 1}`}
             />
             <button onClick={handlePrevp} className='btn-pcarousel-left'>
               <img src={arrowLeftMesure} alt='arrow left' />
