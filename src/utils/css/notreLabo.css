@@ -82,7 +82,7 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 800;
       margin: 0 auto; 
-      padding: 8%;
+      padding: 4%;
     }
 
   .cercle-metier {
@@ -295,6 +295,20 @@
       .container-card-img {
         text-align: center;
       }
+
+      .container-moyen-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .moyen-item {
+        width: 90%;
+      }
+
+      .moyen-item h3 {
+        font-size: 15px;
+      }
   
     } 
 
@@ -306,6 +320,11 @@
   
       .cercle-moyen {
         display: none;
+      }
+
+      .container-history {
+        width: 91%;
+        padding: 0 2% 0 2%;
       }
     }  
 
@@ -355,18 +374,8 @@
         text-align: center;
       }
 
-    }
+      /* --------------------- */
 
-    @media (min-width: 420px) and (max-width: 1179px) {
-      .container-carrousel-moyen {
-        display: flex;
-        gap: 5%;
-      }
-      
-      
-    }
-
-    @media (max-width: 420px) {
       .container-moyen-items {
         display: flex;
         flex-direction: column;
@@ -377,8 +386,22 @@
         width: 90%;
       }
 
-      .moyen-item h3 {
-        font-size: 15px;
+      .moyen-item img {
+        width: 30%;
       }
+
+      .moyen-item h3 {
+        font-size: 25px;
+      }
+
+    }
+
+    @media (min-width: 420px) and (max-width: 1179px) {
+      .container-carrousel-moyen {
+        display: flex;
+        gap: 5%;
+      }
+      
+      
     }
   

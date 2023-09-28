@@ -18,7 +18,10 @@ import pilulier from'../assets/images/marque-blanche/pilulier.png';
 import flacon from '../assets/images/marque-blanche/flacon.png';
 import pot from '../assets/images/marque-blanche/pot 2.png';
 
-function FormuleBlanche() {
+function FormuleBlanche(props) {
+
+  document.title = props.pageName;
+
   const { chooseImage, chooseSizeTitle } = ResponsiveSize();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 

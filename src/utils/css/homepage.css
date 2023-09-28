@@ -25,12 +25,19 @@
 
 .line-container {
   height: 5px;
+  overflow: hidden;
 }
 
 .link-more-info {
   text-decoration: none;
   color: black;
   margin-bottom: 5%;
+}
+
+.line-svg {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition: stroke-dashoffset 0.9s ease;
 }
 
 .container-video {
@@ -158,7 +165,7 @@
   justify-content: center;
   gap: 5%;
   padding: 1%;
-  padding-top: 13.5%;
+  padding-top: 10.5%;
 }
 
 .container-formule-item {
@@ -205,7 +212,6 @@
   font-size: 14px;
 }
 
-
 @media (max-width: 1179px) {
 
   .container-on-video {
@@ -242,10 +248,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-top: 4%;
   }
 
   .container-formule-item {
-    margin-top: 35%;
+    margin-top: 13%;
     width: 90%;
   }
 
@@ -295,4 +302,10 @@
     background-color: #000;
   }
 
+}
+
+@media (max-width: 650px) {
+  .container-formule-item {
+    margin-top: 25%;
+  }
 }
