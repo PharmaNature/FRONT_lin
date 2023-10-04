@@ -8,8 +8,12 @@ import MoreInfo from '../components/HomePage/MoreInfo';
 import { useSwipeable } from 'react-swipeable';
 import arrowLeft from '../assets/pictogrammes/arrow_left.svg'
 import arrowRight from '../assets/pictogrammes/arrow_right.svg'
+import global from '../assets/global.json'
 
 function Homepage(props) { 
+  const langue = global["global"]
+  const texts = global[langue]["HomePage"]
+  
   document.title = props.pageName;
 
   const { videoResponsive } = ResponsiveSize();
@@ -33,63 +37,63 @@ function Homepage(props) {
   const iconData = {
     1 : {
       imageURL : require("../assets/pictogrammes/France.png"),
-      title1 : "LABORATOIRE",
-      title2 : "FRANÇAIS"
+      title1 : texts["txt4-0"],
+      title2 : texts["txt4-1"]
     },
     2 : {
       imageURL : require("../assets/pictogrammes/independant.png"),
-      title1 : "INDÉPENDANT",
-      title2 : "& AUTONOME"
+      title1 : texts["txt4-2"],
+      title2 : texts["txt4-3"]
     },
     3 : {
       imageURL : require("../assets/pictogrammes/recherche.png"),
-      title1 : "RECHERCHE &",
-      title2 : "DEVELOPPEMENT"
+      title1 : texts["txt4-4"],
+      title2 : texts["txt4-5"]
     },
     4 : {
       imageURL : require("../assets/pictogrammes/experience.png"),
-      title1 : "+ DE 20 ANS",
-      title2 : "D'EXPÉRIENCE"
+      title1 : texts["txt4-6"],
+      title2 : texts["txt4-7"]
     }
   }
 
   const dataMetier = {
     1 : {
-        "titleLine1" : "FORMULATION",
-        "titleLine2" : "& SOURCING",
+        "titleLine1" : texts["txt5-0"],
+        "titleLine2" : texts["txt5-1"],
         "urlImage" : require("../assets/pictogrammes/formulation.png")
     },
     2 : {
-        "titleLine1" : "RÈGLEMENTATION",
-        "titleLine2" : "& SOURCING",
+        "titleLine1" : texts["txt5-2"],
+        "titleLine2" : texts["txt5-3"],
         "urlImage" : require("../assets/pictogrammes/reglementation.png")
     },
     3 : {
-        "titleLine1" : "FAÇONNAGE &",
-        "titleLine2" : "CONDITIONNEMENT",
+        "titleLine1" : texts["txt5-4"],
+        "titleLine2" : texts["txt5-5"],
         "urlImage" : require("../assets/pictogrammes/production.png")
     },
     4 : {
-        "titleLine1" : "FORMATION",
-        "titleLine2" : "& COMMUNICATION",
+        "titleLine1" : texts["txt5-6"],
+        "titleLine2" : texts["txt5-7"],
         "urlImage" : require("../assets/pictogrammes/formation.png")
     },
   }
 
   const nosFormules = {
     1 : {
-      titleLine1 : "FORMULE",
-      titleLine2 : "EN MARQUE",
-      titleLine3 : "BLANCHE",
-      description : "Vous accédez à des produits clé en main, prêts à être mis sur le marché.",
+      titleLine1 : texts["txt6-0"],
+      titleLine2 : texts["txt6-1"],
+      titleLine3 : texts["txt6-2"],
+      description : texts["txt6-3"],
       urlImage : require("../assets/pictogrammes/marque-blanche.png"),
       link : "marque-blanche"
     },
     2 : {
-      titleLine1 : "FORMULE",
-      titleLine2 : "PERSONNALISÉE",
-      titleLine3 : "SUR MESURE",
-      description : "Vous développez vos formules selon votre cahier des charges.",
+      titleLine1 : texts["txt6-4"],
+      titleLine2 : texts["txt6-5"],
+      titleLine3 : texts["txt6-6"],
+      description : texts["txt6-7"],
       urlImage : require("../assets/pictogrammes/formule-sur-mesure.png"),
       link : "formule-sur-mesure"
     }
@@ -129,32 +133,32 @@ function Homepage(props) {
           <div className='container-objectif'>
               <div className='objectif-title'>
                   <h2>
-                    NOTRE OBJECTIF : <br/>
-                    LA CRÉATION ET LE FAÇONNAGE <br/>
-                    DE VOS COMPLÉMENTS ALIMENTAIRES
+                    {texts["txt0-0"]}<br/>
+                    {texts["txt0-1"]}<br/>
+                    {texts["txt0-2"]}
                   </h2>
               </div>
               <div className='container-objectif-paragraphes'>
                 <div className='objectif-paragraphe1'>
                   <span>
-                  Notre objectif principal est de proposer une large gamme de compléments alimentaires afin de répondre aux besoins de santé et de prévention de chacun avec une qualité irréprochable permettant de garantir l’efficacité des produits
+                  {texts["txt1-0"]}
                   </span>
                   <br /><br />
-                  Nous concevons nos produits sur l’alliance de deux éléments :
+                  {texts["txt1-1"]}
                   <br />
                   <br />
-                  • Les bienfaits offerts par la Nature.
+                  {texts["txt1-2"]}
                   <br />
-                  • Les avancées pertinentes de la Science.
+                  {texts["txt1-3"]}
                 </div>
                 <div className='objectif-paragraphe2'>
-                  Nous proposons une flexibilté en terme de production allant de petites à grandes séries, que ce soit en marque blanche ou en solutions sur mesure. 
+                {texts["txt2-0"]}
                   <br /><br />
-                  La qualité de nos produits est garantie par notre gamme étendue de certifications. 
+                  {texts["txt2-1"]}
                   <br /><br />
-                  Nous mettons à disposition un large éventail de formes galéniques, qu'il s'agisse de formes sèches, de gélules, de capsules ou de liquides, tous d'une qualité exceptionnelle.
+                  {texts["txt2-2"]}
                   <br /><br />
-                  Nos matières premières sont méticuleusement choisies pour satisfaire à toutes les exigences, et notre approche est respectueuse de l'environnement.
+                  {texts["txt2-3"]}
                 </div>
               </div>
             <MoreInfo link="notre-labo" />
@@ -163,7 +167,7 @@ function Homepage(props) {
 
         <div className='container-intervention'>
               <h2 className='intervention-title'>
-                NOS INTERVENTIONS
+              {texts["txt3-0"]}
               </h2>
 
             {windowWidth >= 1179 ? (

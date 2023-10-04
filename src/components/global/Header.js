@@ -4,8 +4,10 @@ import Logo from '../../assets/images/logoSVG.svg';
 import LogoLIN from '../../assets/images/logoLIN.svg';
 import { Link, useLocation } from 'react-router-dom';
 import items from '../../utils/other/links';
+import global from '../../assets/global.json'
 
 function Header() {
+  const langue = global["global"]
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
