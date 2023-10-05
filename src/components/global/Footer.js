@@ -4,6 +4,10 @@ import Logo from "../../assets/images/logoSVG.svg";
 import { Link } from 'react-router-dom';
 import items from '../../utils/other/links';
 import ContactForm from './FooterForm';
+import global from '../../assets/global.json'
+
+const langue = global["global"]
+const texts = global[langue]["Footer"]
 
 function Footer() {
   return (
@@ -33,12 +37,12 @@ function Footer() {
 
           </div>
           <div className="address">
-            <p> 145 RUE DE LA MARBRERIE</p>
-            <p>LE SALAISON</p>
-            <p>Bât.12 </p>
-            <p> 145 RUE DE LA MARBRERIE</p>
-            <p> 34740 VENDARGUES</p>
-            <p> +334 xx xx xx xx</p>
+            <p> {texts["txt0-0"]}</p>
+            <p>{texts["txt0-1"]}</p>
+            <p>{texts["txt0-2"]}</p>
+            <p> {texts["txt0-3"]}</p>
+            <p> {texts["txt0-4"]}</p>
+            <p> {texts["txt0-5"]}</p>
           </div>
         </div>
         <div className="contact-form">

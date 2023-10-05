@@ -28,54 +28,58 @@ import dev from '../assets/pictogrammes/developpement.png';
 import condition from '../assets/pictogrammes/formule-blanche-conditionnement.png';
 import envoi from '../assets/pictogrammes/formule-blanche-envoi.png';
 
+import global from '../assets/global.json'
+
+const langue = global["global"]
+const texts = global[langue]["SurMesure"]
 
 function FormuleSurMesure(props) {
 
-    document.title = props.pageName;
+  document.title = props.pageName;
 
   const { chooseImage, chooseSizeTitle } = ResponsiveSize();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-      const handleResize = () => {
-          setWindowWidth(window.innerWidth);
-      };
-      window.addEventListener('resize', handleResize);
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
 
-      return () => {
-          window.removeEventListener('resize', handleResize);
-      };
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const imageChoice = chooseImage("formule_sur_mesure", windowWidth);
   const titleSizeChoice = chooseSizeTitle(windowWidth);
 
-    const pData = [
+  const pData = [
     {
       img: cCharges,
       alt: 'Cahier des Charges',
-      title: "CAHIER <br /> DES CHARGES",
-      
+      title: texts["txt3-0"] + "<br />" + texts["txt3-1"],
+
     },
     {
-        img: dev,
-        alt: 'Développement',
-        title: 'DÉVELOPPEMENT',
-      },
+      img: dev,
+      alt: 'Développement',
+      title: texts["txt3-2"],
+    },
     {
       img: production,
       alt: 'Production',
-      title: 'PRODUCTION',
+      title: texts["txt3-3"],
     },
     {
       img: condition,
       alt: 'Conditionnement personnalisé',
-      title: 'CONDITIONNEMENT<br />PERSONNALISÉ',
+      title: texts["txt3-4"] + "<br />" + texts["txt3-5"],
     },
     {
       img: envoi,
       alt: 'Envoi du produit',
-      title: 'ENVOI<br />PRODUIT',
+      title: texts["txt3-6"] + "<br />" + texts["txt3-7"],
     },
   ]
 
@@ -83,55 +87,55 @@ function FormuleSurMesure(props) {
     {
       img: poudreImg,
       alt: 'Forme galénique poudre',
-      title: 'Poudre',
-      text: "Nous conditionnons nos poudres sur mesure en fonction de vos besoins, qu'il s'agisse de plantes, de vitamines, de minéraux, en combinaison ou séparément.",
+      title: texts["txt4-2"],
+      text: texts["txt4-3"],
     },
     {
       img: geluleImg,
       alt: 'Forme galénique gélule',
-      title: 'Gélules',
-      text: "Nous offrons une gamme complète de tailles, que ce soit en version gélatine ou végétale. Nous les proposons en taille O ou taille 1. ",
+      title: texts["txt4-4"],
+      text: texts["txt4-5"],
     },
     {
       img: capsuleImg,
       alt: 'Capsule',
-      title: 'Capsule',
-      text: "Nous proposons un large éventail d'opportunités, que ce soit dans le cadre de formules standards ou de développements sur mesure.",
+      title: texts["txt4-6"],
+      text: texts["txt4-7"],
     },
     {
       img: liquidImg,
       alt: 'Liquide',
-      title: 'Liquide',
-      text: "Nous proposons également une gamme d’huile végétales ou huiles essentielles.",
+      title: texts["txt4-8"],
+      text: texts["txt4-9"],
     },
   ]
 
   const cData = [
     {
-      title: 'BLISTER',
+      title: texts["txt5-3"],
       img: blister,
     },
     {
-      title: 'PILULIER',
+      title: texts["txt5-4"],
       img: pilulier,
     },
     {
-      title: 'FLACON',
+      title: texts["txt5-5"],
       img: flacon,
     },
     {
-      title: 'POT',
+      title: texts["txt5-6"],
       img: pot,
     }
   ]
   const textGroups = [
-    { title1: 'BEAUTÉ', title2: 'CANNA' },
-    { title1: 'DOULEURS', title2: 'CIRCULATION' },
-    { title1: 'CONFORT URINAIRE', title2: 'CONFORT & PREVENTION' },
-    { title1: 'CIRCULATION', title2: 'LIPOSOME' },
-    { title1: 'CONFORT & PREVENTION', title2: 'TONIQUES & VITAMINES' },
-    { title1: 'DIGESTION TRANSIT / DETOX', title2: 'SOMMEIL & SERENITE' },
-    { title1: 'GAMME FEMME', title2: 'VOIES RESPIRATOIRES ET IMMUNTE' },
+    { title1: texts["txt7-0"], title2: texts["txt7-1"] },
+    { title1: texts["txt7-2"], title2: texts["txt7-3"] },
+    { title1: texts["txt7-4"], title2: texts["txt7-5"] },
+    { title1: texts["txt7-6"], title2: texts["txt7-7"] },
+    { title1: texts["txt7-8"], title2: texts["txt7-9"] },
+    { title1: texts["txt7-10"], title2: texts["txt7-11"] },
+    { title1: texts["txt7-12"], title2: texts["txt7-13"] },
   ];
 
   //  Ajout du scroll horizontal AreaOfExpertise
@@ -188,16 +192,16 @@ function FormuleSurMesure(props) {
 
   return (
     <div className='big-container'>
-    <Introduction format='image' imageChoice={imageChoice} alt={"Formule sur mesure"} titleSizeChoice={titleSizeChoice} titleBold1="NOS FORMULES" title1="SUR MESURE" />
+      <Introduction format='image' imageChoice={imageChoice} alt={"Formule sur mesure"} titleSizeChoice={titleSizeChoice} titleBold1={texts["txt0-0"]} title1={texts["txt0-1"]} />
       <div className="sub-container">
         <div className='sub-container-text'>
           <div className='container-formula'>
-            <h1 className='NotreFormula-mesure'>VOTRE FORMULE</h1>
-            <h2 className='NotreCatalogue'>PERSONNALISÉE</h2>
+            <h1 className='NotreFormula-mesure'>{texts["txt0-2"]}</h1>
+            <h2 className='NotreCatalogue'>{texts["txt0-3"]}</h2>
           </div>
           <div className='plus-sign-mesure'> + </div>
           <div className='container-packaging'>
-            <h1 className='packaging'> VOTRE PACKAGING</h1>
+            <h1 className='packaging'>{texts["txt0-4"]}</h1>
           </div>
         </div>
         <div className='equal-sign-mesure'>=</div>
@@ -207,13 +211,13 @@ function FormuleSurMesure(props) {
       </div>
       <div className='container-formula-text'>
         <div className='formula-text'>
-          <h3>Vous développez vos formules selon votre cahier des charges.
-          <br /><br />
-            De la conception à la réalisation de votre produit, nous mettons à votre disposition toute notre expertise pour créer des formulations et des packagings entièrement personnalisés, parfaitement adaptés à votre public cible.
-          <br /><br />
-        Nous mettons à disposition une variété étendue de produits élaborés par notre équipe de recherche et développement pour répondre aux divers besoins du marché.</h3>
+          <h3>{texts["txt1-0"]}
+            <br /><br />
+            {texts["txt1-1"]}
+            <br /><br />
+            {texts["txt1-2"]}</h3>
           <br />
-          <p>Nous vous proposons un accompagnement sur mesure avec toute notre équipe  jusqu'au lancement de votre produit sur le marché.</p>
+          <p>{texts["txt1-3"]}</p>
         </div>
       </div>
 
@@ -224,17 +228,17 @@ function FormuleSurMesure(props) {
           <span className='vertical-line-fb'></span>
 
           <div className='container-process-title'>
-            <h2> NOS PROCESSUS <br /> <span className='title-bold'> DE FABRICATION </span></h2>
+            <h2> {texts["txt2-0"]} <br /> <span className='title-bold'> {texts["txt2-1"]}</span></h2>
           </div>
           <div {...swipeHandlersP} className='container-process-carousel'>
 
-              <ProcessCard
-             key={currentPIndex}
-             index={currentPIndex}
-             img={pData[currentPIndex].img}
-             alt={pData[currentPIndex].alt}
-             title={pData[currentPIndex].title}
-             couleur={"bleu"}
+            <ProcessCard
+              key={currentPIndex}
+              index={currentPIndex}
+              img={pData[currentPIndex].img}
+              alt={pData[currentPIndex].alt}
+              title={pData[currentPIndex].title}
+              couleur={"bleu"}
             />
             <button onClick={handlePrevp} className='btn-pcarousel-left'>
               <img src={arrowLeftMesure} alt='arrow left' />
@@ -251,7 +255,7 @@ function FormuleSurMesure(props) {
         <div className='container-formes'>
 
           <div className='container-formes-title'>
-            <h2> NOS DIVERSES <br /><span className='title-bold'>FORMES GALÉNIQUES...</span></h2>
+            <h2> {texts["txt4-0"]} <br /><span className='title-bold'>{texts["txt4-1"]}</span></h2>
           </div>
 
           {windowWidth >= 768 ? (
@@ -294,8 +298,8 @@ function FormuleSurMesure(props) {
 
         <div className='container-condition'>
           <div className='container-condition-title'>
-            <h2>ET NOS CHOIX <br /><span className='title-bold'>DE CONDITIONNEMENT </span></h2>
-            <h3>(SOUS DIVERS FORMATS)</h3>
+            <h2>{texts["txt5-0"]}<br /><span className='title-bold'>{texts["txt5-1"]}</span></h2>
+            <h3>{texts["txt5-2"]}</h3>
           </div>
 
           <div className='container-condition-item'>
@@ -313,7 +317,7 @@ function FormuleSurMesure(props) {
 
         <div className='AreaOfExpertise'>
           <div className='expertise-title'>
-            <h2> NOS <br /> <span className='title-bold' > DOMAINES <br /> D'APPLICATIONS</span></h2>
+            <h2>{texts["txt6-0"]}<br /> <span className='title-bold' >{texts["txt6-1"]} <br />{texts["txt6-2"]}</span></h2>
           </div>
 
           <div className={`expertise-list ${horizontalScroll ? 'horizontal-scroll' : ''}`}>

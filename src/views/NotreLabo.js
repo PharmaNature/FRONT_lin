@@ -44,30 +44,30 @@ const dataMetier = {
 
 const dataMoyen = {
     1: {
-        "name": "PRODUCTION",
+        "name": texts["txt5-0"],
         "urlImage": require("../assets/images/notre-laboratoire/production.png"),
         "description": {
-            "3 mélangeurs": ["— Capacité de 20 kilos à 1 tonne/jour —"],
-            "6 géluleuses": ["— Capacité de 200.000 gélules/heure —"],
-            "6 brosseuses de gélules": [null],
-            "1 remplisseuse liquide": ["— De 10 à 30 ml —"]
+            [texts["txt5-1"]]: [texts["txt5-2"]],
+            [texts["txt5-3"]]: [texts["txt5-4"]],
+            [texts["txt5-5"]]: [null],
+            [texts["txt5-6"]]: [texts["txt5-7"]]
         }
     },
     2: {
-        "name": "CONDITIONNEMENT",
+        "name": texts["txt6-0"],
         "urlImage": require("../assets/images/notre-laboratoire/conditionnement.png"),
         "description": {
-            "1 ligne de mise en pilulier avec bouchage et étiquetage  pour flacons en verre, plastique ": [" — Capacité de 10.000 unités/jour —"],
-            "1 ligne de blistérisation automatisée": [" — Capacité de 60.000 unités/jour —"],
-            "2 étuyeuses automatiques": [null]
+            [texts["txt6-1"]]: [texts["txt6-2"]],
+            [texts["txt6-3"]]: [texts["txt6-4"]],
+            [texts["txt6-5"]]: [null]
         }
     },
     3: {
-        "name": "QUALITÉ",
+        "name": texts["txt7-0"],
         "urlImage": require("../assets/images/notre-laboratoire/qualite.png"),
         "description": {
-            "Contrôle qualité garanti": ["— Dispose de plusieurs certifications —", "(BIO, HACCP, GMP FOOD…)"],
-            "Projet norme ISO 22000": ["Depuis fin 2022, nous avons entrepris les démarches nécessaires pour l’obtention de la norme ISO 22000. "],
+            [texts["txt7-1"]]: [texts["txt7-2"], texts["txt7-3"]],
+            [texts["txt7-4"]]: [texts["txt7-5"]],
         }
     },
 
@@ -101,102 +101,102 @@ function NotreLabo(props) {
 
     const handleNext = () => {
         if (currentIndex < dataArray.length - 1) {
-          setCurrentIndex(currentIndex + 1);
+            setCurrentIndex(currentIndex + 1);
         } else {
             setCurrentIndex(0);
-          }
-      };
+        }
+    };
 
-      const handlePrev = () => {
+    const handlePrev = () => {
         if (currentIndex > 0) {
-          setCurrentIndex(currentIndex - 1);
+            setCurrentIndex(currentIndex - 1);
         } else {
             setCurrentIndex(dataArray.length - 1);
-          }
-      };
+        }
+    };
 
-      const swipeHandlers = useSwipeable({
+    const swipeHandlers = useSwipeable({
         onSwipedLeft: handleNext,
         onSwipedRight: handlePrev,
-      });
+    });
 
-      const indicators = Array.from({ length: dataArray.length }, (_, i) => i);
-  
-  return (
-      <div className='big-container'>
-        <Introduction format='image' imageChoice={imageChoice} alt={"Laboratoire"} titleSizeChoice={titleSizeChoice} titleBold1={texts["txt0-0"]} title1={texts["txt0-1"]} title2={texts["txt0-2"]} />
-          <div className='container-history'>
-            <div className='container-history-img'>
-                <img src={historyIMG} alt='Histoire Laboratoire'/>
+    const indicators = Array.from({ length: dataArray.length }, (_, i) => i);
+
+    return (
+        <div className='big-container'>
+            <Introduction format='image' imageChoice={imageChoice} alt={"Laboratoire"} titleSizeChoice={titleSizeChoice} titleBold1={texts["txt0-0"]} title1={texts["txt0-1"]} title2={texts["txt0-2"]} />
+            <div className='container-history'>
+                <div className='container-history-img'>
+                    <img src={historyIMG} alt='Histoire Laboratoire' />
+                </div>
+                <div className='container-history-text'>
+                    <h2>{texts["txt1-0"]}</h2>
+                    <h3>{texts["txt1-1"]}</h3>
+                    <p>{texts["txt1-2"]}</p>
+                    <h3>{texts["txt1-3"]}</h3>
+                </div>
             </div>
-            <div className='container-history-text'>
-                <h2>{texts["txt1-0"]}</h2>
-                <h3>{texts["txt1-1"]}</h3>
-                <p>{texts["txt1-2"]}</p>
-                <h3>{texts["txt1-3"]}</h3>
-            </div>
-          </div>
             <div className='container-metiers'>
                 <div className='container-metiers-title'>
                     <h2>{texts["txt2-0"]}</h2>
                     <div className='cercle-metier'></div>
                 </div>
-                
-                    {windowWidth >= 1179 ? (
-                        dataArray.map((item, index) => (
+
+                {windowWidth >= 1179 ? (
+                    dataArray.map((item, index) => (
                         <React.Fragment key={index}>
                             <LateralIconDescription
-                            titleLine1={item.titleLine1}
-                            titleLine2={item.titleLine2}
-                            description={item.description}
-                            urlImage={item.urlImage}
-                            position={index % 2 === 0 ? "left" : "right"}
+                                titleLine1={item.titleLine1}
+                                titleLine2={item.titleLine2}
+                                description={item.description}
+                                urlImage={item.urlImage}
+                                position={index % 2 === 0 ? "left" : "right"}
                             />
                             {index === dataArray.length - 1 ? "" : <span className='vertical-line'></span>}
                         </React.Fragment>
-                        ))
-                    ) : (
-                        <div {...swipeHandlers} className='container-carrousel'>
-                            <LateralIconDescription
-                                titleLine1={dataArray[currentIndex].titleLine1}
-                                titleLine2={dataArray[currentIndex].titleLine2}
-                                description={dataArray[currentIndex].description}
-                                urlImage={dataArray[currentIndex].urlImage}
-                                position={currentIndex % 2 === 0 ? "left" : "right"}
-                            />
-                            <button onClick={handlePrev} className='btn-carrousel-left'>
-                                <img src={arrowLeft} alt='arrow left' />
-                            </button>
-                            <button onClick={handleNext} className='btn-carrousel-right'>
-                                <img src={arrowRight} alt='arrow right' />
-                            </button>
-                            <div className='pagination'>
-                                {indicators.map((i) => (
+                    ))
+                ) : (
+                    <div {...swipeHandlers} className='container-carrousel'>
+                        <LateralIconDescription
+                            titleLine1={dataArray[currentIndex].titleLine1}
+                            titleLine2={dataArray[currentIndex].titleLine2}
+                            description={dataArray[currentIndex].description}
+                            urlImage={dataArray[currentIndex].urlImage}
+                            position={currentIndex % 2 === 0 ? "left" : "right"}
+                        />
+                        <button onClick={handlePrev} className='btn-carrousel-left'>
+                            <img src={arrowLeft} alt='arrow left' />
+                        </button>
+                        <button onClick={handleNext} className='btn-carrousel-right'>
+                            <img src={arrowRight} alt='arrow right' />
+                        </button>
+                        <div className='pagination'>
+                            {indicators.map((i) => (
                                 <div
                                     key={i}
                                     className={`indicator ${i === currentIndex ? 'active' : ''}`}
                                     onClick={() => setCurrentIndex(i)}
                                 ></div>
-                                ))}
-                            </div>
+                            ))}
                         </div>
-                    )}
+                    </div>
+                )}
 
 
             </div>
             <div className='container-moyen'>
                 <div className='container-moyens-title'>
-                    <h2>NOS MOYENS</h2>
+                    <h2>{texts["txt4-0"]}</h2>
                     <h3>
-                        Une flexibilité de production pour s’adapter à vos besoins : <br />
-                        des lots de 500 à 50.000 unités !
+                        {texts["txt4-1"]} <br />
+                        {texts["txt4-2"]}
                     </h3>
                     <div className='cercle-moyen'></div>
                 </div>
                 <div className='container-moyen-items'>
-                        {Object.keys(dataMoyen).map((id, index) => (
-                            <MoyenCard key={id} dataMoyenCard={dataMoyen[id]} />
-                        ))}
+                    {Object.keys(dataMoyen).map((id, index) => (
+                        <MoyenCard key={id} dataMoyenCard={dataMoyen[id]} />
+                    ))}
                 </div>
             </div>
         </div>

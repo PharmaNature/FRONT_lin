@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import countries from 'country-list';
+import global from '../../assets/global.json'
+
+const langue = global["global"]
+const texts = global[langue]["Footer"]
 
 const countryList = countries.getData();
 
@@ -71,10 +75,10 @@ function ContactForm() {
 
   return (
     <div>
-      <h2 className="contactUs">CONTACTEZ-NOUS</h2>
+      <h2 className="contactUs">{texts["txt1-0"]}</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label className="label-form" htmlFor="subject">Sujet <span className="required-label">*</span></label>
+          <label className="label-form" htmlFor="subject">{texts["txt1-1"]} <span className="required-label">*</span></label>
           <input
             type="text"
             id="subject"
@@ -85,7 +89,7 @@ function ContactForm() {
           />
         </div>
         <div className="form-group">
-          <label className="label-form" htmlFor="name">Nom <span className="required-label">*</span></label>
+          <label className="label-form" htmlFor="name">{texts["txt1-2"]} <span className="required-label">*</span></label>
           <input
             type="text"
             id="name"
@@ -96,7 +100,7 @@ function ContactForm() {
           />
         </div>
         <div className="form-group">
-          <label className="label-form" htmlFor="lastname">Prénom <span className="required-label">*</span> </label>
+          <label className="label-form" htmlFor="lastname">{texts["txt1-3"]} <span className="required-label">*</span> </label>
           <input
             type="text"
             id="lastname"
@@ -107,7 +111,7 @@ function ContactForm() {
           />
         </div>
         <div className="form-group">
-          <label className="label-form" htmlFor="company">Société <span className="required-label">*</span> </label>
+          <label className="label-form" htmlFor="company">{texts["txt1-4"]} <span className="required-label">*</span> </label>
           <input
             type="text"
             id="company"
@@ -118,7 +122,7 @@ function ContactForm() {
           />
         </div>
         <div className="form-group">
-          <label className="label-form" htmlFor="country">Pays<span className="required-label">*</span> </label>
+          <label className="label-form" htmlFor="country">{texts["txt1-5"]}<span className="required-label">*</span> </label>
           <select
             id="country"
             name="country"
@@ -137,7 +141,7 @@ function ContactForm() {
           </select>
         </div>
         <div className="form-group">
-          <label className="label-form" htmlFor="phone">Téléphone <span className="required-label">*</span> </label>
+          <label className="label-form" htmlFor="phone">{texts["txt1-6"]} <span className="required-label">*</span> </label>
           <input
             type="tel"
             id="phone"
@@ -148,7 +152,7 @@ function ContactForm() {
           />
         </div>
         <div className="form-group">
-          <label className="label-form" htmlFor="email">Email <span className="required-label">*</span></label>
+          <label className="label-form" htmlFor="email">{texts["txt1-7"]} <span className="required-label">*</span></label>
           <input
             type="email"
             id="email"
@@ -159,7 +163,7 @@ function ContactForm() {
           />
         </div>
         <div className="form-group">
-          <label className="label-form" htmlFor="message">Message <span className="required-label">*</span> </label>
+          <label className="label-form" htmlFor="message">{texts["txt1-8"]} <span className="required-label">*</span> </label>
           <textarea
             id="message"
             name="message"
@@ -169,7 +173,7 @@ function ContactForm() {
             required
           ></textarea>
         </div>
-        <button className="button-send" type="submit"> ENVOYER &gt; </button>
+        <button className="button-send" type="submit"> {texts["txt1-9"]} &gt; </button>
       </form>
     </div>
   );
