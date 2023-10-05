@@ -6,7 +6,7 @@ import BoxQualite from '../components/Qualite/BoxQualite'
 
 // Imports des images
 import formeGalenique from '../assets/images/qualite/formes-galeniques.png'
-import global from '../assets/global.json'
+import global from '../assets/global.js'
 
 const langue = global["global"]
 const texts = global[langue]["Qualite"]

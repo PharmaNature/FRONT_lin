@@ -4,7 +4,7 @@ import Logo from "../../assets/images/logoSVG.svg";
 import { Link } from 'react-router-dom';
 import items from '../../utils/other/links';
 import ContactForm from './FooterForm';
-import global from '../../assets/global.json'
+import global from '../../assets/global.js'
 
 const langue = global["global"]
 const texts = global[langue]["Footer"]

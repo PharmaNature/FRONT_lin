@@ -1,7 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import global from '../../assets/global'
 
 function MoreInfo(props) {
+  const langue = global["global"]
+  const texts = global[langue]["Other"]
   const myParagraphRef = useRef(null);
   const lineRef = useRef(null);
   const [paragraphSize, setParagraphSize] = useState({ width: 0, height: 0 });
@@ -46,7 +49,7 @@ function MoreInfo(props) {
     >
       <div className="container-more-info">
         <p ref={myParagraphRef} className="text">
-          EN SAVOIR +
+          {texts["txt0-0"]}
         </p>
         <div className="line-container">
           <svg width={lineLength} xmlns="http://www.w3.org/2000/svg">

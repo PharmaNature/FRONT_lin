@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import countries from 'country-list';
-import global from '../../assets/global.json'
+import global from '../../assets/global.js'
 
 const langue = global["global"]
 const texts = global[langue]["Footer"]

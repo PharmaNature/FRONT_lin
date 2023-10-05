@@ -10,7 +10,7 @@ import { useSwipeable } from 'react-swipeable';
 import historyIMG from '../assets/images/notre-laboratoire/history.jpg'
 import arrowLeft from '../assets/pictogrammes/arrow_left.svg'
 import arrowRight from '../assets/pictogrammes/arrow_right.svg'
-import global from '../assets/global.json'
+import global from '../assets/global'
 
 const langue = global["global"]
 const texts = global[langue]["NotreLabo"]

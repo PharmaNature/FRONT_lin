@@ -4,10 +4,10 @@ import Logo from '../../assets/images/logoSVG.svg';
 import LogoLIN from '../../assets/images/logoLIN.svg';
 import { Link, useLocation } from 'react-router-dom';
 import items from '../../utils/other/links';
-import global from '../../assets/global.json'
+import global from '../../assets/global'
 
 function Header() {
-  const langue = global["global"]
+  const [langue,setLangue] =useState(global["global"])
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
@@ -47,6 +47,19 @@ function Header() {
     });
     setMenuOpen(false);
   };
+
+  const changementLangue = () => {
+    let index = global["multilangue"].indexOf(langue)
+    let nextIndex = 0
+    if (index !== global["multilangue"].length-1) {
+      nextIndex = index + 1
+    }
+    setLangue(global["multilangue"][nextIndex])
+    console.log(langue);
+    console.log(index);
+    console.log(nextIndex);
+  }
+
 
   return (
     <div className={`header ${menuOpen ? 'menu-open' : ''} ${scrolling ? 'scrolling' : ''}`}>
@@ -96,6 +109,9 @@ function Header() {
                     )
                   }
         })}
+        <li>
+          <h3 className='multilangue' onClick={changementLangue}>{langue}</h3>
+        </li>
         </ul>
       </nav>
     </div>

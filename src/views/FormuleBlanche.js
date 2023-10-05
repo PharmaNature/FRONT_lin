@@ -27,7 +27,7 @@ import envoi from '../assets/pictogrammes/formule-blanche-envoi.png';
 import condition from '../assets/pictogrammes/formule-blanche-conditionnement.png';
 import formulation from '../assets/pictogrammes/formule-blanche-formulation.png';
 
-import global from '../assets/global.json'
+import global from '../assets/global.js'
 
 const langue = global["global"]
 const texts = global[langue]["MarqueBlanche"]
