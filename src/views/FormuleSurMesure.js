@@ -29,12 +29,13 @@ import condition from '../assets/pictogrammes/formule-blanche-conditionnement.pn
 import envoi from '../assets/pictogrammes/formule-blanche-envoi.png';
 
 import global from '../assets/global.js'
+import { useGlobalState } from '../views/GlobalStateContext';
 
-const langue = global["global"]
-const texts = global[langue]["SurMesure"]
 
 function FormuleSurMesure(props) {
-
+  const {globalVariable} = useGlobalState()
+  const texts = global[globalVariable]["SurMesure"]
+  
   document.title = props.pageName;
 
   const { chooseImage, chooseSizeTitle } = ResponsiveSize();

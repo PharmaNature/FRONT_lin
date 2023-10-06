@@ -11,9 +11,14 @@ import historyIMG from '../assets/images/notre-laboratoire/history.jpg'
 import arrowLeft from '../assets/pictogrammes/arrow_left.svg'
 import arrowRight from '../assets/pictogrammes/arrow_right.svg'
 import global from '../assets/global'
+import { useGlobalState } from '../views/GlobalStateContext';
 
-const langue = global["global"]
-const texts = global[langue]["NotreLabo"]
+
+
+
+function NotreLabo(props) {
+    const {globalVariable} = useGlobalState()
+const texts = global[globalVariable]["NotreLabo"]
 
 const dataMetier = {
     1: {
@@ -72,10 +77,6 @@ const dataMoyen = {
     },
 
 }
-
-
-function NotreLabo(props) {
-
     document.title = props.pageName;
 
     const { chooseImage, chooseSizeTitle } = ResponsiveSize();

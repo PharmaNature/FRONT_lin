@@ -2,14 +2,24 @@ import React from 'react';
 import '../../utils/css/footer.css';
 import Logo from "../../assets/images/logoSVG.svg";
 import { Link } from 'react-router-dom';
-import items from '../../utils/other/links';
 import ContactForm from './FooterForm';
 import global from '../../assets/global.js'
+import { useGlobalState } from '../../views/GlobalStateContext';
 
-const langue = global["global"]
-const texts = global[langue]["Footer"]
+
 
 function Footer() {
+  const {globalVariable} = useGlobalState()
+  const texts = global[globalVariable]["Footer"]
+  const texts2 = global[globalVariable]["Header"]
+
+  const items = [
+    { id: 1, name: texts2["txt0-0"] + "<br/>" + texts2["txt0-1"], link: "notre-labo" },
+    { id: 2, name: texts2["txt1-0"] + "<br/>" + texts2["txt1-1"], link: "marque-blanche" },
+    { id: 3, name: texts2["txt2-0"] + "<br/>" + texts2["txt2-1"], link: "formule-sur-mesure" },
+    { id: 4, name: texts2["txt3-0"], link: "qualite" },
+    { id: 5, name: texts2["txt4-0"], link: "#contactez-nous" },
+  ]
   return (
     <footer>
       <div className="footer">

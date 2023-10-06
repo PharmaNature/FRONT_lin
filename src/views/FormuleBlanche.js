@@ -28,12 +28,12 @@ import condition from '../assets/pictogrammes/formule-blanche-conditionnement.pn
 import formulation from '../assets/pictogrammes/formule-blanche-formulation.png';
 
 import global from '../assets/global.js'
-
-const langue = global["global"]
-const texts = global[langue]["MarqueBlanche"]
+import { useGlobalState } from '../views/GlobalStateContext';
 
 
 function FormuleBlanche(props) {
+  const {globalVariable} = useGlobalState()
+  const texts = global[globalVariable]["MarqueBlanche"]
 
   document.title = props.pageName;
 

@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import countries from 'country-list';
 import global from '../../assets/global.js'
+import { useGlobalState } from '../../views/GlobalStateContext';
 
-const langue = global["global"]
-const texts = global[langue]["Footer"]
-
-const countryList = countries.getData();
 
 
 function ContactForm() {
+  const {globalVariable} = useGlobalState()
+  const texts = global[globalVariable]["Footer"]
+
+  const countryList = countries.getData();
   const [formData, setFormData] = useState({
     subject: '',
     lastname: '',

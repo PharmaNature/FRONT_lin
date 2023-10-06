@@ -9,10 +9,11 @@ import { useSwipeable } from 'react-swipeable';
 import arrowLeft from '../assets/pictogrammes/arrow_left.svg'
 import arrowRight from '../assets/pictogrammes/arrow_right.svg'
 import global from '../assets/global.js'
+import { useGlobalState } from '../views/GlobalStateContext';
 
 function Homepage(props) { 
-  const langue = global["global"]
-  const texts = global[langue]["HomePage"]
+  const {globalVariable} = useGlobalState()
+  const texts = global[globalVariable]["HomePage"]
   
   document.title = props.pageName;
 

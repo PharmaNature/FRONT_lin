@@ -7,11 +7,12 @@ import BoxQualite from '../components/Qualite/BoxQualite'
 // Imports des images
 import formeGalenique from '../assets/images/qualite/formes-galeniques.png'
 import global from '../assets/global.js'
+import { useGlobalState } from '../views/GlobalStateContext';
 
-const langue = global["global"]
-const texts = global[langue]["Qualite"]
 
 function Qualite(props) {
+    const {globalVariable} = useGlobalState()
+    const texts = global[globalVariable]["Qualite"]
 
     document.title = props.pageName;
 

@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
 import Homepage from './views/Homepage';
 import Header from './components/global/Header'
 import Footer from './components/global/Footer'
@@ -8,11 +9,12 @@ import FormuleSurMesure from './views/FormuleSurMesure'
 import Qualite from './views/Qualite'
 
 
+
 function App() {
   return (
     <Router>
       <div>
-        <Header />
+        <Header/>
           <Routes> 
             <Route path="/" element={<Homepage pageName="Accueil" />} />
             <Route path="notre-labo" element={<NotreLabo pageName="Notre Laboratoire" />} />
