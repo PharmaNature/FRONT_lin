@@ -7,11 +7,11 @@
     position: relative; 
     overflow-x: hidden;
   }
-
-  /* .centered-title {
+/* 
+  .centered-title {
     position: absolute; 
     top: 50%; 
-    transform: translateY(-50%); 
+   transform: translate(10%, -50%);
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
   } */
