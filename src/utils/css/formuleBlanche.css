@@ -9,10 +9,9 @@
 }
 
 .centered-title {
-  margin-left: -30%;
   position: absolute;
   top: 50%;
-  transform: translate(10%, -50%);
+  transform: translate(-5%, -50%);
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
@@ -289,7 +288,6 @@ h2.NotreCatalogue {
   width: 100%;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
   gap: 8px;
 }
 
@@ -334,38 +332,43 @@ h2.NotreCatalogue {
   .sub-container {
     margin-top: 10%;
     width: 100%;
-    gap: 2%;
+    /* gap: 2%; */
     flex-direction: row;
     flex-wrap: nowrap;
   }
-
+  .sub-container-text {
+    width: 40%;
+  }
   .container-formula {
     width: 100%;
     margin-top: 2%;
   }
 
   h1.NotreFormula {
-    font-size: 3em;
+    font-size: 2em;
     width: 100%;
   }
 
   h2.NotreCatalogue {
 
     width: 100%;
-    font-size: 20px;
+    font-size: 24px;
+  }
+  .plus-sign {
+    font-size: 9em;
   }
 
   h1.packaging {
-    font-size: 2.5em;
+    font-size: 1.8em;
     width: 100%;
   }
 
   .equal-sign {
-    width: 20%;
+    width: 10%;
   }
 
   .sub-container-img {
-    width: 30%;
+    width: 50%;
   }
 
   .sub-container-img img {
@@ -381,10 +384,28 @@ h2.NotreCatalogue {
   }
 
 
-}@media screen and (min-width: 1180px) and (max-width: 1300px){
-  .sub-container{
-    flex-direction: column;
+}@media screen and (min-width: 1180px) and (max-width: 1523px){
+  .sub-container-text{
+    width: 26%;
   }
+  h1.NotreFormula {
+    font-size: 3em;
+  }
+  h2.NotreCatalogue {
+    font-size: 27px;
+  }
+  h1.packaging {
+    font-size: 2.7em;
+  }
+ .equal-sign {
+      width: 15%;
+    }
+    .sub-container-img {
+      width: 45%;
+  }
+  .sub-container-img img {
+    width: 100%;
+}
 
 }
 
@@ -458,6 +479,7 @@ h2.NotreCatalogue {
   .equal-sign {
     color: #D9C5C4;
     font-size: 130px;
+    text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     width: 20%;
@@ -550,6 +572,11 @@ h2.NotreCatalogue {
 
   .expertise-list {
     width: 80%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 324px) {
+  .container-condition-item {
+    gap: 8%;
   }
 }
 
