@@ -75,7 +75,7 @@ function ContactForm() {
   
 
   return (
-    <div>
+    <div className="contact-form">
       <h2 className="contactUs">{texts["txt1-0"]}</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
