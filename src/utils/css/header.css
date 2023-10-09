@@ -34,7 +34,7 @@
     margin-right: 30px;
   }
   
-  .navigation a {
+  .navigation a, .multilangue {
     text-decoration: none;
     color: #000;
     font-weight: bold;

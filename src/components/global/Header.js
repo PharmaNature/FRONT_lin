@@ -3,11 +3,24 @@ import '../../utils/css/header.css';
 import Logo from '../../assets/images/logoSVG.svg';
 import LogoLIN from '../../assets/images/logoLIN.svg';
 import { Link, useLocation } from 'react-router-dom';
-import items from '../../utils/other/links';
-import global from '../../assets/global.json'
+import { useGlobalState } from '../../views/GlobalStateContext';
+import global from '../../assets/global'
 
 function Header() {
-  const langue = global["global"]
+  const {globalVariable, setGlobalVariable} = useGlobalState()
+
+  const texts = global[globalVariable]["Header"]
+
+  const items = [
+    { id: 1, name: texts["txt0-0"]+"<br/>"+texts["txt0-1"], link: "notre-labo" },
+    { id: 2, name: texts["txt1-0"]+"<br/>"+texts["txt1-1"], link: "marque-blanche" },
+    { id: 3, name: texts["txt2-0"]+"<br/>"+texts["txt2-1"], link: "formule-sur-mesure" },
+    { id: 4, name: texts["txt3-0"], link: "qualite" },
+    { id: 5, name: texts["txt4-0"], link: "#contactez-nous" },
+    
+  ]
+
+
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
@@ -47,6 +60,18 @@ function Header() {
     });
     setMenuOpen(false);
   };
+
+  const changementLangue = () => {
+    let index = global["multilangue"].indexOf(globalVariable)
+    let nextIndex = 0
+    if (index !== global["multilangue"].length-1) {
+      nextIndex = index + 1
+    }
+    setGlobalVariable(global["multilangue"][nextIndex])
+    console.log(globalVariable);
+    console.log(global[globalVariable]["Header"]["txt0-0"]);
+  }
+
 
   return (
     <div className={`header ${menuOpen ? 'menu-open' : ''} ${scrolling ? 'scrolling' : ''}`}>
@@ -96,6 +121,9 @@ function Header() {
                     )
                   }
         })}
+        <li>
+          <h3 className='multilangue' onClick={changementLangue}>{globalVariable}</h3>
+        </li>
         </ul>
       </nav>
     </div>

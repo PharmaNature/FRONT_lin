@@ -10,68 +10,73 @@ import { useSwipeable } from 'react-swipeable';
 import historyIMG from '../assets/images/notre-laboratoire/history.jpg'
 import arrowLeft from '../assets/pictogrammes/arrow_left.svg'
 import arrowRight from '../assets/pictogrammes/arrow_right.svg'
+import global from '../assets/global'
+import { useGlobalState } from '../views/GlobalStateContext';
+
+
+
+
+function NotreLabo(props) {
+    const {globalVariable} = useGlobalState()
+const texts = global[globalVariable]["NotreLabo"]
 
 const dataMetier = {
     1: {
-        "titleLine1": "FORMULATION",
-        "titleLine2": "& SOURCING",
-        "description": "Formulation d’ingrédients innovants, Identification des actifs les plus performants, Analyses d’études cliniques, Sélection d’ingrédients rigoureusement choisis, Exigence de technicité et d’efficacité, Formulation sur mesure ou clef en main.",
+        "titleLine1": texts["txt3-0"],
+        "titleLine2": texts["txt3-1"],
+        "description": texts["txt3-2"],
         "urlImage": require("../assets/pictogrammes/formulation.png")
     },
     2: {
-        "titleLine1": "RÈGLEMENTATION",
-        "titleLine2": "& SOURCING",
-        "description": "Allégations santé, Vérification réglementaires des compléments alimentaires, Validation de formules et packagings, Analyses de recommandations méthodes et normes de qualité, Suivi et veille réglementaire, Relation avec les autorités de contrôles (DGCCRF, ANSES, ANSM).",
+        "titleLine1": texts["txt3-3"],
+        "titleLine2": texts["txt3-4"],
+        "description": texts["txt3-5"],
         "urlImage": require("../assets/pictogrammes/reglementation.png")
     },
     3: {
-        "titleLine1": "FAÇONNAGE &",
-        "titleLine2": "CONDITIONNEMENT",
-        "description": "Outil de production complet adapté aux petites et grandes séries, Micro encapsulation, Large choix de gamme de produits : phytothérapie, nutraceutique, probiotiques, bio… Production en marque blanche grâce à notre catalogue dédié, Distribution en centre de répartition (palettes) ou directement en point de vente (colisage)",
+        "titleLine1": texts["txt3-6"],
+        "titleLine2": texts["txt3-7"],
+        "description": texts["txt3-8"],
         "urlImage": require("../assets/pictogrammes/production.png")
     },
     4: {
-        "titleLine1": "FORMATION",
-        "titleLine2": "& COMMUNICATION",
-        "description": "Formation et communication, élaboration d'outils de ventes pour les commerciaux, vente de produits à distance, formation des équipes de ventes.",
+        "titleLine1": texts["txt3-9"],
+        "titleLine2": texts["txt3-10"],
+        "description": texts["txt3-11"],
         "urlImage": require("../assets/pictogrammes/formation.png")
     },
 }
 
 const dataMoyen = {
     1: {
-        "name": "PRODUCTION",
+        "name": texts["txt5-0"],
         "urlImage": require("../assets/images/notre-laboratoire/production.png"),
         "description": {
-            "3 mélangeurs": ["— Capacité de 20 kilos à 1 tonne/jour —"],
-            "6 géluleuses": ["— Capacité de 200.000 gélules/heure —"],
-            "6 brosseuses de gélules": [null],
-            "1 remplisseuse liquide": ["— De 10 à 30 ml —"]
+            [texts["txt5-1"]]: [texts["txt5-2"]],
+            [texts["txt5-3"]]: [texts["txt5-4"]],
+            [texts["txt5-5"]]: [null],
+            [texts["txt5-6"]]: [texts["txt5-7"]]
         }
     },
     2: {
-        "name": "CONDITIONNEMENT",
+        "name": texts["txt6-0"],
         "urlImage": require("../assets/images/notre-laboratoire/conditionnement.png"),
         "description": {
-            "1 ligne de mise en pilulier avec bouchage et étiquetage  pour flacons en verre, plastique ": [" — Capacité de 10.000 unités/jour —"],
-            "1 ligne de blistérisation automatisée": [" — Capacité de 60.000 unités/jour —"],
-            "2 étuyeuses automatiques": [null]
+            [texts["txt6-1"]]: [texts["txt6-2"]],
+            [texts["txt6-3"]]: [texts["txt6-4"]],
+            [texts["txt6-5"]]: [null]
         }
     },
     3: {
-        "name": "QUALITÉ",
+        "name": texts["txt7-0"],
         "urlImage": require("../assets/images/notre-laboratoire/qualite.png"),
         "description": {
-            "Contrôle qualité garanti": ["— Dispose de plusieurs certifications —", "(BIO, HACCP, GMP FOOD…)"],
-            "Projet norme ISO 22000": ["Depuis fin 2022, nous avons entrepris les démarches nécessaires pour l’obtention de la norme ISO 22000. "],
+            [texts["txt7-1"]]: [texts["txt7-2"], texts["txt7-3"]],
+            [texts["txt7-4"]]: [texts["txt7-5"]],
         }
     },
 
 }
-
-
-function NotreLabo(props) {
-
     document.title = props.pageName;
 
     const { chooseImage, chooseSizeTitle } = ResponsiveSize();
@@ -97,102 +102,102 @@ function NotreLabo(props) {
 
     const handleNext = () => {
         if (currentIndex < dataArray.length - 1) {
-          setCurrentIndex(currentIndex + 1);
+            setCurrentIndex(currentIndex + 1);
         } else {
             setCurrentIndex(0);
-          }
-      };
+        }
+    };
 
-      const handlePrev = () => {
+    const handlePrev = () => {
         if (currentIndex > 0) {
-          setCurrentIndex(currentIndex - 1);
+            setCurrentIndex(currentIndex - 1);
         } else {
             setCurrentIndex(dataArray.length - 1);
-          }
-      };
+        }
+    };
 
-      const swipeHandlers = useSwipeable({
+    const swipeHandlers = useSwipeable({
         onSwipedLeft: handleNext,
         onSwipedRight: handlePrev,
-      });
+    });
 
-      const indicators = Array.from({ length: dataArray.length }, (_, i) => i);
-  
-  return (
-      <div className='big-container'>
-        <Introduction format='image' imageChoice={imageChoice} alt={"Laboratoire"} titleSizeChoice={titleSizeChoice} titleBold1="LE FAÇONNIER" title1="DE VOS COMPLÉMENTS" title2="ALIMENTAIRES" />
-          <div className='container-history'>
-            <div className='container-history-img'>
-                <img src={historyIMG} alt='Histoire Laboratoire'/>
+    const indicators = Array.from({ length: dataArray.length }, (_, i) => i);
+
+    return (
+        <div className='big-container'>
+            <Introduction format='image' imageChoice={imageChoice} alt={"Laboratoire"} titleSizeChoice={titleSizeChoice} titleBold1={texts["txt0-0"]} title1={texts["txt0-1"]} title2={texts["txt0-2"]} />
+            <div className='container-history'>
+                <div className='container-history-img'>
+                    <img src={historyIMG} alt='Histoire Laboratoire' />
+                </div>
+                <div className='container-history-text'>
+                    <h2>{texts["txt1-0"]}</h2>
+                    <h3>{texts["txt1-1"]}</h3>
+                    <p>{texts["txt1-2"]}</p>
+                    <h3>{texts["txt1-3"]}</h3>
+                </div>
             </div>
-            <div className='container-history-text'>
-                <h2>NOTRE HISTOIRE</h2>
-                <h3>Créé en 2010 LIN, Laboratoire d’Innovation Naturelle est aujourd’hui un des acteurs incontournables dans le monde des compléments alimentaires. </h3>
-                <p>Nous disposons d'un laboratoire de recherche et développement, d'une installation de production, ainsi que d'un système de contrôle qualité qui assure la traçabilité des matières premières depuis leur réception jusqu'à la production des articles finis. Nous garantissons des produits de haute qualité tout en conservant les propriétés des ingrédients actifs.</p>
-                <h3>Une équipe composée de 40 professionnels est entièrement dédiée à cette division pour assurer la réalisation réussie de vos projets de fabrication. </h3>
-            </div>
-          </div>
             <div className='container-metiers'>
                 <div className='container-metiers-title'>
-                    <h2>NOS MÉTIERS</h2>
+                    <h2>{texts["txt2-0"]}</h2>
                     <div className='cercle-metier'></div>
                 </div>
-                
-                    {windowWidth >= 1179 ? (
-                        dataArray.map((item, index) => (
+
+                {windowWidth >= 1179 ? (
+                    dataArray.map((item, index) => (
                         <React.Fragment key={index}>
                             <LateralIconDescription
-                            titleLine1={item.titleLine1}
-                            titleLine2={item.titleLine2}
-                            description={item.description}
-                            urlImage={item.urlImage}
-                            position={index % 2 === 0 ? "left" : "right"}
+                                titleLine1={item.titleLine1}
+                                titleLine2={item.titleLine2}
+                                description={item.description}
+                                urlImage={item.urlImage}
+                                position={index % 2 === 0 ? "left" : "right"}
                             />
                             {index === dataArray.length - 1 ? "" : <span className='vertical-line'></span>}
                         </React.Fragment>
-                        ))
-                    ) : (
-                        <div {...swipeHandlers} className='container-carrousel'>
-                            <LateralIconDescription
-                                titleLine1={dataArray[currentIndex].titleLine1}
-                                titleLine2={dataArray[currentIndex].titleLine2}
-                                description={dataArray[currentIndex].description}
-                                urlImage={dataArray[currentIndex].urlImage}
-                                position={currentIndex % 2 === 0 ? "left" : "right"}
-                            />
-                            <button onClick={handlePrev} className='btn-carrousel-left'>
-                                <img src={arrowLeft} alt='arrow left' />
-                            </button>
-                            <button onClick={handleNext} className='btn-carrousel-right'>
-                                <img src={arrowRight} alt='arrow right' />
-                            </button>
-                            <div className='pagination'>
-                                {indicators.map((i) => (
+                    ))
+                ) : (
+                    <div {...swipeHandlers} className='container-carrousel'>
+                        <LateralIconDescription
+                            titleLine1={dataArray[currentIndex].titleLine1}
+                            titleLine2={dataArray[currentIndex].titleLine2}
+                            description={dataArray[currentIndex].description}
+                            urlImage={dataArray[currentIndex].urlImage}
+                            position={currentIndex % 2 === 0 ? "left" : "right"}
+                        />
+                        <button onClick={handlePrev} className='btn-carrousel-left'>
+                            <img src={arrowLeft} alt='arrow left' />
+                        </button>
+                        <button onClick={handleNext} className='btn-carrousel-right'>
+                            <img src={arrowRight} alt='arrow right' />
+                        </button>
+                        <div className='pagination'>
+                            {indicators.map((i) => (
                                 <div
                                     key={i}
                                     className={`indicator ${i === currentIndex ? 'active' : ''}`}
                                     onClick={() => setCurrentIndex(i)}
                                 ></div>
-                                ))}
-                            </div>
+                            ))}
                         </div>
-                    )}
+                    </div>
+                )}
 
 
             </div>
             <div className='container-moyen'>
                 <div className='container-moyens-title'>
-                    <h2>NOS MOYENS</h2>
+                    <h2>{texts["txt4-0"]}</h2>
                     <h3>
-                        Une flexibilité de production pour s’adapter à vos besoins : <br />
-                        des lots de 500 à 50.000 unités !
+                        {texts["txt4-1"]} <br />
+                        {texts["txt4-2"]}
                     </h3>
                     <div className='cercle-moyen'></div>
                 </div>
                 <div className='container-moyen-items'>
-                        {Object.keys(dataMoyen).map((id, index) => (
-                            <MoyenCard key={id} dataMoyenCard={dataMoyen[id]} />
-                        ))}
+                    {Object.keys(dataMoyen).map((id, index) => (
+                        <MoyenCard key={id} dataMoyenCard={dataMoyen[id]} />
+                    ))}
                 </div>
             </div>
         </div>

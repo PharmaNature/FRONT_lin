@@ -27,10 +27,13 @@ import envoi from '../assets/pictogrammes/formule-blanche-envoi.png';
 import condition from '../assets/pictogrammes/formule-blanche-conditionnement.png';
 import formulation from '../assets/pictogrammes/formule-blanche-formulation.png';
 
-
+import global from '../assets/global.js'
+import { useGlobalState } from '../views/GlobalStateContext';
 
 
 function FormuleBlanche(props) {
+  const {globalVariable} = useGlobalState()
+  const texts = global[globalVariable]["MarqueBlanche"]
 
   document.title = props.pageName;
 
@@ -51,27 +54,27 @@ function FormuleBlanche(props) {
   const imageChoice = chooseImage("marque_blanche", windowWidth);
   const titleSizeChoice = chooseSizeTitle(windowWidth);
 
-  
+
   const pData = [
     {
       img: formulation,
       alt: 'Formule standard',
-      title: "CHOIX D'UNE <br /> FORMULE STANDARD",
+      title: texts["txt2-2"] + "<br />" + texts["txt2-3"],
     },
     {
       img: production,
       alt: 'Production',
-      title: 'PRODUCTION',
+      title: texts["txt2-4"],
     },
     {
       img: condition,
       alt: 'Conditionnement personnalisé',
-      title: 'CONDITIONNEMENT<br />PERSONNALISÉ',
+      title: texts["txt2-5"] + '<br />' + texts["txt2-6"],
     },
     {
       img: envoi,
       alt: 'Envoi du produit',
-      title: 'ENVOI<br />PRODUIT',
+      title: texts["txt2-7"] + '<br />' + texts["txt2-8"],
     },
   ]
 
@@ -79,56 +82,56 @@ function FormuleBlanche(props) {
     {
       img: poudreImg,
       alt: 'Forme galénique poudre',
-      title: 'Poudre',
-      text: "Nous conditionnons nos poudres sur mesure en fonction de vos besoins, qu'il s'agisse de plantes, de vitamines, de minéraux, en combinaison ou séparément.",
+      title: texts["txt3-2"],
+      text: texts["txt3-3"],
     },
     {
       img: geluleImg,
       alt: 'Forme galénique gélule',
-      title: 'Gélules',
-      text: "Nous offrons une gamme complète de tailles, que ce soit en version gélatine ou végétale. Nous les proposons en taille O ou taille 1. ",
+      title: texts["txt3-4"],
+      text: texts["txt3-5"],
     },
     {
       img: capsuleImg,
       alt: 'Capsule',
-      title: 'Capsule',
-      text: "Nous proposons un large éventail d'opportunités, que ce soit dans le cadre de formules standards ou de développements sur mesure.",
+      title: texts["txt3-6"],
+      text: texts["txt3-7"],
     },
     {
       img: liquidImg,
       alt: 'Liquide',
-      title: 'Liquide',
-      text: "Nous proposons également une gamme d’huile végétales ou huiles essentielles.",
+      title: texts["txt3-8"],
+      text: texts["txt3-9"],
     },
   ]
 
   const cData = [
     {
-      title: 'BLISTER',
+      title: texts["txt4-3"],
       img: blister,
     },
     {
-      title: 'PILULIER',
+      title: texts["txt4-4"],
       img: pilulier,
     },
     {
-      title: 'FLACON',
+      title: texts["txt4-5"],
       img: flacon,
     },
     {
-      title: 'POT',
+      title: texts["txt4-6"],
       img: pot,
     }
   ]
 
   const textGroups = [
-    { title1: 'BEAUTÉ', title2: 'CANNA' },
-    { title1: 'DOULEURS', title2: 'CIRCULATION' },
-    { title1: 'CONFORT URINAIRE', title2: 'CONFORT & PREVENTION' },
-    { title1: 'CIRCULATION', title2: 'LIPOSOME' },
-    { title1: 'CONFORT & PREVENTION', title2: 'TONIQUES & VITAMINES' },
-    { title1: 'DIGESTION TRANSIT / DETOX', title2: 'SOMMEIL & SERENITE' },
-    { title1: 'GAMME FEMME', title2: 'VOIES RESPIRATOIRES ET IMMUNTE' },
+    { title1: texts["txt6-0"], title2: texts["txt6-1"] },
+    { title1: texts["txt6-2"], title2: texts["txt6-3"] },
+    { title1: texts["txt6-4"], title2: texts["txt6-5"] },
+    { title1: texts["txt6-6"], title2: texts["txt6-7"] },
+    { title1: texts["txt6-8"], title2: texts["txt6-9"] },
+    { title1: texts["txt6-10"], title2: texts["txt6-11"] },
+    { title1: texts["txt6-12"], title2: texts["txt6-13"] },
   ];
 
   //  Ajout du scroll horizontal AreaOfExpertise
@@ -186,17 +189,17 @@ function FormuleBlanche(props) {
 
   return (
     <div className='big-container'>
-      <Introduction format='image' imageChoice={imageChoice} alt={"Marque Blanche"} titleSizeChoice={titleSizeChoice} titleBold1="NOS FORMULES" title1="EN MARQUE" title2="BLANCHE" />
+      <Introduction format='image' imageChoice={imageChoice} alt={"Marque Blanche"} titleSizeChoice={titleSizeChoice} titleBold1={texts["txt0-0"]} title1={texts["txt0-1"]} title2={texts["txt0-2"]} />
 
       <div className="sub-container">
         <div className='sub-container-text'>
           <div className='container-formula'>
-            <h1 className='NotreFormula'>NOTRE FORMULE</h1>
-            <h2 className='NotreCatalogue'>ISSUE DE <br /> NOTRE CATALOGUE</h2>
+            <h1 className='NotreFormula'>{texts["txt0-3"]}</h1>
+            <h2 className='NotreCatalogue'>{texts["txt0-4"]} <br />{texts["txt0-5"]}</h2>
           </div>
           <div className='plus-sign'> + </div>
           <div className='container-packaging'>
-            <h1 className='packaging'> VOTRE PACKAGING</h1>
+            <h1 className='packaging'> {texts["txt0-6"]}</h1>
           </div>
         </div>
         <div className='equal-sign'>=</div>
@@ -206,9 +209,10 @@ function FormuleBlanche(props) {
       </div>
       <div className='container-formula-text'>
         <div className='formula-text'>
-          <h3>Nous disposons d’un large choix de «formules standards». Ces formulations ont été élaborées par notre équipe de recherche et développement pour répondre aux divers besoins du marché. <br /><br />Vous accédez à des produits clé en main, prêts à être mis sur le marché.</h3>
+          <h3>{texts["txt1-0"]}
+            <br /><br />{texts["txt1-1"]}</h3>
           <br />
-          <p>Le seuil minimum de commande pour cette offre est de 250 unités. Ce service peut être complémentaire à nos services de développement sur mesure, afin de garantir que votre marque conserve son caractère unique.</p>
+          <p>{texts["txt1-2"]}</p>
         </div>
       </div>
 
@@ -219,12 +223,12 @@ function FormuleBlanche(props) {
           <span className='vertical-line-fb'></span>
 
           <div className='container-process-title'>
-            <h2> NOS PROCESSUS <br /> <span className='title-bold'> DE FABRICATION </span></h2>
+            <h2> {texts["txt2-0"]} <br /> <span className='title-bold'>{texts["txt2-1"]} </span></h2>
           </div>
           <div {...swipeHandlersP} className='container-process-carousel'>
 
             <ProcessCard
-               key={currentPIndex}
+              key={currentPIndex}
               index={currentPIndex}
               img={pData[currentPIndex].img}
               alt={pData[currentPIndex].alt}
@@ -246,7 +250,7 @@ function FormuleBlanche(props) {
         <div className='container-formes'>
 
           <div className='container-formes-title'>
-            <h2> NOS DIVERSES <br /><span className='title-bold'>FORMES GALÉNIQUES...</span></h2>
+            <h2>{texts["txt3-0"]} <br /><span className='title-bold'>{texts["txt3-1"]}</span></h2>
           </div>
 
           {windowWidth >= 768 ? (
@@ -289,8 +293,8 @@ function FormuleBlanche(props) {
 
         <div className='container-condition'>
           <div className='container-condition-title'>
-            <h2>ET NOS CHOIX <br /><span className='title-bold'>DE CONDITIONNEMENT </span></h2>
-            <h3>(SOUS DIVERS FORMATS)</h3>
+            <h2>{texts["txt4-0"]}<br /><span className='title-bold'>{texts["txt4-1"]}</span></h2>
+            <h3>{texts["txt4-2"]}</h3>
           </div>
 
           <div className='container-condition-item'>
@@ -308,7 +312,7 @@ function FormuleBlanche(props) {
 
         <div className='AreaOfExpertise'>
           <div className='expertise-title'>
-            <h2> NOS <br /> <span className='title-bold' > DOMAINES <br /> D'APPLICATIONS</span></h2>
+            <h2>{texts["txt5-0"]}<br /> <span className='title-bold' >{texts["txt5-1"]}<br /> {texts["txt5-2"]}</span></h2>
           </div>
 
           <div className={`expertise-list ${horizontalScroll ? 'horizontal-scroll' : ''}`}>
