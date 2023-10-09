@@ -8,13 +8,13 @@
     overflow-x: hidden;
   }
 
-  .centered-title {
+  /* .centered-title {
     position: absolute; 
     top: 50%; 
     transform: translateY(-50%); 
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-  }
+  } */
 
   .title-bold {
     font-family: 'Montserrat', sans-serif;
@@ -32,9 +32,9 @@
   .horizontalTabSize {
     font-size: 4em;
   }
-  .desktopSize {
+  /* .desktopSize {
     font-size: 4em;
-  }
+  } */
   /* Fin taille de title par taille écran */
 
 
