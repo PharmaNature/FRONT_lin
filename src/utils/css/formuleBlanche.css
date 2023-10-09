@@ -9,13 +9,13 @@
 }
 
 .centered-title {
+  margin-left: -30%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
-
 .title-bold {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
@@ -36,9 +36,9 @@
 }
 
 .desktopSize {
-  font-size: 4em;
+  font-size: 96px;
+  line-height: 91px;
 }
-
 /* NOTRE FORMULE */
 
 .sub-container {
