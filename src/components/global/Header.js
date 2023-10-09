@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../../utils/css/header.css';
 import Logo from '../../assets/images/logoSVG.svg';
+import LogoCol from '../../assets/images/logoColSVG.svg';
 import LogoLIN from '../../assets/images/logoLIN.svg';
 import { Link, useLocation } from 'react-router-dom';
 import { useGlobalState } from '../../views/GlobalStateContext';
@@ -24,6 +25,18 @@ function Header() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+        window.removeEventListener('resize', handleResize);
+    };
+}, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,7 +90,11 @@ function Header() {
     <div className={`header ${menuOpen ? 'menu-open' : ''} ${scrolling ? 'scrolling' : ''}`}>
       <div className="logoDiv">
         <a href="/">
+        {windowWidth > 1110 ? (
           <img src={Logo} className="logo" alt="Logo" />
+          ) : (
+            <img src={LogoCol} className="logo" alt="Logo" />
+        )}
         </a>
       </div>
       <div className="menu-toggle" onClick={toggleMenu}>
