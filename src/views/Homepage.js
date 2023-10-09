@@ -125,7 +125,7 @@ function Homepage(props) {
 
           <div className='container-on-video'>
             {Object.values(iconData).map((item, index) => (
-              <IconDescription key={index} imageURL={item['imageURL']} title1={item['title1']} title2={item['title2']} />
+              <IconDescription key={index} imageURL={item['imageURL']} title1={item['title1']} title2={item['title2']} position="top" />
               ))}
           </div>
         </div>
@@ -168,7 +168,7 @@ function Homepage(props) {
 
         <div className='container-intervention'>
               <h2 className='intervention-title'>
-              {texts["txt3-0"]}
+                {texts["txt3-0"]}
               </h2>
 
             {windowWidth >= 1179 ? (
@@ -179,7 +179,7 @@ function Homepage(props) {
                       </div>
                     ) : (
                       <div {...useSwipeable} className='container-item-intervention'>
-                        <IconDescription key={currentIndex} imageURL={dataArray[currentIndex].urlImage} title1={dataArray[currentIndex].titleLine1} title2={dataArray[currentIndex].titleLine2} />
+                        <IconDescription key={currentIndex} imageURL={dataArray[currentIndex].urlImage} title1={dataArray[currentIndex].titleLine1} title2={dataArray[currentIndex].titleLine2} position="bottom" />
                         <button onClick={handlePrev} className='btn-metier-left'>
                             <img src={arrowLeft} alt='arrow left' />
                         </button>
