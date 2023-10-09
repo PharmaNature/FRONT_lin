@@ -60,14 +60,24 @@
   transform: translateX(-50%);
 }
 
-.item-icon {
+.item-icon-top {
   text-align: center;
   padding: 1%;
 }
 
-.item-icon img {
-  width: 58px;
-  height: 60px;
+.item-icon-bottom {
+  text-align: center;
+  padding: 1%;
+}
+
+.item-icon-top img {
+  width: 64px;
+  height: 65px;
+  margin-top: 15px;
+}
+
+.item-icon-bottom img {
+  width: 150px;
   margin-top: 15px;
 }
 
@@ -75,15 +85,15 @@
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 16px;
 }
 
 .big-container-objectif {
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .container-objectif {
@@ -95,12 +105,14 @@
 
 .objectif-title {
   text-align: center;
-  width: 510px;
+  width: 100%;
   margin: auto;
 }
 
 .objectif-title h2 {
   font-weight: 800;
+  font-size: 40px;
+  margin: 0;
 }
 
 .container-objectif-paragraphes {
@@ -108,7 +120,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 5%;
+  gap: 2%;
   width: 100%;
   font-weight: 500;
   margin-top: 2%;
@@ -137,8 +149,9 @@
 .intervention-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
+  font-size: 45px;
   margin: 0 auto;
-  width: 300px;
+  width: 100%;
   text-align: center;
 }
 
@@ -152,11 +165,6 @@
   gap: 5%;
 }
 
-.item-icon h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 500;
-}
-
 .container-nos-formules {
   width: 100%;
   background-color: #EBEBE9;
@@ -164,8 +172,7 @@
   flex-direction: row;
   justify-content: center;
   gap: 5%;
-  padding: 1%;
-  padding-top: 10.5%;
+  padding-top: max(161px);
 }
 
 .container-formule-item {
@@ -195,7 +202,7 @@
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 35px;
 }
 
 .container-formule-item h2 span {
@@ -214,14 +221,16 @@
 
 @media (max-width: 1179px) {
 
-  .container-on-video {
-    display: none;
+  .objectif-title h2 {
+    font-size: 25px;
   }
 
-  .objectif-title {
-    text-align: start;
-    width: 80%;
-    margin: 0;
+  .intervention-title {
+    font-size: 25px;
+  }
+
+  .container-on-video {
+    display: none;
   }
 
   .container-objectif-paragraphes {
@@ -242,6 +251,7 @@
 
   .container-item-intervention {
     position: relative;
+    width: 400px;
   }
 
   .container-nos-formules {
@@ -301,11 +311,17 @@
   .indicator.active {
     background-color: #000;
   }
-
+  
 }
 
 @media (max-width: 650px) {
   .container-formule-item {
     margin-top: 25%;
+  }
+
+  .objectif-title {
+    text-align: start;
+    width: 80%;
+    margin: 0;
   }
 }
