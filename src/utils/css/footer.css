@@ -7,15 +7,19 @@
     bottom: 0; 
 }
 
-.logo {
-    width: 88%; 
+.logo-footer {
     height: auto; 
+}
+
+.logo-menu {
+    width: 280px;
 }
 
 .menu-list {
     list-style-type: none;
     line-height: 2;
     padding: 0;
+    margin: 0;
 }
 .menu-list a {
     text-decoration: none;
@@ -23,7 +27,6 @@
     font-family: 'Poppins', sans-serif;
     color: #6D6869;
 }
-
 
 .form-group {
     display: grid;
@@ -47,18 +50,27 @@
     height: 700px;
 }
 .contact-info {
-    height: 500px;
+    width: 50%;
+    height: 215px;
     display: flex;
-    flex-direction: column;
+    margin: 2% 0 2% 0;
+    flex-direction: row;
     justify-content: space-between;
 }
 
+.logoFooterIMG {
+    width: 170px;
+}
 
 .address {
     font-size: 17px; 
     font-family: 'lato', sans-serif;
     color: #111426;
-    line-height: 0.4;
+    width: 305px;
+}
+
+.address p {
+    margin-top: 0;
 }
 
 .contactUs {
