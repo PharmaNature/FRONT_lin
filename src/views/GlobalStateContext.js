@@ -5,7 +5,7 @@ const GlobalStateContext = createContext();
 
 // Créez un composant fournisseur pour encapsuler votre état global
 export const GlobalStateProvider = ({ children }) => {
-    const [globalVariable, setGlobalVariable] = useState("fr");
+    const [globalVariable, setGlobalVariable] = useState("FRANÇAIS");
 
     return (
         <GlobalStateContext.Provider value={{ globalVariable, setGlobalVariable }}>

@@ -1,5 +1,63 @@
 /* header.css */
 
+.blackspace {
+  background-color: #000;
+  height: 45px;
+  transition: width 0.5s ease;
+  display: flex;
+  justify-content: center;
+}
+
+.big-container-language {
+  width: 1885px;
+  display: flex;
+  justify-content: end;
+}
+
+.container-language {
+  z-index: 9999;
+  width: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.picker-container {
+  margin-top: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.divLanguage {
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divLanguage p {
+  margin: 4%;
+}
+
+.container-language h4 {
+  color: #fff;
+  margin: 0;
+}
+
+.pickList {
+  width: 12px;
+  height: 12px;
+}
+
+.language {
+  cursor: pointer;
+}
+
 .header {
   background: transparent;
   display: flex;
@@ -8,7 +66,7 @@
   padding: 20px;
   height: 80px;
   position: fixed;
-  top: 0; 
+  top: 45px; 
   gap: 3%;
   width: 100%; 
   z-index: 1000;
@@ -17,6 +75,7 @@
 
 .header.scrolling {
   background-color: #fff;
+  top: 0; 
 }
   
   .logoDiv img {
@@ -46,6 +105,7 @@
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     position: relative;
+    cursor: pointer;
   }
 
 /* Style du lien actif */
@@ -119,14 +179,14 @@
   background-color: #fff;
   padding: 10px; 
   position: absolute;
-  top: 10%; 
+  top: 16%; 
   left: 0;
   width: 100%;
 }
 
 /* Taille du logo */
 .logo-mobile img {
-  width: 100px; 
+  width: 150px; 
   margin-left: 10px;
   height: auto; 
   margin-bottom: 10px; 
@@ -169,6 +229,11 @@
 
 /* Media query pour afficher le menu burger sur les téléphones */
 @media (max-width: 1110px) {
+
+  .container-language {
+    display: none;
+  }
+
   /* Styles pour le header */
   .header {
     background: transparent;

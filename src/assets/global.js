@@ -1,8 +1,8 @@
 
 const global = {
-    "global": "fr",
-    "multilangue": ["fr", "en", "ch"],
-    "fr": {
+    "global": "FRANÇAIS",
+    "multilangue": ["FRANÇAIS", "ENGLISH", "中国人"],
+    "FRANÇAIS": {
         "Header": {
             "txt0-0": "NOTRE",
             "txt0-1": "LABORATOIRE",
@@ -263,7 +263,7 @@ const global = {
             "txt0-0": "EN SAVOIR +"
         }
     },
-    "en": {
+    "ENGLISH": {
         "Header": {
             "txt0-0": "OUR",
             "txt0-1": "LABORATORY",
@@ -518,7 +518,7 @@ const global = {
 
 
     },
-    "ch": {
+    "中国人": {
         "Header": {
             "txt0-0": "我们的",
             "txt0-1": "实验室",
