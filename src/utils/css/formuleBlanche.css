@@ -140,6 +140,7 @@ h2.NotreCatalogue {
   position: relative;
   height: 290px;
   width: 50%;
+  max-width: 785px;
 }
 .container-process-title h2{
   font-family: 'Montserrat', sans-serif;
