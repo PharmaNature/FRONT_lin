@@ -92,3 +92,52 @@
     left: 28%;
   }
 }
+@media screen and (min-width: 1180px) and (max-width: 1523px){
+  h1.NotreFormula-mesure {
+    font-size: 3em;
+  }
+  h2.NotreCatalogue-mesure {
+    font-size: 27px;
+  }
+  h1.packaging {
+    font-size: 2.7em;
+  }
+ .equal-sign-mesure {
+      width: 15%;
+    }
+    
+}
+
+@media screen and (max-width: 767px) {
+
+  .container-formula {
+    text-align: center;
+    width: 100%;
+  }
+
+  h1.packaging {
+    font-size: 30px;
+    font-weight: bold;
+    width: 80%;
+    margin-top: 2px;
+    text-align: center;
+  }
+
+  h1.NotreFormula-mesure {
+    font-size: 33px;
+  }
+  .plus-sign-mesure {
+    font-size: 110px;
+    line-height: 84px;
+  }
+
+  .equal-sign-mesure {
+    font-size: 130px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    width: 20%;
+    line-height: 96px;
+  }
+
+  }
