@@ -47,8 +47,8 @@ function Footer() {
             </div>
           <div className="address">
             <p> {texts["txt0-0"]}</p>
-            <p>{texts["txt0-1"]} - {texts["txt0-2"]}</p>
-            <p> {texts["txt0-3"]}</p>
+            <p>{texts["txt0-1"]} </p>
+            <p> {texts["txt0-2"]}</p>
             <p> {texts["txt0-4"]}</p>
             <p> {texts["txt0-5"]}</p>
           </div>
