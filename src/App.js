@@ -7,7 +7,6 @@ import NotreLabo from './views/NotreLabo';
 import FormuleBlanche from './views/FormuleBlanche'
 import FormuleSurMesure from './views/FormuleSurMesure'
 import Qualite from './views/Qualite'
-import BlackSpace from './components/global/BlackSpace'
 
 
 
@@ -15,7 +14,6 @@ function App() {
   return (
     <Router>
       <div>
-        <BlackSpace/>
         <Header/>
           <Routes> 
             <Route path="/" element={<Homepage pageName="Accueil" />} />
