@@ -324,4 +324,8 @@
     width: 80%;
     margin: 0;
   }
+
+  .container-formule-item h2 {
+    font-size: 30px;
+  }
 }

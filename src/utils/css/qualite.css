@@ -44,7 +44,7 @@
 
   .container-qualite-text {
     width: 90%;
-    margin: 5%;
+    margin: 2%;
     text-align: center;
   }
 
@@ -108,10 +108,14 @@
     padding-bottom: 15px;
   }
 
+  .container-qualite-title h2 {
+    font-size: 50px;
+  }
+
   .container-qualite-title {
     font-family: 'Montserrat';
     font-weight: 800;
-    height: 150px;
+    height: 230px;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -162,4 +166,16 @@
       width: 80%;
     }
     
+  }
+  
+  @media (max-width: 1600px) {
+    .container-qualite-title h2 {
+      font-size: 40px;
+    }
+  }
+  
+  @media (max-width: 1300px) {
+    .container-qualite-title h2 {
+      font-size: 30px;
+    }
   }
