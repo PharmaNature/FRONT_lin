@@ -55,10 +55,7 @@ function Footer() {
             <p> {texts["txt0-5"]}</p>
           </div>
         </div>
-        <div className="contact-form">
           <ContactForm />
-        </div>
-          
       </div>
     </footer>
     
