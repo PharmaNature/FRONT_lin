@@ -55,7 +55,9 @@
     display: flex;
     margin: 2% 0 2% 0;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 7%;
+    white-space: nowrap;
 }
 
 .logoFooterIMG {
@@ -66,7 +68,7 @@
     font-size: 17px; 
     font-family: 'lato', sans-serif;
     color: #111426;
-    width: 305px;
+    width: 228px;
 }
 
 .address p {
@@ -132,66 +134,31 @@ form {
 .button-send:hover {
     cursor: pointer;
 }
-/* 
-@media screen and (max-width: 768px) {
-    .footer {
+
+@media screen and (max-width: 790px) {
+
+    .contact-info {
+        display: flex;
         flex-direction: column;
-        height: auto; 
         align-items: center;
+        gap: 5%;
+        height: auto;
     }
-    .button-send{
-        margin-left: 74%;
+
+    .logo-footer {
+        margin-bottom: 15%;
     }
-    .address{
-        margin-bottom: 11vw;
-        margin-top: 12.1vw;
+
+    .menu {
+        text-align: center;
     }
-    .menu-list{
-        line-height: 1;
+
+    .logo-menu {
+        margin-bottom: 15%;
+    }
+
+    .address {
+        text-align: center;
     }
 }
-     */
-     @media screen and (max-width: 768px) {
-        .footer {
-            padding: 0%;
-            height: auto;
-            width: 100%
-        }
-        .contact-info {
-            height: auto;
-            flex-direction: column;
-            align-items: center;
-        }
-        .logoFooterIMG {
-            width: 130px;
-        }
-        .logo-menu {
-            margin-top: 11%;
-        }
-        .address{
-            margin-top: 20%;
-        }
-        .menu-list{
-            line-height: 1.3;
-        }
-     }
 
-     @media screen and (min-width: 769px) and (max-width: 1600px) {
-        .footer{
-            padding: 0%;
-        }
-        .contact-info {
-            height: auto;
-            width: 100%;
-        }
-        .logo-footer{
-            margin-left: 3%;
-        }
-        .logoFooterIMG {
-            width: 150px;
-        }
-        .logo-menu ,
-        .address {
-            width: 33%;
-        }
-     }
