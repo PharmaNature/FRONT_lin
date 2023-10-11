@@ -12,7 +12,7 @@ function BoxFormule(props) {
                     {props.titleLine3} <br />
                 </span>
             </h2>
-            <p>
+            <p className="descriptionBoxFormules">
                 {props.description}
             </p>
                 <MoreInfo link={props.link} />
