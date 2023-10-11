@@ -109,6 +109,14 @@ function Header() {
             </div>
           )}
           <ul>
+          {menuOpen && (
+            <li className='divLangues'>
+              {global["multilangue"].map((item, index) => (
+                  <h3 className='multilangue' key={index} onClick={() => changementLangue(index)}>{item}</h3>
+                )
+              )}
+            </li>
+          )}
           {items.map(item => {
                     if (item.name !== "CONTACT") {
                       return (
@@ -133,14 +141,6 @@ function Header() {
                       )
                     }
           })}
-          {menuOpen && (
-            <li>
-              {global["multilangue"].map((item, index) => (
-                  <h3 className='multilangue' key={index} onClick={() => changementLangue(index)}>{item}</h3>
-                )
-              )}
-            </li>
-          )}
           </ul>
         </nav>
       </div>

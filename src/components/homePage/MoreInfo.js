@@ -61,6 +61,7 @@ function MoreInfo(props) {
               y2="0"
               stroke="black"
               strokeWidth="2"
+              strokeDashoffset="0"
               className="line-svg"
             />
           </svg>
