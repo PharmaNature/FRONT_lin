@@ -23,8 +23,9 @@
 }
 .menu-list a {
     text-decoration: none;
+    line-height: 10px;
     font-size: 17px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat';
     color: #6D6869;
 }
 
@@ -63,10 +64,15 @@
 .logoFooterIMG {
     width: 170px;
 }
+hr.separator-footer {
+    height: 124px;
+    border-left: 2px solid #000;
+}
 
 .address {
     font-size: 17px; 
-    font-family: 'lato', sans-serif;
+    font-weight: 600;
+    font-family: 'Montserrat';
     color: #111426;
     width: 228px;
 }
@@ -136,7 +142,9 @@ form {
 }
 
 @media screen and (max-width: 790px) {
-
+    hr.separator-footer {
+        transform: rotate(90deg);
+    }
     .contact-info {
         display: flex;
         flex-direction: column;

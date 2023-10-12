@@ -110,24 +110,33 @@
     }
 
     .container-card-text-left p {
-      text-align: justify;
-      width: 400px;
+        text-align: justify;
+        width: 404px;
+        font-family: 'Montserrat';
+        font-size: 16px;
+        font-weight: 300;
     }
+    
 
     .container-card-text-right p {
       text-align: justify;
-      width: 400px;
-    }
+      width: 404px;
+      font-family: 'Montserrat';
+      font-size: 16px;
+      font-weight: 300;
+  }
 
     .container-card-text-left h2 {
-      font-size: 50px;
+      font-family: 'Montserrat';
+      font-size: 42px;
       margin: 0;
     }
 
     .container-card-text-right h2 {
-      font-size: 50px;
+      font-family: 'Montserrat';
+      font-size: 42px;
       margin: 0;
-    }
+  }
 
     .container-card-text-left {
       grid-column-start: 2;

@@ -23,7 +23,7 @@ import arrowRight from '../assets/pictogrammes/arrow_right.svg'
 import arrowLeftMesure from '../assets/images/formule-sur-mesure/arrow_left_formule_sur_mesure.svg'
 import arrowRightMesure from '../assets/images/formule-sur-mesure/arrow_right_formule_sur_mesure.svg'
 import cCharges from '../assets/pictogrammes/cahier-des-charges.png';
-import production from '../assets/pictogrammes/production.png';
+import production from '../assets/pictogrammes/formule-blanche-production.png';
 import dev from '../assets/pictogrammes/developpement.png';
 import condition from '../assets/pictogrammes/formule-blanche-conditionnement.png';
 import envoi from '../assets/pictogrammes/formule-blanche-envoi.png';

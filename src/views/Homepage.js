@@ -141,16 +141,18 @@ function Homepage(props) {
               </div>
               <div className='container-objectif-paragraphes'>
                 <div className='objectif-paragraphe1'>
-                  <span>
+                  <span className='paragraphe1'>
                   {texts["txt1-0"]}
                   </span>
                   <br /><br />
                   {texts["txt1-1"]}
                   <br />
                   <br />
+                  <span className='text-home'>
                   {texts["txt1-2"]}
                   <br />
                   {texts["txt1-3"]}
+                  </span>
                 </div>
                 <div className='objectif-paragraphe2'>
                 {texts["txt2-0"]}
