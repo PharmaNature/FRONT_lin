@@ -289,7 +289,7 @@ h2.NotreCatalogue {
 
 .expertise-list {
   margin-top: 60px;
-  width: 100%;
+  width: 94%;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -300,7 +300,7 @@ h2.NotreCatalogue {
 }
 
 .text-group {
-  width: 253px;
+  width: 258px;
 }
 
 .horizontal-scroll {

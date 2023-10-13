@@ -141,7 +141,7 @@ function FormuleSurMesure(props) {
 
   //  Ajout du scroll horizontal AreaOfExpertise
 
-  const horizontalScroll = windowWidth < 1500;
+  const horizontalScroll = windowWidth < 2120;
 
   //  Ajout scroll horizontal en mobile Forme Galenique
 
