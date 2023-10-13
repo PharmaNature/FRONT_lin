@@ -37,6 +37,7 @@ function Qualite(props) {
         1: {
             titleLine1: texts["txt2-0"],
             titleLine2: texts["txt2-1"],
+            titleLine1_2: texts["txt2-01"],
             description: [
                 texts["txt2-2"],
                 texts["txt2-3"],
@@ -44,7 +45,7 @@ function Qualite(props) {
             ]
         },
         2: {
-            titleLine1: texts["txt2-5"],
+            titleLine1_2: texts["txt2-5"],
             description: [
                 texts["txt2-6"],
                 texts["txt2-7"],
@@ -53,7 +54,7 @@ function Qualite(props) {
             ]
         },
         3: {
-            titleLine1: texts["txt2-10"],
+            titleLine1_2: texts["txt2-10"],
             description: [
                 texts["txt2-11"],
                 texts["txt2-12"],
@@ -92,7 +93,7 @@ function Qualite(props) {
             </div>
             <div className='big-container-card-qualite'>
                 {Object.values(dataQualite).map((item, index) => (
-                    <BoxQualite key={index} titleLine1={item.titleLine1} titleLine2={item.titleLine2} description={item.description} />
+                    <BoxQualite key={index} titleLine1={item.titleLine1} titleLine2={item.titleLine2} titleLine1_2={item.titleLine1_2} description={item.description} />
                 ))}
             </div>
             <div className='container-service-qualite'>

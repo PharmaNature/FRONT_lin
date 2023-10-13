@@ -6,7 +6,7 @@ function BoxQualite(props) {
         <div className="container-card-qualite">
             <div className="container-qualite-title">
                 <h2>
-                    {props.titleLine1} <br />
+                    <span className="qualiteSoloText">{props.titleLine1}</span>{props.titleLine1_2} <br />
                     {props.titleLine2}
                 </h2>
                 <img src={plusSVG} alt="plus"/>
