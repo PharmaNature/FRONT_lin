@@ -138,9 +138,10 @@ h2.NotreCatalogue {
 
 .container-process-carousel {
   position: relative;
-  height: 290px;
+  height: 258px;
   width: 50%;
   max-width: 785px;
+  margin-top: 3%;
 }
 .container-process-title h2{
   font-family: 'Montserrat', sans-serif;
@@ -326,7 +327,7 @@ h2.NotreCatalogue {
 
 .rose {
   color: #D9C5C4;
-}
+} 
 
 /* FORMAT TABLETTE */
 
@@ -614,6 +615,27 @@ h2.NotreCatalogue {
     width: 265px;
 }
 }
+
+@media screen and (max-width: 530px) {
+  .container-process-carousel {
+    margin-top: 8%;
+  }
+}
+
+@media screen and (min-width: 501px)and (max-width: 686px) {
+  .container-process-carousel {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 531px) and (max-width: 766px) {
+  .container-process-carousel {
+    margin-top: 6%;
+  }
+}
+
+
+
 @media screen and (min-width: 501px)and (max-width: 686px) {
   .container-process-carousel {
     width: 70%;

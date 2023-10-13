@@ -29,6 +29,9 @@ function Footer() {
                 <img className='logoFooterIMG' src={Logo} alt="Logo de l'entreprise"/>
               </a>
             </div>
+
+         
+
             <div className="logo-menu">
               <div className="menu">
                     <ul className="menu-list">
@@ -45,6 +48,8 @@ function Footer() {
                     </ul>
               </div>
             </div>
+            <hr className='separator-footer'/>
+            
           <div className="address">
             <p> {texts["txt0-0"]}</p>
             <p>{texts["txt0-1"]} - {texts["txt0-2"]}</p>

@@ -65,7 +65,8 @@
 
   .index {
     position: absolute;
-    left: 37%;
+    /* left: 37%; */
+    top: -21%;
     font-size: 30px;
     font-family: montserrat;
     font-weight: bold;
@@ -75,12 +76,13 @@
     color: #B9E8E8;
   }
   
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
   .index{
-    left: 20%;
+    top: -13%;
+    font-size: 25px;
   }
 }
- 
+ /* 
 @media screen and (min-width: 1001px) and (max-width: 1300px) {
   .index{
     left: 25%;
@@ -91,7 +93,7 @@
   .index{
     left: 28%;
   }
-}
+} */
 @media screen and (min-width: 1180px) and (max-width: 1523px){
   h1.NotreFormula-mesure {
     font-size: 3em;
