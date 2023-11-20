@@ -7,34 +7,16 @@
     position: relative; 
     overflow-x: hidden;
   }
-/* 
-  .centered-title {
-    position: absolute; 
-    top: 50%; 
-   transform: translate(10%, -50%);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-  } */
 
   .title-bold {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
   }
 
-  /* Taille de title par taille écran */
-  /* .telSize {
-    font-size: 1.5em;
-    text-align: center;
-  /* } 
-  .verticalTabSize {
-    font-size: 2.1em;
-  } */
   .horizontalTabSize {
     font-size: 4em;
   }
-  /* .desktopSize {
-    font-size: 4em;
-  } */
+
   /* Fin taille de title par taille écran */
 
 
@@ -327,6 +309,7 @@
       .container-card-text-left {
         padding: 0 5% 0 5%;
         text-align: justify;
+        align-items: center;
       }
 
       .container-card-text-left h2 {
@@ -335,13 +318,10 @@
         margin: auto;
       }
 
-      .container-card-text-right {
-        padding: 0 5% 0 5%;
-        text-align: justify;
-      }
-
       .container-card-text-right h2 {
         text-align: center;
+        font-size: 25px;
+        margin: auto;
       }
 
       .container-card-img {
