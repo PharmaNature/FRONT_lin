@@ -9,7 +9,7 @@ function BoxQualite(props) {
                     <span className="qualiteSoloText">{props.titleLine1}</span>{props.titleLine1_2} <br />
                     {props.titleLine2}
                 </h2>
-                <img src={plusSVG} alt="plus"/>
+                {/* <img src={plusSVG} alt="plus"/> */}
             </div>
                 <hr className="line-separation"/>
                 <ol className="liste-description">

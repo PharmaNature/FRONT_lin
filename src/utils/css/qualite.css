@@ -119,7 +119,7 @@
     height: 230px;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: center;
     align-items: center;
     margin-top: 1%;
   }
@@ -169,6 +169,7 @@
 
     .container-card-qualite {
       width: 80%;
+      max-width: 500px;
     }
     
   }
