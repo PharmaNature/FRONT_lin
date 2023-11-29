@@ -141,9 +141,9 @@
   .qualiteSoloText {
     font-weight: 300;
   }
-  @media screen and (min-width: 400px) and (max-width: 600px){
+  @media screen and (min-width: 400px) and (max-width: 650px){
     .container-formeGaleniqueIMG img {
-      min-width: 484px;
+      min-width: 400px;
   }
   }
   
