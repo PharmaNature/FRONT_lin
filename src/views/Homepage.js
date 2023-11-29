@@ -8,7 +8,7 @@ import MoreInfo from '../components/HomePage/MoreInfo';
 import { useSwipeable } from 'react-swipeable';
 import arrowLeft from '../assets/pictogrammes/arrow_left.svg'
 import arrowRight from '../assets/pictogrammes/arrow_right.svg'
-import global from '../assets/global.js'
+import global from '../assets/global.js';
 import { useGlobalState } from '../views/GlobalStateContext';
 
 function Homepage(props) { 

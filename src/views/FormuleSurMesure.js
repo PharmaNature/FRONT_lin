@@ -9,7 +9,7 @@ import TextGroup from '../components/Formules/AreaOfExpertise';
 import plus from '../assets/pictogrammes/plus.svg'
 
 // Imports de toutes les images
-import surMesureIMG from '../assets/images/formule-sur-mesure/formule-sur-mesure.png';
+import surMesureIMG from '../assets/images/formule-sur-mesure/formule-sur-mesure_v2.png';
 import poudreImg from '../assets/images/marque-blanche/galenique_poudre.jpg'
 import capsuleImg from '../assets/images/marque-blanche/galenique_capsule.jpg'
 import geluleImg from '../assets/images/marque-blanche/galenique_gélules.jpg'
