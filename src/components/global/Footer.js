@@ -30,8 +30,6 @@ function Footer() {
               </a>
             </div>
 
-         
-
             <div className="logo-menu">
               <div className="menu">
                     <ul className="menu-list">
