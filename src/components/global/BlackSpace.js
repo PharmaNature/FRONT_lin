@@ -20,9 +20,9 @@ function BlackSpace() {
         setGlobalVariable(global["multilangue"][index])
     };
 
-  return (
+return (
     <div className='blackspace'>
-      <div className='big-container-language'>
+    <div className='big-container-language'>
         <div className='container-language' onMouseEnter={toggleDivLanguage} onMouseLeave={toggleDivLanguage} style={containerStyle}>
             <div className='picker-container'>
                 <h4>{globalVariable}</h4>
@@ -40,9 +40,9 @@ function BlackSpace() {
                 </div>
             )}
         </div>
-      </div>
     </div>
-  );
+    </div>
+);
 }
 
 export default BlackSpace;

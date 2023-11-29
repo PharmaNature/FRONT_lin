@@ -1,0 +1,32 @@
+.transition-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: fade-in-out 2s ease-in-out forwards;
+    z-index: 99999;
+    opacity: 0; /* Définissez l'opacité à 0 pour commencer */
+  }
+
+
+  
+  @keyframes fade-in-out {
+    0% {
+      opacity: 0; /* Commencez avec une opacité de 0 (complètement transparent) */
+    }
+    20%, 80% {
+      opacity: 1; /* Passez à une opacité de 1 (complètement opaque) entre 10% et 90% de l'animation */
+    }
+    100% {
+      opacity: 0; /* Terminez avec une opacité de 0 (complètement transparent) */
+      display: none;
+    }
+  }
+  
+    
