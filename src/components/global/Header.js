@@ -39,6 +39,12 @@ function Header() {
     };
 }, []);
 
+useEffect(() => {
+  if (windowWidth > 1110) {
+    setMenuOpen(false);
+  }
+}, [windowWidth]);
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 20) {
@@ -99,17 +105,21 @@ function Header() {
         </div>
         <nav className={`navigation ${menuOpen ? 'open' : ''}`}>
           {menuOpen && (
+            <>
             <button className="close-button" onClick={closeMenu}>
               Fermer
             </button>
+            
+            </>
           )}
-          {menuOpen && (
+          <ul>
+            <li>
             <div className="logo-mobile">
               <img src={LogoLIN} className="logo" alt="Logo" />
             </div>
-          )}
-          <ul>
+            </li>
           {menuOpen && (
+            
             <li className='divLangues'>
               {global["multilangue"].map((item, index) => (
                   <h3 className='multilangue' key={index} onClick={() => changementLangue(index)}>{item}</h3>
