@@ -1,0 +1,66 @@
+.image-formulaire{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+}
+.imageFr{
+  width: 80%;
+}
+
+.form{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.formMobile{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.div-input{
+  display: flex;
+  flex-direction: column;
+}
+.input-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.required {
+  color: #E80000;
+}
+
+.div_moit-form{
+  margin: 20px;
+  width: 100%;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #ccc;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.div-bouton{
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+  

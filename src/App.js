@@ -8,6 +8,7 @@ import FormuleBlanche from './views/FormuleBlanche';
 import FormuleSurMesure from './views/FormuleSurMesure';
 import Qualite from './views/Qualite';
 import TransitionPage from './components/global/TransitionPage';
+import Contact from './views/Contact'
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -36,6 +37,7 @@ function App() {
         <Route path="marque-blanche" element={<FormuleBlanche pageName="Formule Blanche" />} />
         <Route path="formule-sur-mesure" element={<FormuleSurMesure pageName="Formule Sur Mesure" />} />
         <Route path="qualite" element={<Qualite pageName="Qualité & Engagement" />} />
+        <Route path="contact" element={<Contact pageName="Contact" />} />
       </Routes>
       <Footer />
     </div>
