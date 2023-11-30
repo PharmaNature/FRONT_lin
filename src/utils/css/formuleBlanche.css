@@ -631,6 +631,7 @@ h2.NotreCatalogue {
 @media screen and (min-width: 531px) and (max-width: 766px) {
   .container-process-carousel {
     margin-top: 6%;
+    margin-bottom: 4%;
   }
 }
 
