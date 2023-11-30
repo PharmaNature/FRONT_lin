@@ -86,19 +86,19 @@ function Homepage(props) {
     // engrenage 
     5: {
       "titleLine1": texts["txt5-4"],
-      "titleLine2": texts["txt5-5"],
+      "titleLine2": "",
       "urlImage": require("../assets/pictogrammes/production.png")
     },
-    // pas encore de logo 
-    /*
+    // cadeau surprise
+    
     6 : {
-      "titleLine1" : texts["txt5-0"],
-      "titleLine2" : texts["txt5-1"],
-      "urlImage" : require("../assets/pictogrammes/formulation.png")
+      "titleLine1" : texts["txt5-5"],
+      "titleLine2" : "",
+      "urlImage" : require("../assets/pictogrammes/conditionnement.png")
     },
-    */
+    
     // chat plante
-    6 : {
+    7 : {
       "titleLine1" : texts["txt5-6"],
       "titleLine2" : texts["txt5-7"],
       "urlImage" : require("../assets/pictogrammes/formation com.png")
