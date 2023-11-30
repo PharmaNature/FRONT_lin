@@ -59,26 +59,51 @@ function Homepage(props) {
   }
 
   const dataMetier = {
-    1 : {
-        "titleLine1" : texts["txt5-0"],
-        "titleLine2" : texts["txt5-1"],
-        "urlImage" : require("../assets/pictogrammes/formulation.png")
+    // loupe 
+    1: {
+      "titleLine1": texts["txt5-2"],
+      "titleLine2": texts["txt5-3"],
+      "urlImage": require("../assets/pictogrammes/reglementation.png")
     },
-    2 : {
-        "titleLine1" : texts["txt5-2"],
-        "titleLine2" : texts["txt5-3"],
-        "urlImage" : require("../assets/pictogrammes/reglementation.png")
+    // fiole
+    2: {
+      "titleLine1": texts["txt5-0"],
+      "titleLine2": texts["txt5-1"],
+      "urlImage": require("../assets/pictogrammes/formulation.png")
     },
-    3 : {
-        "titleLine1" : texts["txt5-4"],
-        "titleLine2" : texts["txt5-5"],
-        "urlImage" : require("../assets/pictogrammes/production.png")
+    // diplome
+    3: {
+      "titleLine1": texts["txt5-8"],
+      "titleLine2": texts["txt5-9"],
+      "urlImage": require("../assets/pictogrammes/reglementation qualite.png")
     },
-    4 : {
-        "titleLine1" : texts["txt5-6"],
-        "titleLine2" : texts["txt5-7"],
-        "urlImage" : require("../assets/pictogrammes/formation.png")
+    // bocale
+    4: {
+      "titleLine1": texts["txt5-10"],
+      "titleLine2": texts["txt5-11"],
+      "urlImage": require("../assets/pictogrammes/design.png")
     },
+    // engrenage 
+    5: {
+      "titleLine1": texts["txt5-4"],
+      "titleLine2": texts["txt5-5"],
+      "urlImage": require("../assets/pictogrammes/production.png")
+    },
+    // pas encore de logo 
+    /*
+    6 : {
+      "titleLine1" : texts["txt5-0"],
+      "titleLine2" : texts["txt5-1"],
+      "urlImage" : require("../assets/pictogrammes/formulation.png")
+    },
+    */
+    // chat plante
+    6 : {
+      "titleLine1" : texts["txt5-6"],
+      "titleLine2" : texts["txt5-7"],
+      "urlImage" : require("../assets/pictogrammes/formation com.png")
+    },
+
   }
 
   const nosFormules = {
@@ -176,6 +201,9 @@ function Homepage(props) {
               <h2 className='intervention-title'>
                 {texts["txt3-0"]}
               </h2>
+              <p>
+              {texts["txt3-1"]}
+              </p>
 
             {windowWidth >= 1179 ? (
                       <div className='container-item-intervention'>
