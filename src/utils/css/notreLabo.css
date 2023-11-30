@@ -65,7 +65,8 @@
       font-weight: 800;
       font-size: 25px;
       margin: 0 auto; 
-      padding: 4%;
+      margin-bottom: 25px;
+      /* padding: 4%; */
     }
 
   .cercle-metier {
@@ -282,6 +283,26 @@
     background-color: #000;
   } 
 
+
+/* 
+ @media screen and (min-width: 330px) and (max-width: 459px){
+  .container-card-text-right {
+      display: flex;
+      width: 300px;
+      flex-direction: column;
+      align-items: center;
+  }
+  .big-container-card-left {
+    width: 299px;
+  }
+  .container-card-text-left p {
+    width: 288px;
+  }
+  .container-card-text-right p {
+    width: 257px;
+  }
+} */
+
   
     @media (max-width: 1179px) {
       .vertical-line{
@@ -453,4 +474,42 @@
       
       
     }
+
+        
+    @media screen and (min-width: 320px) and (max-width: 459px){
+      .container-card-text-right {
+          display: flex;
+          width: 300px;
+          flex-direction: column;
+          align-items: center;
+          margin: auto;
+      }
+       .container-card-text-left {
+          display: flex;
+          width: 300px;
+          flex-direction: column;
+          align-items: center;
+          margin: auto;
+      }
+      .big-container-card-left {
+        width: 350px;
+      }
+      .big-container-card-right {
+        width: 350px;
+      }
+      .container-card-text-left p {
+        width: 257px;
+        margin-top: 25px;
+      }
+      .container-card-text-right p {
+        width: 257px;
+        margin-top: 25px;
+      }
+      .pagination {
+        bottom: -50px;
+    }
+    .container-metiers {
+      height: 658px;
+  }
+}
   

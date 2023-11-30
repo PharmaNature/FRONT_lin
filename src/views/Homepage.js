@@ -133,8 +133,10 @@ function Homepage(props) {
         <div className='big-container-objectif'>
           <div className='container-objectif'>
               <div className='objectif-title'>
-                  <h2>
+                  <h1>
                     {texts["txt0-0"]}<br/>
+                  </h1>
+                  <h2>
                     {texts["txt0-1"]}<br/>
                     {texts["txt0-2"]}
                   </h2>
@@ -157,11 +159,13 @@ function Homepage(props) {
                 <div className='objectif-paragraphe2'>
                 {texts["txt2-0"]}
                   <br /><br />
+                  <div className='objectif-paragraphe3'>
                   {texts["txt2-1"]}
                   <br /><br />
                   {texts["txt2-2"]}
                   <br /><br />
                   {texts["txt2-3"]}
+                  </div>
                 </div>
               </div>
             <MoreInfo link="notre-labo" />

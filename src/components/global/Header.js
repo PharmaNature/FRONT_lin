@@ -107,7 +107,7 @@ useEffect(() => {
           {menuOpen && (
             <>
             <button className="close-button" onClick={closeMenu}>
-              Fermer
+              
             </button>
             
             </>
@@ -115,7 +115,7 @@ useEffect(() => {
           <ul>
             <li>
             <div className="logo-mobile">
-              <img src={LogoLIN} className="logo" alt="Logo" />
+              <a href='/'><img src={LogoLIN} className="logo" alt="Logo" /></a>
             </div>
             </li>
           {menuOpen && (

@@ -51,8 +51,8 @@
   .container-qualite-text h4 {
     font-family: 'Montserrat';
     font-weight: 400;
-  }
-
+    font-size: 20px;
+}
   .container-qualite-text h4 span {
     font-weight: 600;
   }

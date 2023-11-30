@@ -33,7 +33,7 @@ const global = {
             "txt1-9": "ENVOYER"
         },
         "HomePage": {
-            "txt0-0": "NOTRE OBJECTIF : ",
+            "txt0-0": "NOTRE SAVOIR-FAIRE  ",
             "txt0-1": "LA CRÉATION ET LE FAÇONNAGE ",
             "txt0-2": "DE VOS COMPLÉMENTS ALIMENTAIRES",
             "txt1-0": "Notre objectif principal est de proposer une large gamme de compléments alimentaires afin de répondre aux besoins de santé et de prévention de chacun avec une qualité irréprochable permettant de garantir l’efficacité des produits.",
@@ -44,7 +44,7 @@ const global = {
             "txt2-1": "La qualité de nos produits est garantie par notre gamme étendue de certifications.",
             "txt2-2": "Nous mettons à disposition un large éventail de formes galéniques, qu'il s'agisse de formes sèches, de gélules, de capsules ou de liquides, tous d'une qualité exceptionnelle.",
             "txt2-3": "Nos matières premières sont méticuleusement choisies pour satisfaire à toutes les exigences, et notre approche est respectueuse de l'environnement.",
-            "txt3-0": "NOS INTERVENTIONS",
+            "txt3-0": "NOTRE MISSION",
             "txt4-0": "LABORATOIRE",
             "txt4-1": "FRANÇAIS",
             "txt4-2": "INDÉPENDANT",
@@ -71,7 +71,7 @@ const global = {
             "txt6-7": "Vous développez vos formules selon votre cahier des charges."
         },
         "NotreLabo": {
-            "txt0-0": "LE FAÇONNIER",
+            "txt0-0": "LE CRÉATEUR",
             "txt0-1": "DE VOS COMPLÉMENTS",
             "txt0-2": "ALIMENTAIRES",
             "txt1-0": "NOTRE HISTOIRE",
@@ -294,7 +294,7 @@ const global = {
             "txt1-9": "SEND"
         },
         "HomePage": {
-            "txt0-0": "OUR GOAL: ",
+            "txt0-0": "OUR EXPERTISE ",
             "txt0-1": "CREATE AND SHAPE ",
             "txt0-2": "YOUR DIETARY SUPPLEMENTS",
             "txt1-0": "Our main goal is to offer a wide range of dietary supplements to meet the health and preventive needs of everyone with impeccable quality that guarantees the products effectiveness.",
@@ -305,7 +305,7 @@ const global = {
             "txt2-1": "The quality of our products is guaranteed by our extensive range of certifications.",
             "txt2-2": "We provide a wide range of galenic forms whether it's dry forms, capsules, softgels or liquids, all of exceptional quality.",
             "txt2-3": "Our raw materials are meticulously selected to meet all requirements and our approach is environmentally friendly.",
-            "txt3-0": "OUR EXPERTISE",
+            "txt3-0": "OUR MISSION",
             "txt4-0": "FRENCH",
             "txt4-1": "LABORATORY",
             "txt4-2": "INDEPENDENT",
@@ -332,9 +332,9 @@ const global = {
             "txt6-7": "We develop formulas according to your specifications."
         },
         "NotreLabo": {
-            "txt0-0": "THE MANUFACTURER",
-            "txt0-1": "OF YOUR DIETARY ",
-            "txt0-2": "SUPPLEMENTS",
+            "txt0-0": "YOUR DIETARY",
+            "txt0-1": "SUPPLEMENTS",
+            "txt0-2": "CREATOR",
             "txt1-0": "OUR HISTORY",
             "txt1-1": "Established in 2010, LIN (Natural Innovation Laboratory) is now one of the key players in the world of dietary supplements.",
             "txt1-2": "We have a research and development laboratory, a production facility and a quality control system that ensures traceability of raw materials from reception to finished products. We guarantee high-quality products while preserving the properties of active ingredients.",
@@ -552,7 +552,7 @@ const global = {
             "txt1-9": "发送"
         },
         "HomePage": {
-            "txt0-0": "我们的目标：",
+            "txt0-0": "我们的专业知识",
             "txt0-1": "创造和塑造",
             "txt0-2": "您的膳食补充剂",
             "txt1-0": "我们的主要目标是提供广泛的膳食补充剂，以满足每个人的健康和预防需求，并以无可挑剔的品质保证产品的有效性。",
@@ -563,7 +563,7 @@ const global = {
             "txt2-1": "我们产品的质量由我们广泛的认证范围来保证。",
             "txt2-2": "我们提供多种剂型选择，无论是干燥剂型、胶囊、软胶囊还是液体，所有产品都具有卓越的质量。",
             "txt2-3": "我们的原材料经过精心挑选，以满足所有要求，并且我们的方法环保可持续。",
-            "txt3-0": "我们的专业知识",
+            "txt3-0": "我们的任务",
             "txt4-0": "法国",
             "txt4-1": "独立",
             "txt4-2": "与自主性",
@@ -582,9 +582,9 @@ const global = {
             "txt6-5": "您根据您的规格开发配方。"
         },
         "NotreLabo": {
-            "txt0-0": "制造商",
-            "txt0-1": "您的膳食补充剂",
-            "txt0-2": "膳食",
+            "txt0-0": "创造者",
+            "txt0-1": "你的补充",
+            "txt0-2": "食物",
             "txt1-0": "我们的历史",
             "txt1-1": "成立于2010年，LIN（Natural Innovation Laboratory）现在是膳食补充剂领域的重要参与者之一。",
             "txt1-2": "我们拥有研发实验室、生产设施和质量控制系统，确保从原材料接收到成品生产的可追溯性。我们保证高质量的产品同时保留活性成分的特性。",
