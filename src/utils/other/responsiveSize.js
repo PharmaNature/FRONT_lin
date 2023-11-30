@@ -5,9 +5,9 @@ function ResponsiveSize() {
     const chooseImage = (page, windowWidth) => {
 
         switch (true) {
-            case windowWidth < 420:
+            case windowWidth < 450:
                 return data[page]["_phoneSize"];
-            case windowWidth >= 420 && windowWidth < 850:
+            case windowWidth >= 450 && windowWidth < 850:
                 return data[page]["_verticalTabSize"];
             case windowWidth >= 850 && windowWidth < 1180:
                 return data[page]["_horizontalTabSize"];
@@ -19,9 +19,9 @@ function ResponsiveSize() {
     const chooseSizeTitle = (windowWidth) => {
 
         switch (true) {
-            case windowWidth < 420:
+            case windowWidth < 450:
                 return "telSize";
-            case windowWidth >= 420 && windowWidth < 850:
+            case windowWidth >= 450 && windowWidth < 850:
                 return "verticalTabSize";
             case windowWidth >= 850 && windowWidth < 1180:
                 return "horizontalTabSize";
@@ -32,7 +32,7 @@ function ResponsiveSize() {
 
     const videoResponsive = (windowWidth) => {
         switch (true) {
-            case windowWidth < 420:
+            case windowWidth < 450:
                 return "VideoPhoneSize";
             default:
                 return "Video";
