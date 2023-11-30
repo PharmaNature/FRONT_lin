@@ -124,7 +124,7 @@
 
 .objectif-title h2 {
   font-weight: 800;
-  font-size: 40px;
+  font-size: 30px;
   margin: 0;
 }
 
@@ -259,6 +259,7 @@ span.paragraphe1 {
 @media (max-width: 1179px) {
 
   .objectif-title h2 {
+    margin-top: 20px;
     font-size: 25px;
   }
 
