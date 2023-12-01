@@ -81,7 +81,7 @@ function Homepage(props) {
     4: {
       "titleLine1": texts["txt5-10"],
       "titleLine2": texts["txt5-11"],
-      "urlImage": require("../assets/pictogrammes/design.png")
+      "urlImage": require("../assets/pictogrammes/design_hp.png")
     },
     // engrenage 
     5: {
@@ -148,11 +148,11 @@ function Homepage(props) {
         <div className='container-video'>
           <Introduction format='video' imageChoice={videoChoice} />
 
-          <div className='container-on-video'>
+          {/* <div className='container-on-video'>
             {Object.values(iconData).map((item, index) => (
               <IconDescription key={index} imageURL={item['imageURL']} title1={item['title1']} title2={item['title2']} position="top" />
               ))}
-          </div>
+          </div> */}
         </div>
 
         <div className='big-container-objectif'>
