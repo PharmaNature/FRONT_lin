@@ -31,7 +31,7 @@ const dataMetier = {
         "titleLine1": texts["txt3-3"],
         "titleLine2": texts["txt3-4"],
         "description": texts["txt3-5"],
-        "urlImage": require("../assets/pictogrammes/reglementation.png")
+        "urlImage": require("../assets/pictogrammes/reglementation qualite.png")
     },
     3: {
         "titleLine1": texts["txt3-6"],
@@ -43,7 +43,7 @@ const dataMetier = {
         "titleLine1": texts["txt3-9"],
         "titleLine2": texts["txt3-10"],
         "description": texts["txt3-11"],
-        "urlImage": require("../assets/pictogrammes/formation.png")
+        "urlImage": require("../assets/pictogrammes/formation com.png")
     },
 }
 
