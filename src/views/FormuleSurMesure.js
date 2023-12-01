@@ -27,6 +27,7 @@ import production from '../assets/pictogrammes/formule-blanche-production.png';
 import dev from '../assets/pictogrammes/developpement.png';
 import condition from '../assets/pictogrammes/formule-blanche-conditionnement.png';
 import envoi from '../assets/pictogrammes/formule-blanche-envoi.png';
+import design from '../assets/pictogrammes/design.png'
 
 import global from '../assets/global.js'
 import { useGlobalState } from '../views/GlobalStateContext';
@@ -71,6 +72,11 @@ function FormuleSurMesure(props) {
       img: production,
       alt: 'Production',
       title: texts["txt3-3"],
+    },
+    {
+      img: design,
+      alt: 'Packaging personnalisé',
+      title: texts["txt3-8"] + "<br />" + texts["txt3-9"],
     },
     {
       img: condition,
