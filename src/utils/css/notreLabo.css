@@ -148,7 +148,7 @@ font-weight: 400;
   }
 
   .container-card-img img {
-    width: 150px;
+    width: 190px;
     max-height: 100%;
   }
   
@@ -329,6 +329,11 @@ font-weight: 400;
 
     .container-card-img {
       text-align: center;
+    }
+
+    .container-card-img img {
+      width: 150px;
+      max-height: 100%;
     }
 
     /* --------------------- */
