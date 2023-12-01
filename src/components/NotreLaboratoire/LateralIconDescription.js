@@ -11,9 +11,13 @@ function LateralIconDescription(props) {
                         {props.titleLine2}
                         
                     </h2>
-                    <p>
-                        {props.description}
-                    </p>
+                    {Array.isArray(props.description) ? (
+                    props.description.map((text, index) => (
+                        <p key={index}>{text}</p>
+                    ))
+                ) : (
+                    <p>{props.description}</p>
+                )}
                 </div>
                 <div className='container-card-img'>
                     <img src={props.urlImage}/>
@@ -32,9 +36,13 @@ function LateralIconDescription(props) {
                         {props.titleLine2}
                         
                     </h2>
-                    <p>
-                        {props.description}
-                    </p>
+                    {Array.isArray(props.description) ? (
+                    props.description.map((text, index) => (
+                        <p key={index}>{text}</p>
+                    ))
+                ) : (
+                    <p>{props.description}</p>
+                )}
                 </div>
             </div>
         )
