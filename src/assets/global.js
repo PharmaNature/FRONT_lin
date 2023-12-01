@@ -59,7 +59,7 @@ const global = {
             "txt5-2": "EXPERTISE R&D",
             "txt5-3": "AU MARKETING",
             "txt5-4": "FAÇONNAGE",
-            "txt5-5": " ",
+            "txt5-5": "CONDITIONNEMENT",
             "txt5-6": "FORMATION",
             "txt5-7": "& COMMUNICATION",
             "txt5-8": "RÈGLEMENTATION",
