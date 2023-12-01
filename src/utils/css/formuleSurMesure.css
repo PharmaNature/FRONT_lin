@@ -76,6 +76,10 @@
   .bleu {
     color: #B9E8E8;
   }
+
+  .formula-text p {
+    font-size: 17px;
+  }
   
 @media screen and (max-width: 768px) {
   .index{
