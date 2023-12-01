@@ -73,34 +73,34 @@ function Homepage(props) {
     },
     // diplome
     3: {
-      "titleLine1": texts["txt5-8"],
-      "titleLine2": texts["txt5-9"],
+      "titleLine1": texts["txt5-12"],
+      "titleLine2": texts["txt5-13"],
       "urlImage": require("../assets/pictogrammes/reglementation qualite.png")
     },
     // bocale
     4: {
       "titleLine1": texts["txt5-10"],
       "titleLine2": texts["txt5-11"],
-      "urlImage": require("../assets/pictogrammes/design.png")
+      "urlImage": require("../assets/pictogrammes/design_hp.png")
     },
     // engrenage 
     5: {
       "titleLine1": texts["txt5-4"],
-      "titleLine2": "",
+      "titleLine2": texts["txt5-5"],
       "urlImage": require("../assets/pictogrammes/production.png")
     },
     // cadeau surprise
     
     6 : {
-      "titleLine1" : texts["txt5-5"],
-      "titleLine2" : "",
+      "titleLine1" : texts["txt5-6"],
+      "titleLine2" : texts["txt5-7"],
       "urlImage" : require("../assets/pictogrammes/conditionnement.png")
     },
     
     // chat plante
     7 : {
-      "titleLine1" : texts["txt5-6"],
-      "titleLine2" : texts["txt5-7"],
+      "titleLine1" : texts["txt5-8"],
+      "titleLine2" : texts["txt5-9"],
       "urlImage" : require("../assets/pictogrammes/formation com.png")
     },
 
@@ -148,11 +148,11 @@ function Homepage(props) {
         <div className='container-video'>
           <Introduction format='video' imageChoice={videoChoice} />
 
-          <div className='container-on-video'>
+          {/* <div className='container-on-video'>
             {Object.values(iconData).map((item, index) => (
               <IconDescription key={index} imageURL={item['imageURL']} title1={item['title1']} title2={item['title2']} position="top" />
               ))}
-          </div>
+          </div> */}
         </div>
 
         <div className='big-container-objectif'>

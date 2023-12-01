@@ -76,6 +76,10 @@
   .bleu {
     color: #B9E8E8;
   }
+
+  .formula-text p {
+    font-size: 18px;
+  }
   
 @media screen and (max-width: 768px) {
   .index{
@@ -97,6 +101,7 @@
  .equal-sign-mesure {
       width: 15%;
     }
+  
     
 }
 
@@ -130,6 +135,10 @@
     font-weight: bold;
     width: 20%;
     line-height: 96px;
+  }
+
+  .formula-text p {
+    font-size: 15px;
   }
 
   }
