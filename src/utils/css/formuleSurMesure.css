@@ -76,6 +76,10 @@
   .bleu {
     color: #B9E8E8;
   }
+  .text-blue{
+    color: #8BCFCF;
+    font-size: 22px;
+  }
 
   .formula-text p {
     font-size: 18px;
