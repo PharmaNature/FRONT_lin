@@ -213,6 +213,7 @@ function FormuleBlanche(props) {
             <br /><br />{texts["txt1-1"]}</h3>
           <br />
           <p>{texts["txt1-2"]}</p>
+          <p>{texts["txt1-3"]}</p>
         </div>
       </div>
 

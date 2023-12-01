@@ -73,8 +73,8 @@ function Homepage(props) {
     },
     // diplome
     3: {
-      "titleLine1": texts["txt5-8"],
-      "titleLine2": texts["txt5-9"],
+      "titleLine1": texts["txt5-12"],
+      "titleLine2": texts["txt5-13"],
       "urlImage": require("../assets/pictogrammes/reglementation qualite.png")
     },
     // bocale
@@ -86,21 +86,21 @@ function Homepage(props) {
     // engrenage 
     5: {
       "titleLine1": texts["txt5-4"],
-      "titleLine2": "",
+      "titleLine2": texts["txt5-5"],
       "urlImage": require("../assets/pictogrammes/production.png")
     },
     // cadeau surprise
     
     6 : {
-      "titleLine1" : texts["txt5-5"],
-      "titleLine2" : "",
+      "titleLine1" : texts["txt5-6"],
+      "titleLine2" : texts["txt5-7"],
       "urlImage" : require("../assets/pictogrammes/conditionnement.png")
     },
     
     // chat plante
     7 : {
-      "titleLine1" : texts["txt5-6"],
-      "titleLine2" : texts["txt5-7"],
+      "titleLine1" : texts["txt5-8"],
+      "titleLine2" : texts["txt5-9"],
       "urlImage" : require("../assets/pictogrammes/formation com.png")
     },
 
