@@ -15,8 +15,8 @@ import capsuleImg from '../assets/images/marque-blanche/galenique_capsule.jpg'
 import geluleImg from '../assets/images/marque-blanche/galenique_gélules.jpg'
 import liquidImg from '../assets/images/marque-blanche/galenique_liquid.jpg'
 import blister from '../assets/images/marque-blanche/blister 2.png';
-import pilulier from '../assets/images/marque-blanche/pilulier.png';
-import flacon from '../assets/images/marque-blanche/flacon.png';
+import flacon from '../assets/images/marque-blanche/pilulier.png';
+import pilulier from '../assets/images/marque-blanche/flacon.png';
 import pot from '../assets/images/marque-blanche/pot 2.png';
 import arrowLeft from '../assets/pictogrammes/arrow_left.svg'
 import arrowRight from '../assets/pictogrammes/arrow_right.svg'
@@ -209,6 +209,7 @@ function FormuleBlanche(props) {
       </div>
       <div className='container-formula-text'>
         <div className='formula-text'>
+          <h3 className='text-rose'>{texts["txt7"]}</h3>
           <h3>{texts["txt1-0"]}
             <br /><br />{texts["txt1-1"]}</h3>
           <br />
