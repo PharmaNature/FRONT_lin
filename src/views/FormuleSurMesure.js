@@ -218,13 +218,20 @@ function FormuleSurMesure(props) {
       </div>
       <div className='container-formula-text'>
         <div className='formula-text'>
-          <h3>{texts["txt1-0"]}
+          <h3 className='text-blue'>
+            {texts["txt1-0"]}
             <br /><br />
             {texts["txt1-1"]}
             <br /><br />
-            {texts["txt1-2"]}</h3>
+            </h3>
+            <h3>
+            {texts["txt1-2"]}
+            <br /><br />
+            {texts["txt1-3"]}
+            <br /><br />
+            {texts["txt1-4"]}</h3>
           <br />
-          <p>{texts["txt1-3"]}</p>
+          <p>{texts["txt1-5"]}</p>
         </div>
       </div>
 
