@@ -24,25 +24,50 @@ const dataMetier = {
     1: {
         "titleLine1": texts["txt3-0"],
         "titleLine2": texts["txt3-1"],
-        "description": texts["txt3-2"],
+        "description": [
+        texts["txt3-2-0"],
+        texts["txt3-2-1" ],
+        texts["txt3-2-2" ],
+        texts["txt3-2-3" ],
+        texts["txt3-2-4" ],
+        texts["txt3-2-5" ]
+        ],
         "urlImage": require("../assets/pictogrammes/formulation.png")
     },
     2: {
         "titleLine1": texts["txt3-3"],
         "titleLine2": texts["txt3-4"],
-        "description": texts["txt3-5"],
+        "description": [
+            texts["txt3-5-0"],
+            texts["txt3-5-1" ],
+            texts["txt3-5-2" ],
+            texts["txt3-5-3" ],
+            texts["txt3-5-4" ],
+            texts["txt3-5-5" ]
+            ],
         "urlImage": require("../assets/pictogrammes/reglementation.png")
     },
     3: {
         "titleLine1": texts["txt3-6"],
         "titleLine2": texts["txt3-7"],
-        "description": texts["txt3-8"],
+        "description": [
+            texts["txt3-8-0"],
+            texts["txt3-8-1"],
+            texts["txt3-8-2"],
+            texts["txt3-8-3"],
+            texts["txt3-8-4"]
+        ],
         "urlImage": require("../assets/pictogrammes/production.png")
     },
     4: {
         "titleLine1": texts["txt3-9"],
         "titleLine2": texts["txt3-10"],
-        "description": texts["txt3-11"],
+        "description": [
+            texts["txt3-11-0"],
+            texts["txt3-11-1" ],
+            texts["txt3-11-2" ],
+            texts["txt3-11-3" ]
+        ],
         "urlImage": require("../assets/pictogrammes/formation.png")
     },
 }
