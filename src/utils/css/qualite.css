@@ -134,13 +134,23 @@
     flex-wrap: wrap;
   }
 
-  .container-service-qualite img {
-    width: 150px;
-  }
-
   .qualiteSoloText {
     font-weight: 300;
   }
+
+  .text-rappel{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1%;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding: 0;
+  }
+
+  .disclaimer{
+    background-color: #EBEBE9;
+  }
+
   @media screen and (min-width: 400px) and (max-width: 650px){
     .container-formeGaleniqueIMG img {
       min-width: 400px;
@@ -162,7 +172,7 @@
 
   @media (max-width: 506px) {
     .container-service-qualite img {
-      width: 75px;
+      width: 95px;
     }
   }
 

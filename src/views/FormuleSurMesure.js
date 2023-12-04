@@ -14,10 +14,12 @@ import poudreImg from '../assets/images/marque-blanche/galenique_poudre.jpg'
 import capsuleImg from '../assets/images/marque-blanche/galenique_capsule.jpg'
 import geluleImg from '../assets/images/marque-blanche/galenique_gélules.jpg'
 import liquidImg from '../assets/images/marque-blanche/galenique_liquid.jpg'
-import blister from '../assets/images/marque-blanche/blister 2.png';
-import pilulier from '../assets/images/marque-blanche/pilulier.png';
-import flacon from '../assets/images/marque-blanche/flacon.png';
-import pot from '../assets/images/marque-blanche/pot 2.png';
+
+import blister from '../assets/images/formule-sur-mesure/blister-bleue.png';
+import pilulier from '../assets/images/formule-sur-mesure/pot-bleue.png';
+import flacon from '../assets/images/formule-sur-mesure/flacon-bleue.png';
+import pot from '../assets/images/formule-sur-mesure/pot2-bleue.png';
+
 import arrowLeft from '../assets/pictogrammes/arrow_left.svg'
 import arrowRight from '../assets/pictogrammes/arrow_right.svg'
 import arrowLeftMesure from '../assets/images/formule-sur-mesure/arrow_left_formule_sur_mesure.svg'
@@ -27,6 +29,7 @@ import production from '../assets/pictogrammes/formule-blanche-production.png';
 import dev from '../assets/pictogrammes/developpement.png';
 import condition from '../assets/pictogrammes/formule-blanche-conditionnement.png';
 import envoi from '../assets/pictogrammes/formule-blanche-envoi.png';
+import design from '../assets/pictogrammes/design.png'
 
 import global from '../assets/global.js'
 import { useGlobalState } from '../views/GlobalStateContext';
@@ -71,6 +74,11 @@ function FormuleSurMesure(props) {
       img: production,
       alt: 'Production',
       title: texts["txt3-3"],
+    },
+    {
+      img: design,
+      alt: 'Packaging personnalisé',
+      title: texts["txt3-8"] + "<br />" + texts["txt3-9"],
     },
     {
       img: condition,
@@ -212,13 +220,20 @@ function FormuleSurMesure(props) {
       </div>
       <div className='container-formula-text'>
         <div className='formula-text'>
-          <h3>{texts["txt1-0"]}
+          <h3 className='text-blue'>
+            {texts["txt1-0"]}
             <br /><br />
             {texts["txt1-1"]}
             <br /><br />
-            {texts["txt1-2"]}</h3>
+            </h3>
+            <h3>
+            {texts["txt1-2"]}
+            <br /><br />
+            {texts["txt1-3"]}
+            <br /><br />
+            {texts["txt1-4"]}</h3>
           <br />
-          <p>{texts["txt1-3"]}</p>
+          <p>{texts["txt1-5"]}</p>
         </div>
       </div>
 

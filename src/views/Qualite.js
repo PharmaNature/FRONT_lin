@@ -78,13 +78,13 @@ function Qualite(props) {
             <div className='container-qualite-text'>
                 <h4>
                     <span>
-                        {texts["txt1-0"]} <br />
-                        {texts["txt1-1"]} <br />
+                        {texts["txt1-0"]}<br />
+                        {texts["txt1-1"]}<br />
                         {texts["txt1-2"]}<br /> <br />
                     </span>
                     &gt; {texts["txt1-3"]}<br />
                     &gt; {texts["txt1-4"]}<br />
-                    &gt; {texts["txt1-5"]} <br />
+                    &gt; {texts["txt1-5"]}<br />
                     &gt; {texts["txt1-6"]}
                 </h4>
             </div>
@@ -95,6 +95,9 @@ function Qualite(props) {
                 {Object.values(dataQualite).map((item, index) => (
                     <BoxQualite key={index} titleLine1={item.titleLine1} titleLine2={item.titleLine2} titleLine1_2={item.titleLine1_2} description={item.description} />
                 ))}
+            </div>
+            <div className='disclaimer'>
+                <p className='text-rappel'>{texts["txt2-16"]}</p>
             </div>
             <div className='container-service-qualite'>
                 {dataServiceQualite.map((item, index) => (
