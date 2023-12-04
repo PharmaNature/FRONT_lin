@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../utils/css/formuleBlanche.css';
+import '../utils/css/formuleSurMesure.css';
 import { useSwipeable } from 'react-swipeable';
 import ResponsiveSize from '../utils/other/responsiveSize'
 import Introduction from '../components/global/Introduction'
@@ -331,12 +331,12 @@ function FormuleSurMesure(props) {
 
         </div>
 
-        <div className='AreaOfExpertise bleu'>
-          <div className='expertise-title bleu'>
+        <div className='AreaOfExpertise'>
+          <div className='expertise-title'>
             <h2>{texts["txt6-0"]}<br /> <span className='title-bold' >{texts["txt6-1"]} <br />{texts["txt6-2"]}</span></h2>
           </div>
 
-          <div className={`expertise-list bleu ${horizontalScroll ? 'horizontal-scroll' : ''}`}>
+          <div className={`expertise-list ${horizontalScroll ? 'horizontal-scroll' : ''}`}>
             {textGroups.map((group, index) => (
               <React.Fragment key={index}>
                 {index > 0 && <img
