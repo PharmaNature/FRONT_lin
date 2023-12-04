@@ -552,7 +552,8 @@ const global = {
             "txt2-12": "Complete traceability of materials and products.",
             "txt2-13": "Strict adherence to specifications.",
             "txt2-14": "Control performed at each stage of production.",
-            "txt2-15": "Compilation of batch files."
+            "txt2-15": "Compilation of batch files.",
+            "txt2-16": "* Regulatory texts based on EC regulations n°852/2004, EC n°178/2002, EC n°853/2004, the Codex Alimentarius, the recommended international code of practice."
         },
         "Other": {
             "txt0-0": "READ MORE+"
@@ -814,7 +815,8 @@ const global = {
             "txt2-12": "材料和产品的完全可追溯性。",
             "txt2-13": "严格遵守规格。",
             "txt2-14": "在生产的每个阶段进行控制。",
-            "txt2-15": "批次文件的编制。"
+            "txt2-15": "批次文件的编制。",
+            "txt2-16": "* 根据欧共体第 n°852/2004 号条例、欧共体第 n°178/2002 号条例、欧共体第 n°853/2004 号条例、食品法典、建议的国际业务守则制定的法规文本。"
         },
         "Other": {
             "txt0-0": "了解更多"
