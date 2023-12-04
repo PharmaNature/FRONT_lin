@@ -294,13 +294,10 @@ h2.NotreCatalogue {
 
 .expertise-list {
   margin-top: 60px;
-  margin-bottom: 40px;
   width: 94%;
   display: flex;
   align-items: center;
   gap: 8px;
-  background-color: #ECE2E1;
-
 }
 
 .expertise-title {
@@ -340,7 +337,7 @@ h2.NotreCatalogue {
 /* FORMAT TABLETTE */
 
 @media screen and (min-width: 768px) and (max-width: 1180px) {
-  
+
   .sub-container {
     margin-top: 10%;
     width: 100%;
@@ -355,47 +352,47 @@ h2.NotreCatalogue {
     width: 100%;
     margin-top: 2%;
   }
-  
+
   h1.NotreFormula {
     font-size: 2em;
     width: 100%;
   }
-  
+
   h2.NotreCatalogue {
-    
+
     width: 100%;
     font-size: 24px;
   }
   .plus-sign {
     font-size: 9em;
   }
-  
+
   h1.packaging {
     font-size: 1.8em;
     width: 100%;
   }
-  
+
   .equal-sign {
     width: 10%;
   }
-  
+
   .sub-container-img {
     width: 50%;
   }
-  
+
   .sub-container-img img {
     width: 100%;
   }
-  
+
   .galenique {
     gap: 14%;
   }
-  
+
   .expertise-list {
     width: 80%;
   }
-  
-  
+
+
 }@media screen and (min-width: 1180px) and (max-width: 1523px){
   .sub-container-text{
     width: 26%;
@@ -409,16 +406,16 @@ h2.NotreCatalogue {
   h1.packaging {
     font-size: 2.7em;
   }
-  .equal-sign {
-    width: 15%;
-  }
-  .sub-container-img {
-    width: 45%;
+ .equal-sign {
+      width: 15%;
+    }
+    .sub-container-img {
+      width: 45%;
   }
   .sub-container-img img {
     width: 100%;
-  }
-  
+}
+
 }
 
 @media screen and (min-width: 1500px) {
@@ -436,42 +433,42 @@ h2.NotreCatalogue {
     gap: 14%;
     flex-wrap: wrap;
   }
-  
+
   .container-formes-title {
     width: 100%;
   }
-  
+
   .container-formes {
     align-items: center;
   }
-  
+
 }
 
 /* FORMAT MOBILE */
 
 @media screen and (max-width: 1300px) {
-  .centered-title {
-    transform: translate(0%, -50%);
-  }
+.centered-title {
+  transform: translate(0%, -50%);
+}
 }
 
 @media screen and (max-width: 767px) {
-  
+
   .sub-container {
     margin-top: 20%;
     flex-direction: column;
     flex-wrap: nowrap;
   }
-  
+
   .sub-container-text {
     width: 80%;
   }
-  
+
   .container-formula {
     text-align: center;
     width: 100%;
   }
-  
+
   h1.packaging {
     font-size: 30px;
     font-weight: bold;
@@ -479,22 +476,22 @@ h2.NotreCatalogue {
     margin-top: 2px;
     text-align: center;
   }
-  
+
   h1.NotreFormula {
     font-size: 33px;
   }
-  
+
   h2.NotreCatalogue {
-    
+
     width: 100%;
     font-size: 24px;
   }
-  
+
   .plus-sign {
     font-size: 110px;
     line-height: 84px;
   }
-  
+
   .equal-sign {
     color: #D9C5C4;
     font-size: 130px;
@@ -504,33 +501,33 @@ h2.NotreCatalogue {
     width: 20%;
     line-height: 96px;
   }
-  
+
   .sub-container-img {
     width: 80%;
   }
-  
+
   .sub-container-img img {
     width: 100%;
   }
-  
+
   .container-formula-text {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+
   .formula-text {
     width: 80%;
     font-size: 12px;
-    
+
   }
 
   .container-process-title h2 {
     font-size: 24px;
     font-weight: 100;
-  }
-  
+}
+
   .container-formes {
     width: 100%;
     display: flex;
@@ -541,32 +538,32 @@ h2.NotreCatalogue {
   .container-formes-title {
     width: 100%;
   }
-  
+
   .container-formes-title h2 {
     font-size: 24px;
     font-weight: 100;
   }
-  
+
   .container-condition-title h3 {
     font-size: 14px;
   }
-  
+
   .container-condition-title {
     width: 100%;
   }
-  
+
   .container-condition-title h2 {
     font-size: 27px;
   }
-  
+
   .container-condition-item {
     flex-wrap: wrap;
   }
-  
+
   .container-galenique-carousel {
     position: relative;
   }
-  
+
   .btn-carousel-left {
     position: absolute;
     left: -10%;
@@ -574,7 +571,7 @@ h2.NotreCatalogue {
     background-color: transparent;
     border: none;
   }
-  
+
   .btn-carousel-right {
     position: absolute;
     right: -10%;
@@ -583,14 +580,13 @@ h2.NotreCatalogue {
     border: none;
   }
   .AreaOfExpertise {
-    background-color: #ECE2E1;
     width: 100%;
   }
-  
+
   .expertise-title h2 {
     font-size: 32px;
   }
-  
+
   .expertise-list {
     width: 80%;
   }
@@ -623,7 +619,7 @@ h2.NotreCatalogue {
   }
   .g-card {
     width: 265px;
-  }
+}
 }
 
 @media screen and (max-width: 530px) {
@@ -651,7 +647,4 @@ h2.NotreCatalogue {
   .container-process-carousel {
     width: 70%;
   }
-}
-.bleu{
-  background-color: #DCF3F3 ;
 }
