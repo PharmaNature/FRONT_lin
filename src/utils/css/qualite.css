@@ -137,6 +137,20 @@
   .qualiteSoloText {
     font-weight: 300;
   }
+
+  .text-rappel{
+    text-align: center;
+    margin: 0;
+    margin-bottom: 1%;
+    margin-left: 8%;
+    margin-right: 8%;
+    padding: 0;
+  }
+
+  .disclaimer{
+    background-color: #EBEBE9;
+  }
+
   @media screen and (min-width: 400px) and (max-width: 650px){
     .container-formeGaleniqueIMG img {
       min-width: 400px;
