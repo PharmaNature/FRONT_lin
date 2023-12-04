@@ -12,7 +12,6 @@ function Homepage(props) {
 
   document.title = props.pageName;
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  console.log(windowWidth);
 
   useEffect(() => {
     const handleResize = () => {

@@ -141,8 +141,10 @@
     line-height: 96px;
   }
 
+  .bleu{
+    background-color: #B9E8E8;
+  }
+  
   .formula-text p {
     font-size: 15px;
-  }
-
   }
