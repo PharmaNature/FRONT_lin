@@ -37,7 +37,7 @@ text-align: center;
 }
 
 .container-history-img img {
-width: 80%;
+width: 90%;
 }
 
 .container-history-text {
@@ -247,7 +247,7 @@ font-weight: 400;
 .btn-carrousel-left {
   position: absolute;
   left: 5%;
-  top: 40%;
+  top: 38%;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -256,7 +256,7 @@ font-weight: 400;
 .btn-carrousel-right {
   position: absolute;
   right: 5%;
-  top: 40%;
+  top: 38%;
   background-color: transparent;
   border: none;
   cursor: pointer;
@@ -284,6 +284,10 @@ font-weight: 400;
 .indicator.active {
   background-color: #000;
 } 
+
+.history-text{
+  padding: 5%;
+}
 
 
   @media (max-width: 1179px) {
@@ -396,6 +400,18 @@ font-weight: 400;
   }  
 
   @media (max-width: 460px) {
+
+    .btn-carrousel-left {
+      top: 36%;
+    }
+
+    .btn-carrousel-right {
+      top: 36%;
+    }
+
+    .icon-lateral-text{
+      text-align: center;
+    }
 
     .big-container-card-left {
       width: 250px;

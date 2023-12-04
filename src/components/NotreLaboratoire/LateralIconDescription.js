@@ -9,11 +9,10 @@ function LateralIconDescription(props) {
                     <h2>
                         {props.titleLine1} <br/>
                         {props.titleLine2}
-                        
                     </h2>
                     {Array.isArray(props.description) ? (
                     props.description.map((text, index) => (
-                        <p key={index}>{text}</p>
+                        <p key={index} className="icon-lateral-text">{text}</p>
                     ))
                 ) : (
                     <p>{props.description}</p>
@@ -38,7 +37,7 @@ function LateralIconDescription(props) {
                     </h2>
                     {Array.isArray(props.description) ? (
                     props.description.map((text, index) => (
-                        <p key={index}>{text}</p>
+                        <p className="icon-lateral-text" key={index}>{text}</p>
                     ))
                 ) : (
                     <p>{props.description}</p>
