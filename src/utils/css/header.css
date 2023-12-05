@@ -63,10 +63,10 @@
   display: flex;
   justify-content: center;
   align-items: center; 
-  padding: 20px;
+  padding: 10px;
   height: 80px;
   position: fixed;
-  top: 45px; 
+  top: 35px; 
   gap: 3%;
   width: 100%; 
   z-index: 1000;

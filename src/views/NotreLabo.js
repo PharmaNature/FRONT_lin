@@ -13,9 +13,6 @@ import arrowRight from '../assets/pictogrammes/arrow_right.svg'
 import global from '../assets/global'
 import { useGlobalState } from '../views/GlobalStateContext';
 
-
-
-
 function NotreLabo(props) {
     const {globalVariable} = useGlobalState()
 const texts = global[globalVariable]["NotreLabo"]
@@ -156,10 +153,10 @@ const dataMoyen = {
                     <img src={historyIMG} alt='Histoire Laboratoire' />
                 </div>
                 <div className='container-history-text'>
-                    <h2>{texts["txt1-0"]}</h2>
-                    <h3>{texts["txt1-1"]}</h3>
-                    <p>{texts["txt1-2"]}</p>
-                    <h3>{texts["txt1-3"]}</h3>
+                    <h2 className='history-text'>{texts["txt1-0"]}</h2>
+                    <h3 className='history-text'>{texts["txt1-1"]}</h3>
+                    <p className='history-text'>{texts["txt1-2"]}</p>
+                    <h3 className='history-text'>{texts["txt1-3"]}</h3>
                 </div>
             </div>
             <div className='container-metiers'>
@@ -207,7 +204,6 @@ const dataMoyen = {
                         </div>
                     </div>
                 )}
-
 
             </div>
             <div className='container-moyen'>

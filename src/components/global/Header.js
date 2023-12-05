@@ -22,7 +22,6 @@ function Header() {
     
   ]
 
-
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolling, setScrolling] = useState(false);
@@ -87,15 +86,19 @@ useEffect(() => {
 
   return (
     <div>
-      <BlackSpace/>
+      {
+        windowWidth > 1110 && <BlackSpace />
+      }
       <div className={`header ${menuOpen ? 'menu-open' : ''} ${scrolling ? 'scrolling' : ''}`}>
         <div className="logoDiv">
           <a href="/">
-          {windowWidth > 1110 ? (
-            <img src={Logo} className="logo" alt="Logo" />
-            ) : (
+          {
+            windowWidth > 1110 ? (
+              <img src={Logo} className="logo" alt="Logo" />
+            ) : windowWidth > 450 ? (
               <img src={LogoCol} className="logo" alt="Logo" />
-          )}
+            ) : null
+          }
           </a>
         </div>
         <div className="menu-toggle" onClick={toggleMenu}>
@@ -106,10 +109,8 @@ useEffect(() => {
         <nav className={`navigation ${menuOpen ? 'open' : ''}`}>
           {menuOpen && (
             <>
-            <button className="close-button" onClick={closeMenu}>
-              
-            </button>
-            
+              <button className="close-button" onClick={closeMenu}>
+              </button>
             </>
           )}
           <ul>
