@@ -86,7 +86,9 @@ useEffect(() => {
 
   return (
     <div>
-      <BlackSpace/>
+      {
+        windowWidth > 1110 && <BlackSpace />
+      }
       <div className={`header ${menuOpen ? 'menu-open' : ''} ${scrolling ? 'scrolling' : ''}`}>
         <div className="logoDiv">
           <a href="/">
