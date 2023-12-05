@@ -9,17 +9,17 @@ import global from '../../assets/global'
 import BlackSpace from './BlackSpace';
 
 function Header() {
-  const {globalVariable, setGlobalVariable} = useGlobalState()
+  const { globalVariable, setGlobalVariable } = useGlobalState()
 
   const texts = global[globalVariable]["Header"]
 
   const items = [
-    { id: 1, name: texts["txt0-0"]+"<br/>"+texts["txt0-1"], link: "notre-labo" },
-    { id: 2, name: texts["txt1-0"]+"<br/>"+texts["txt1-1"], link: "marque-blanche" },
-    { id: 3, name: texts["txt2-0"]+"<br/>"+texts["txt2-1"], link: "formule-sur-mesure" },
+    { id: 1, name: texts["txt0-0"] + "<br/>" + texts["txt0-1"], link: "notre-labo" },
+    { id: 2, name: texts["txt1-0"] + "<br/>" + texts["txt1-1"], link: "marque-blanche" },
+    { id: 3, name: texts["txt2-0"] + "<br/>" + texts["txt2-1"], link: "formule-sur-mesure" },
     { id: 4, name: texts["txt3-0"], link: "qualite" },
     { id: 5, name: texts["txt4-0"], link: "contact" },
-    
+
   ]
 
   const location = useLocation();
@@ -29,20 +29,20 @@ function Header() {
 
   useEffect(() => {
     const handleResize = () => {
-        setWindowWidth(window.innerWidth);
+      setWindowWidth(window.innerWidth);
     };
     window.addEventListener('resize', handleResize);
 
     return () => {
-        window.removeEventListener('resize', handleResize);
+      window.removeEventListener('resize', handleResize);
     };
-}, []);
+  }, []);
 
-useEffect(() => {
-  if (windowWidth > 1110) {
-    setMenuOpen(false);
-  }
-}, [windowWidth]);
+  useEffect(() => {
+    if (windowWidth > 1110) {
+      setMenuOpen(false);
+    }
+  }, [windowWidth]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,13 +92,13 @@ useEffect(() => {
       <div className={`header ${menuOpen ? 'menu-open' : ''} ${scrolling ? 'scrolling' : ''}`}>
         <div className="logoDiv">
           <a href="/">
-          {
-            windowWidth > 1110 ? (
-              <img src={Logo} className="logo" alt="Logo" />
-            ) : windowWidth > 450 ? (
-              <img src={LogoCol} className="logo" alt="Logo" />
-            ) : null
-          }
+            {
+              windowWidth > 450 ? (
+                <img src={Logo} className="logo" alt="Logo" />
+              ) : windowWidth > 450 ? (
+                <img src={LogoCol} className="logo" alt="Logo" />
+              ) : null
+            }
           </a>
         </div>
         <div className="menu-toggle" onClick={toggleMenu}>
@@ -115,43 +115,43 @@ useEffect(() => {
           )}
           <ul>
             <li>
-            <div className="logo-mobile">
-              <a href='/'><img src={LogoLIN} className="logo" alt="Logo" /></a>
-            </div>
+              <div className="logo-mobile">
+                <a href='/'><img src={LogoLIN} className="logo" alt="Logo" /></a>
+              </div>
             </li>
-          {menuOpen && (
-            
-            <li className='divLangues'>
-              {global["multilangue"].map((item, index) => (
+            {menuOpen && (
+
+              <li className='divLangues'>
+                {global["multilangue"].map((item, index) => (
                   <h3 className='multilangue' key={index} onClick={() => changementLangue(index)}>{item}</h3>
                 )
-              )}
-            </li>
-          )}
-          {items.map(item => {
-                    if (item.name !== "CONTACT") {
-                      return (
-                        <li key={item.id}>
-                          <Link
-                            to={item.link}
-                            dangerouslySetInnerHTML={{ __html: item.name }}
-                            className={"/" + item.link === location.pathname ? 'active' : ''}
-                            onClick={closeMenu}
-                          />
-                        </li>
-                      )
-                    } else {
-                      return (
-                        <li key={item.id}>
-                          <Link
-                            to={item.link}
-                            dangerouslySetInnerHTML={{ __html: item.name }}
-                            onClick={scrollToBottom}
-                          />
-                        </li>
-                      )
-                    }
-          })}
+                )}
+              </li>
+            )}
+            {items.map(item => {
+              if (item.name !== "CONTACT") {
+                return (
+                  <li key={item.id}>
+                    <Link
+                      to={item.link}
+                      dangerouslySetInnerHTML={{ __html: item.name }}
+                      className={"/" + item.link === location.pathname ? 'active' : ''}
+                      onClick={closeMenu}
+                    />
+                  </li>
+                )
+              } else {
+                return (
+                  <li key={item.id}>
+                    <Link
+                      to={item.link}
+                      dangerouslySetInnerHTML={{ __html: item.name }}
+                      onClick={scrollToBottom}
+                    />
+                  </li>
+                )
+              }
+            })}
           </ul>
         </nav>
       </div>

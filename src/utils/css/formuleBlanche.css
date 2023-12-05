@@ -117,7 +117,6 @@ h2.NotreCatalogue {
   width: 640px;
   text-align: justify;
   font-family: 'Montserrat', sans-serif;
-
 }
 
 .text-rose {
@@ -222,10 +221,11 @@ h2.NotreCatalogue {
 }
 
 .g-card {
-  width: 284px;
+  width: 280 px;
   text-align: justify;
   height: 450px;
 }
+
 .card-content h2 {
   font-size: 20px;
   font-weight: 500;
@@ -332,7 +332,12 @@ h2.NotreCatalogue {
 
 .rose {
   color: #D9C5C4;
-} 
+}
+
+.card-content img{
+  height: 176px;
+  width: 265px;
+}
 
 /* FORMAT TABLETTE */
 
@@ -443,12 +448,15 @@ h2.NotreCatalogue {
   }
 
 }
-
 /* FORMAT MOBILE */
 
 @media screen and (max-width: 1300px) {
 .centered-title {
   transform: translate(0%, -50%);
+}
+.g-card {
+  width: 265px;
+  height: 370px;
 }
 }
 
@@ -566,16 +574,16 @@ h2.NotreCatalogue {
 
   .btn-carousel-left {
     position: absolute;
-    left: -10%;
-    top: 37%;
+    left: -15%;
+    top: 25%;
     background-color: transparent;
     border: none;
   }
 
   .btn-carousel-right {
     position: absolute;
-    right: -10%;
-    top: 37%;
+    right: -15%;
+    top: 25%;
     background-color: transparent;
     border: none;
   }
@@ -591,6 +599,7 @@ h2.NotreCatalogue {
     width: 80%;
   }
 }
+
 @media screen and (min-width: 320px) and (max-width: 324px) {
   .container-condition-item {
     gap: 8%;
@@ -616,9 +625,11 @@ h2.NotreCatalogue {
   .container-pCard h2 {
     font-size: 23px;
     line-height: 45px;
+    margin-bottom: 0
   }
   .g-card {
     width: 265px;
+    height: 390px;
 }
 }
 
@@ -641,10 +652,18 @@ h2.NotreCatalogue {
   }
 }
 
-
-
 @media screen and (min-width: 501px)and (max-width: 686px) {
   .container-process-carousel {
     width: 70%;
   }
 }
+
+@media screen and (min-width: 1300px) {
+  .centered-title {
+    transform: translate(0%, -50%);
+  }
+  .g-card {
+    width: 265px;
+    height: 370px;
+  }
+  }
