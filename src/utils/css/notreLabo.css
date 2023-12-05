@@ -99,7 +99,6 @@ font-weight: 400;
       font-size: 16px;
       font-weight: 400;
       margin-bottom: 4px;
-
   }
   
 
@@ -112,15 +111,22 @@ font-weight: 400;
 
 }
 
-  .container-card-text-left h2 {
+  .container-card-text-left-1 {
     font-family: 'Montserrat';
-    font-size: 42px;
+    font-size: 38px;
+    margin: 0;
+    margin-right: 102px;
+  }
+
+  .container-card-text-left-2  {
+    font-family: 'Montserrat';
+    font-size: 38px;
     margin: 0;
   }
 
   .container-card-text-right h2 {
     font-family: 'Montserrat';
-    font-size: 42px;
+    font-size: 38px;
     margin: 0;
 }
 

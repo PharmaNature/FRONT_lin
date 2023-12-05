@@ -174,6 +174,7 @@ const dataMoyen = {
                                 description={item.description}
                                 urlImage={item.urlImage}
                                 position={index % 2 === 0 ? "left" : "right"}
+                                position_number={index == 0 ? 1 : 2}
                             />
                             {index === dataArray.length - 1 ? "" : <span className='vertical-line'></span>}
                         </React.Fragment>
