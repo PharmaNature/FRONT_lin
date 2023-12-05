@@ -169,7 +169,6 @@ span.paragraphe1 {
   align-items: center;
 }
 
-
 .intervention-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
@@ -251,6 +250,11 @@ span.paragraphe1 {
     position: relative;
     width: 320px;
   }
+  .container-intervention p {
+    text-align: justify;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
   }
   
 @media screen and (min-width: 401px) and (max-width: 1179px) {
@@ -258,8 +262,12 @@ span.paragraphe1 {
   position: relative;
   width: 400px;
 }
+.container-intervention p {
+  text-align: justify;
+  margin-left: 10%;
+  margin-right: 10%
 }
-
+}
 
 @media (max-width: 1179px) {
 
