@@ -7,11 +7,19 @@
   position: relative;
   overflow-x: hidden;
 }
-
-.centered-title {
+a{
+  text-decoration: none;
+}
+.divTitle {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 50%;
   transform: translate(-5%, -50%);
+}
+
+.centered-title {
+  margin-bottom: 20px ;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
@@ -301,9 +309,6 @@ h2.NotreCatalogue {
   font-size: 12px;
 }
 
-.expertise-title {
-}
-
 .text-group {
   width: 258px;
 }
@@ -449,16 +454,19 @@ h2.NotreCatalogue {
 
 }
 /* FORMAT MOBILE */
-
 @media screen and (max-width: 1300px) {
-.centered-title {
-  transform: translate(0%, -50%);
+  .divTitle {
+    transform: translate(0%, -50%);
+    align-items: center;
+  }
 }
+
+
 .g-card {
   width: 265px;
   height: 370px;
 }
-}
+
 
 @media screen and (max-width: 767px) {
 
@@ -659,11 +667,175 @@ h2.NotreCatalogue {
 }
 
 @media screen and (min-width: 1300px) {
-  .centered-title {
-    transform: translate(0%, -50%);
-  }
+  
   .g-card {
     width: 265px;
     height: 370px;
   }
+  }
+  .bleu{
+    background-color: #DCF3F3 ;
+  }
+  .buttonTitle{
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  
+  .buttonTitle.desktopSizebut {
+    
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 185px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: left;
+    border-width: 1px 0 0 0;
+    /* épaisseur de bordure : haut 1px, autres côtés 0 */
+    border-style: solid;
+    /* style de bordure : solide */
+    border-color: black;
+  }
+  
+  .buttonTitle.horizontalTabSizebut {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 1px 0 0 0;
+    /* épaisseur de bordure : haut 1px, autres côtés 0 */
+    border-style: solid;
+    /* style de bordure : solide */
+    border-color: black;
+    width: 180px;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  
+  .buttonTitle.verticalTabSizebut {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 1px 0 0 0;
+    /* épaisseur de bordure : haut 1px, autres côtés 0 */
+    border-style: solid;
+    /* style de bordure : solide */
+    border-color: black;
+    width: 170px;
+    font-size: 12px;
+    text-align: left;
+  }
+  
+  .buttonTitle.telSizebut {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 1px 0 0 0;
+    /* épaisseur de bordure : haut 1px, autres côtés 0 */
+    border-style: solid;
+    /* style de bordure : solide */
+    border-color: black;
+    width: 155px;
+    font-size: 11px;
+    text-align: left;
+  }
+  .buttonTitle{
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .buttonTitle:hover{
+    background-color: #000;
+    color: white;
+  }
+  
+  .divmiddlebouton{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .buttonTitle{
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  
+  .buttonTitle2.desktopSizebut {
+    
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 250px;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: left;
+    border-width: 1px 0 0 0;
+    /* épaisseur de bordure : haut 1px, autres côtés 0 */
+    border-style: solid;
+    /* style de bordure : solide */
+    border-color: black;
+  }
+  
+  .buttonTitle2.horizontalTabSizebut {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 1px 0 0 0;
+    /* épaisseur de bordure : haut 1px, autres côtés 0 */
+    border-style: solid;
+    /* style de bordure : solide */
+    border-color: black;
+    width: 180px;
+    font-size: 14px;
+    text-align: left;
+  }
+  
+  
+  .buttonTitle2.verticalTabSizebut {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 1px 0 0 0;
+    /* épaisseur de bordure : haut 1px, autres côtés 0 */
+    border-style: solid;
+    /* style de bordure : solide */
+    border-color: black;
+    width: 170px;
+    font-size: 12px;
+    text-align: left;
+  }
+  
+  .buttonTitle2.telSizebut {
+    color: rgb(0, 0, 0);
+    background-color: #ffffff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 1px 0 0 0;
+    /* épaisseur de bordure : haut 1px, autres côtés 0 */
+    border-style: solid;
+    /* style de bordure : solide */
+    border-color: black;
+    width: 155px;
+    font-size: 11px;
+    text-align: left;
+  }
+  .buttonTitle2{
+    transition: 0.5s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+  .buttonTitle2:hover{
+    background-color: #000;
+    color: white;
+    
   }
