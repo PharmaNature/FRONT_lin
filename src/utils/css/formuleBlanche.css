@@ -298,10 +298,10 @@ h2.NotreCatalogue {
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 12px;
 }
 
 .expertise-title {
-  width: 100%;
 }
 
 .text-group {
