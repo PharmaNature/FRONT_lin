@@ -7,6 +7,8 @@ import ProcessCard from '../components/Formules/ProcessCard';
 import Introduction from '../components/global/Introduction';
 import TextGroup from '../components/Formules/AreaOfExpertise';
 import plus from '../assets/pictogrammes/plus.svg'
+import { Link} from 'react-router-dom';
+
 
 // Imports de toutes les images
 import formulaIMG from '../assets/images/marque-blanche/marqueBlancheFormule.png';
@@ -189,7 +191,7 @@ function FormuleBlanche(props) {
 
   return (
     <div className='big-container'>
-      <Introduction format='image' imageChoice={imageChoice} alt={"Marque Blanche"} titleSizeChoice={titleSizeChoice} titleBold1={texts["txt0-0"]} title1={texts["txt0-1"]} title2={texts["txt0-2"]} />
+      <Introduction format='image' bouton={true} imageChoice={imageChoice} alt={"Marque Blanche"} titleSizeChoice={titleSizeChoice} titleBold1={texts["txt0-0"]} title1={texts["txt0-1"]} title2={texts["txt0-2"]} />
 
       <div className="sub-container">
         <div className='sub-container-text'>
@@ -215,6 +217,13 @@ function FormuleBlanche(props) {
           <br />
           <p>{texts["txt1-2"]}</p>
           <p>{texts["txt1-3"]}</p>
+          <div className='divmiddlebouton'>
+            <Link
+              to={"/contact"}
+              dangerouslySetInnerHTML={{ __html: "<h3>DEMANDEZ <br /> NOTRE CATALOGUE</h3>" }}
+              className={"buttonTitle2 " + titleSizeChoice + "but "}
+              />
+              </div>
         </div>
       </div>
 

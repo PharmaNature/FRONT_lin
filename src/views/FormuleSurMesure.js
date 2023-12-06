@@ -7,6 +7,8 @@ import GaleniqueCard from '../components/Formules/GaleniqueCard';
 import ProcessCard from '../components/Formules/ProcessCard';
 import TextGroup from '../components/Formules/AreaOfExpertise';
 import plus from '../assets/pictogrammes/plus.svg'
+import { Link} from 'react-router-dom';
+
 
 // Imports de toutes les images
 import surMesureIMG from '../assets/images/formule-sur-mesure/formule-sur-mesure_v2.png';
@@ -201,7 +203,7 @@ function FormuleSurMesure(props) {
 
   return (
     <div className='big-container'>
-      <Introduction format='image' imageChoice={imageChoice} alt={"Formule sur mesure"} titleSizeChoice={titleSizeChoice} titleBold1={texts["txt0-0"]} title1={texts["txt0-1"]} />
+      <Introduction format='image' bouton={true} imageChoice={imageChoice} alt={"Formule sur mesure"} titleSizeChoice={titleSizeChoice} titleBold1={texts["txt0-0"]} title1={texts["txt0-1"]} />
       <div className="sub-container">
         <div className='sub-container-text'>
           <div className='container-formula'>
@@ -234,6 +236,13 @@ function FormuleSurMesure(props) {
             {texts["txt1-4"]}</h3>
           <br />
           <p>{texts["txt1-5"]}</p>
+          <div className='divmiddlebouton'>
+            <Link
+              to={"/contact"}
+              dangerouslySetInnerHTML={{ __html: "<h3>DEMANDEZ <br /> NOTRE CATALOGUE</h3>" }}
+              className={"buttonTitle2 " + titleSizeChoice + "but "}
+              />
+              </div>
         </div>
       </div>
 
