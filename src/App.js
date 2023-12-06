@@ -38,6 +38,8 @@ function App() {
         <Route path="formule-sur-mesure" element={<FormuleSurMesure pageName="Formule Sur Mesure" />} />
         <Route path="qualite" element={<Qualite pageName="Qualité & Engagement" />} />
         <Route path="contact" element={<Contact pageName="Contact" />} />
+        <Route path="*" element={<Homepage pageName="Accueil" />} />
+
       </Routes>
       <Footer />
     </div>
