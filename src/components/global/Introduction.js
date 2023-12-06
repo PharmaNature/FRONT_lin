@@ -1,6 +1,8 @@
 import React from "react";
 import videoLIN from "../../assets/videos/VIDEO-LIN-HOMEPAGE.mp4"
 import videoLIN_PHONE from "../../assets/videos/VIDEO-LIN-HOMEPAGE-PHONE.mp4"
+import { Link} from 'react-router-dom';
+
 
 function Introduction(props) {
 
@@ -8,13 +10,26 @@ function Introduction(props) {
         return (
             <div className='centered-image'>
                 <img src={props.imageChoice} className='imgBG' alt={props.alt} />
-                <h1 className={'centered-title ' + props.titleSizeChoice}>
-                    <span className='title-bold'>
-                    {props.titleBold1} {props.titleBold2 ? <br /> : null} {props.titleBold2}
-                </span> <br />
-                    {props.title1} <br />
-                    {props.title2}
-                </h1>
+                <div className="divTitle ">
+                    <h1 className={'centered-title ' + props.titleSizeChoice}>
+                        <span className='title-bold'>
+                            {props.titleBold1} {props.titleBold2 ? <br /> : null} {props.titleBold2}
+                        </span> <br />
+                        {props.title1} <br />
+                        {props.title2}
+                    </h1>
+                    {props.bouton ?
+                        
+                        <div className={"buttonTitle " + props.titleSizeChoice + "but"}>
+
+                        <Link
+                            to={"/contact"}
+                            dangerouslySetInnerHTML={{ __html: "<h3>DEMANDEZ <br /> NOTRE CATALOGUE</h3>" }}
+                            className={"buttonTitle " + props.titleSizeChoice + "but"}
+                            />
+                            </div>
+                        : <></>}
+                </div>
             </div>
         )
     } else {
@@ -37,9 +52,9 @@ function Introduction(props) {
                 </div>
             )
         }
-        
+
     }
-    
+
 }
 
 export default Introduction;

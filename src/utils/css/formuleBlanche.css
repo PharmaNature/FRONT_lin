@@ -7,11 +7,15 @@
   position: relative;
   overflow-x: hidden;
 }
-
-.centered-title {
+.divTitle {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 50%;
   transform: translate(-5%, -50%);
+}
+.centered-title {
+  margin-bottom: 20px ;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
@@ -445,7 +449,7 @@ h2.NotreCatalogue {
 /* FORMAT MOBILE */
 
 @media screen and (max-width: 1300px) {
-  .centered-title {
+  .divTitle {
     transform: translate(0%, -50%);
   }
 }
@@ -646,6 +650,82 @@ h2.NotreCatalogue {
     width: 70%;
   }
 }
+
+
 .bleu{
   background-color: #DCF3F3 ;
+}
+.buttonTitle{
+  display: flex;
+  justify-content: center;
+}
+
+.buttonTitle.desktopSizebut {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 185px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: left;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+}
+
+.buttonTitle.horizontalTabSizebut {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+  width: 180px;
+  font-size: 14px;
+  text-align: left;
+}
+
+
+.buttonTitle.verticalTabSizebut {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+  width: 170px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.buttonTitle.telSizebut {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+  width: 155px;
+  font-size: 11px;
+  text-align: left;
+}
+.buttonTitle{
+  transition: 0.5s;
+  cursor: pointer;
+}
+.buttonTitle:hover{
+  background-color: #000;
+  color: white;
 }

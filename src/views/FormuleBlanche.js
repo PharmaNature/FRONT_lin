@@ -7,6 +7,7 @@ import ProcessCard from '../components/Formules/ProcessCard';
 import Introduction from '../components/global/Introduction';
 import TextGroup from '../components/Formules/AreaOfExpertise';
 import plus from '../assets/pictogrammes/plus.svg'
+import { useNavigation } from "react-router-dom";
 
 // Imports de toutes les images
 import formulaIMG from '../assets/images/marque-blanche/marqueBlancheFormule.png';
@@ -189,7 +190,7 @@ function FormuleBlanche(props) {
 
   return (
     <div className='big-container'>
-      <Introduction format='image' imageChoice={imageChoice} alt={"Marque Blanche"} titleSizeChoice={titleSizeChoice} titleBold1={texts["txt0-0"]} title1={texts["txt0-1"]} title2={texts["txt0-2"]} />
+      <Introduction format='image'bouton={true} imageChoice={imageChoice} alt={"Marque Blanche"} titleSizeChoice={titleSizeChoice} titleBold1={texts["txt0-0"]} title1={texts["txt0-1"]} title2={texts["txt0-2"]} />
 
       <div className="sub-container">
         <div className='sub-container-text'>
