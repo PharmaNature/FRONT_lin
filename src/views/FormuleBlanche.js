@@ -266,13 +266,11 @@ function FormuleBlanche(props) {
                   title={item.title}
                   text={item.text}
                 />
-
               ))}
             </div>
           ) : (
             // Afficher une seule forme à la fois avec des flèches
             <div {...swipeHandlers} className='container-galenique-carousel'>
-
               <GaleniqueCard
                 img={gData[currentIndex].img}
                 alt={gData[currentIndex].alt}

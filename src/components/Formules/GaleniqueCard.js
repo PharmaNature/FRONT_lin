@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function GaleniqueCard({ img, alt, title, text}) {
 
   return (

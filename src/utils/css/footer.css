@@ -3,7 +3,6 @@
     justify-content: center;
     gap: 15%;
     background-color: #F7F7F7;
-    padding: 40px; 
     bottom: 0; 
 }
 
@@ -54,7 +53,7 @@
     width: 55%;
     height: 215px;
     display: flex;
-    margin: 2% 0 2% 0;
+    margin: 3% 0 0 0;
     flex-direction: row;
     justify-content: center;
     gap: 7%;
@@ -64,13 +63,14 @@
 .logoFooterIMG {
     width: 170px;
 }
+
 hr.separator-footer {
     height: 124px;
     border-left: 2px solid #000;
 }
 
 .address {
-    font-size: 17px; 
+    font-size: 13px; 
     font-weight: 600;
     font-family: 'Montserrat';
     color: #111426;
@@ -78,7 +78,9 @@ hr.separator-footer {
 }
 
 .address p {
-    margin-top: 0;
+    margin-bottom: 5%;
+    margin-top: 4px;
+
 }
 
 .contactUs {
@@ -167,6 +169,11 @@ form {
 
     .address {
         text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .footer{
+        height: 760px;
     }
 }
 

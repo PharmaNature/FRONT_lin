@@ -66,7 +66,6 @@
   padding: 10px;
   height: 80px;
   position: fixed;
-  top: 35px; 
   gap: 3%;
   width: 100%; 
   z-index: 1000;
@@ -152,9 +151,8 @@
   .logo {
     width: 200px;
     margin-right: 30px;
+    margin-left: 5%
   }
-  
-
 
 /* ---------------------------------------------------------------------- */
 
@@ -243,7 +241,7 @@
   }
 
   .logoDiv img {
-    width: 72%;
+    width: 60%;
   }
 
   .menu-toggle {
@@ -317,5 +315,11 @@
     content: '×';
     font-weight: bold;
     margin-right: 5px;
+  }
+}
+
+@media (max-width: 450px) {
+  .header{
+    height: 25px;
   }
 }
