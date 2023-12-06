@@ -6,7 +6,7 @@ import { countries } from 'countries-list';
 import emailjs from '@emailjs/browser';
 import imageFR from '../assets/images/Group 188.png'
 
-function Homepage(props) {
+function Contact(props) {
   const { globalVariable } = useGlobalState();
   const texts = global[globalVariable]["HomePage"];
 
@@ -32,9 +32,9 @@ function Homepage(props) {
 
     emailjs.sendForm('service_wgsu43b', 'template_agfbylo', form.current, 'KqiX34UbVki7utDCT')
       .then((result) => {
-          console.log(result.text);
+        console.log(result.text);
       }, (error) => {
-          console.log(error.text);
+        console.log(error.text);
       });
   };
 
@@ -72,108 +72,110 @@ function Homepage(props) {
         </div>
         <div>
           <h2>CONTACTEZ NOUS</h2>
-          <form ref={form} onSubmit={sendEmail} className={isMobile ? ('form') : ('formMobile')}>
-            <div className='div_moit-form'>
-              <div className='div-input'>
-                <label htmlFor="subject" className="input-label">Sujet <span className='required'>*</span></label>
-                <input
-                  type="text"
-                  id="subject"
-                  className="input-field"
-                  value={subject}
-                  onChange={(e) => setSubject(e.target.value)}
-                  required
-                />
-              </div>
+          <form ref={form} onSubmit={sendEmail} >
+            <div className={isMobile ? ('form') : ('formMobile')}>
+              <div className='div_moit-form'>
+                <div className='div-input'>
+                  <label htmlFor="subject" className="input-label">Sujet <span className='required'>*</span></label>
+                  <input
+                    type="text"
+                    id="subject"
+                    className="input-field"
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
+                    required
+                  />
+                </div>
 
-              <div className='div-input'>
-                <label htmlFor="name" className="input-label">Nom <span className='required'>*</span></label>
-                <input
-                  type="text"
-                  id="name"
-                  className="input-field"
-                  value={name}
-                  name="nom_contact"
-                  onChange={(e) => setName(e.target.value)}
-                  required
-                />
-              </div>
+                <div className='div-input'>
+                  <label htmlFor="name" className="input-label">Nom <span className='required'>*</span></label>
+                  <input
+                    type="text"
+                    id="name"
+                    className="input-field"
+                    value={name}
+                    name="nom_contact"
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                  />
+                </div>
 
-              <div className='div-input'>
-                <label htmlFor="company" className="input-label">Société</label>
-                <input
-                  type="text"
-                  id="company"
-                  className="input-field"
-                  value={company}
-                  name="societe_contact"
-                  onChange={(e) => setCompany(e.target.value)}
-                />
+                <div className='div-input'>
+                  <label htmlFor="company" className="input-label">Société</label>
+                  <input
+                    type="text"
+                    id="company"
+                    className="input-field"
+                    value={company}
+                    name="societe_contact"
+                    onChange={(e) => setCompany(e.target.value)}
+                  />
+                </div>
+                <div className='div-input'>
+                  <label htmlFor="country" className="input-label">Pays <span className='required'>*</span></label>
+                  <select
+                    id="country"
+                    className="input-field"
+                    value={country}
+                    name="pays_contact"
+                    onChange={(e) => setCountry(e.target.value)}
+                    required
+                  >
+                    <option value="">Sélectionnez un pays</option>
+                    {countryList.map((country) => (
+                      <option key={country.name} value={country.name}>
+                        {country.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
               </div>
-              <div className='div-input'>
-                <label htmlFor="country" className="input-label">Pays <span className='required'>*</span></label>
-                <select
-                  id="country"
-                  className="input-field"
-                  value={country}
-                  name="pays_contact"
-                  onChange={(e) => setCountry(e.target.value)}
-                  required
-                >
-                  <option value="">Sélectionnez un pays</option>
-                  {countryList.map((country) => (
-                    <option key={country.name} value={country.name}>
-                      {country.name}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-            <div className='div_moit-form'>
-              <div className='div-input'>
-                <label htmlFor="phone" className="input-label">Téléphone</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  className="input-field"
-                  name="tel_contact"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                />
-              </div>
+              <div className='div_moit-form'>
+                <div className='div-input'>
+                  <label htmlFor="phone" className="input-label">Téléphone</label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    className="input-field"
+                    name="tel_contact"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                  />
+                </div>
 
-              <div className='div-input'>
-                <label htmlFor="email" className="input-label">Email <span className='required'>*</span></label>
-                <input
-                  type="email"
-                  id="email"
-                  className="input-field"
-                  value={email}
-                  name="email_contact"
-                  onChange={(e) => setEmail(e.target.value)}
-                  required
-                />
-              </div>
+                <div className='div-input'>
+                  <label htmlFor="email" className="input-label">Email <span className='required'>*</span></label>
+                  <input
+                    type="email"
+                    id="email"
+                    className="input-field"
+                    value={email}
+                    name="email_contact"
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </div>
 
-              <div className='div-input'>
-                <label htmlFor="message" className="input-label">Votre demande <span className='required'>*</span></label>
-                <textarea
-                  id="message"
-                  className="input-field"
-                  value={message}
-                  name="message"
-                  onChange={(e) => setMessage(e.target.value)}
-                  required
-                ></textarea>
+                <div className='div-input'>
+                  <label htmlFor="message" className="input-label">Votre demande <span className='required'>*</span></label>
+                  <textarea
+                    id="message"
+                    className="input-field"
+                    value={message}
+                    name="message"
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                  ></textarea>
+                </div>
               </div>
             </div>
             <div className='div-bouton'>
-            <button type="submit" value="Send">Envoyer</button>
-          </div>
+              <button type="submit" value="Send">Envoyer</button>
+            </div>
           </form>
         </div>
       </div>
     </div>
   );
 }
-export default Homepage;
+export default Contact;
