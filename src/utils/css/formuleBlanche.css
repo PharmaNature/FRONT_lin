@@ -660,7 +660,10 @@ h2.NotreCatalogue {
   justify-content: center;
 }
 
+
+
 .buttonTitle.desktopSizebut {
+  
   background-color: #ffffff;
   color: rgb(0, 0, 0);
   border-bottom-left-radius: 10px;
@@ -728,4 +731,90 @@ h2.NotreCatalogue {
 .buttonTitle:hover{
   background-color: #000;
   color: white;
+}
+
+.divmiddlebouton{
+  display: flex;
+  justify-content: center;
+}
+
+.buttonTitle{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.buttonTitle2.desktopSizebut {
+  
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 250px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: left;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+}
+
+.buttonTitle2.horizontalTabSizebut {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+  width: 180px;
+  font-size: 14px;
+  text-align: left;
+}
+
+
+.buttonTitle2.verticalTabSizebut {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+  width: 170px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.buttonTitle2.telSizebut {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+  width: 155px;
+  font-size: 11px;
+  text-align: left;
+}
+.buttonTitle2{
+  transition: 0.5s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.buttonTitle2:hover{
+  background-color: #000;
+  color: white;
+  
 }

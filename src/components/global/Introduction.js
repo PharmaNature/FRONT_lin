@@ -20,14 +20,12 @@ function Introduction(props) {
                     </h1>
                     {props.bouton ?
                         
-                        <div className={"buttonTitle " + props.titleSizeChoice + "but"}>
 
                         <Link
                             to={"/contact"}
                             dangerouslySetInnerHTML={{ __html: "<h3>DEMANDEZ <br /> NOTRE CATALOGUE</h3>" }}
                             className={"buttonTitle " + props.titleSizeChoice + "but"}
                             />
-                            </div>
                         : <></>}
                 </div>
             </div>
