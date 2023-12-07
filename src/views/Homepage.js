@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import '../utils/css/homepage.css';
 import Introduction from '../components/global/Introduction';
 import ResponsiveSize from '../utils/other/responsiveSize'
-import IconDescription from '../components/HomePage/IconDescription'
-import BoxFormule from '../components/HomePage/BoxFormule';
-import MoreInfo from '../components/HomePage/MoreInfo';
+import IconDescription from '../components/HomePage5/IconDescription'
+import BoxFormule from '../components/HomePage5/BoxFormule';
+import MoreInfo from '../components/HomePage5/MoreInfo';
 import { useSwipeable } from 'react-swipeable';
 import arrowLeft from '../assets/pictogrammes/arrow_left.svg'
 import arrowRight from '../assets/pictogrammes/arrow_right.svg'
