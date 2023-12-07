@@ -320,6 +320,10 @@
 
 @media (max-width: 450px) {
   .header{
-    height: 25px;
+    height: 45px;
+  }
+  img{
+    height: 45px;
+    margin: 1%
   }
 }

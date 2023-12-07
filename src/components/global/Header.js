@@ -94,10 +94,10 @@ function Header() {
           <a href="/">
             {
               windowWidth > 450 ? (
-                <img src={Logo} className="logo" alt="Logo" />
-              ) : windowWidth > 450 ? (
                 <img src={LogoCol} className="logo" alt="Logo" />
-              ) : null
+              ) : (
+                <img src={Logo} className="logo" alt="Logo" />
+              )
             }
           </a>
         </div>

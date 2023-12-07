@@ -198,8 +198,9 @@ const global = {
             "txt7-10": "DIGESTION TRANSIT / DETOX",
             "txt7-11": "SOMMEIL & SERENITE",
             "txt7-12": "GAMME FEMME",
-            "txt7-13": "VOIES RESPIRATOIRES ET IMMUNITE"
-
+            "txt7-13": "VOIES RESPIRATOIRES ET IMMUNITE",
+            "txt7-14": "DEMANDER",
+            "txt7-15": "NOTRE CATALOGUE"
 
 
         },
@@ -258,8 +259,9 @@ const global = {
             "txt6-11": "SOMMEIL & SERENITE",
             "txt6-12": "GAMME FEMME",
             "txt6-13": "VOIES RESPIRATOIRES ET IMMUNITE",
-            "txt7": "Vous souhaitez créer et commercialiser de nouveaux produits avec des concepts déjà développés et approuvés sur le marché ?"
-
+            "txt7": "Vous souhaitez créer et commercialiser de nouveaux produits avec des concepts déjà développés et approuvés sur le marché ?",
+            "txt7-14": "DEMANDER",
+            "txt7-15": "NOTRE CATALOGUE"
         },
         "Qualite": {
             "txt0-0": "QUALITÉ",
@@ -488,7 +490,9 @@ const global = {
             "txt7-10": "DIGESTIVE HEALTH / DETOX",
             "txt7-11": "SLEEP & SERENITY",
             "txt7-12": "WOMEN'S RANGE",
-            "txt7-13": "RESPIRATORY & IMMUNE SYSTEM"
+            "txt7-13": "RESPIRATORY & IMMUNE SYSTEM",
+            "txt7-14": "REQUEST",
+            "txt7-15": "OUR CATALOG"
         },
         "MarqueBlanche": {
             "txt0-0": "OUR WHITE LABEL",
@@ -544,7 +548,9 @@ const global = {
             "txt6-11": "SLEEP & SERENITY",
             "txt6-12": "WOMEN'S RANGE",
             "txt6-13": "RESPIRATORY & IMMUNE SYSTEM",
-            "txt7": "Do you want to create and market new products with concepts already developed and approved in the market?"
+            "txt7": "Do you want to create and market new products with concepts already developed and approved in the market?",
+            "txt7-14": "REQUEST",
+            "txt7-15": "OUR CATALOG"   
         },
         "Qualite": {
             "txt0-0": "QUALITY",
@@ -579,9 +585,6 @@ const global = {
         "Other": {
             "txt0-0": "READ MORE+"
         }
-
-
-
     },
     "中国人": {
         "Header": {
@@ -772,7 +775,9 @@ const global = {
             "txt7-10": "消化健康/排毒",
             "txt7-11": "睡眠与宁静",
             "txt7-12": "女性系列",
-            "txt7-13": "呼吸与免疫"
+            "txt7-13": "呼吸与免疫",
+            "txt7-14": "问",
+            "txt7-15": "我们的目录"
         },
         "MarqueBlanche": {
             "txt0-0": "我们的白标",
@@ -828,7 +833,9 @@ const global = {
             "txt6-11": "睡眠与宁静",
             "txt6-12": "女性系列",
             "txt6-13": "呼吸与免疫",
-            "txt7": "您想要使用市场上已经开发并获得批准的概念来创建并推广新产品吗？"
+            "txt7": "您想要使用市场上已经开发并获得批准的概念来创建并推广新产品吗",
+            "txt7-14": "问",
+            "txt7-15": "我们的目录"
         },
         "Qualite": {
             "txt0-0": "质量",

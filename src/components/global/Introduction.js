@@ -2,8 +2,13 @@ import React from "react";
 import videoLIN from "../../assets/videos/VIDEO-LIN-HOMEPAGE.mp4"
 import videoLIN_PHONE from "../../assets/videos/VIDEO-LIN-HOMEPAGE-PHONE.mp4"
 import { Link} from 'react-router-dom';
+import global from '../../assets/global.js'
+import { useGlobalState } from '../../views/GlobalStateContext';
 
 function Introduction(props) {
+ 
+    const { globalVariable } = useGlobalState()
+    const texts = global[globalVariable]["SurMesure"]
 
     if (props.format === "image") {
         return (
@@ -20,7 +25,7 @@ function Introduction(props) {
                     {props.bouton ?
                         <Link
                             to={"/contact"}
-                            dangerouslySetInnerHTML={{ __html: "<h3>DEMANDEZ <br /> NOTRE CATALOGUE</h3>" }}
+                            dangerouslySetInnerHTML={{ __html: `<h3>${texts['txt7-14']} <br />${texts['txt7-15']}</h3>` }}
                             className={"buttonTitle " + props.titleSizeChoice + "but"}
                         />
                         : <></>}
