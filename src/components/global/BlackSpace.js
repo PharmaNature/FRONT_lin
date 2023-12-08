@@ -23,7 +23,7 @@ function BlackSpace() {
 return (
     <div className='blackspace'>
     <div className='big-container-language'>
-        <div className='container-language' onMouseEnter={toggleDivLanguage} onMouseLeave={toggleDivLanguage} style={containerStyle}>
+        <div className='container-language' onMouseEnter={toggleDivLanguage} onMouseLeave={toggleDivLanguage} >
             <div className='picker-container'>
                 <h4>{globalVariable}</h4>
                 <img src={pickList} className='pickList' />

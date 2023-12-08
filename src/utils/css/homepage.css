@@ -8,7 +8,6 @@
     overflow-x: hidden;
   }
 
-
 .text{
   white-space: nowrap;
   margin-bottom: 5px;
@@ -71,24 +70,17 @@
   margin: 0;
 }
 
-.item-icon-top h4 {
-  font-family: 'Montserrat';
-  font-size: 16px;
-  font-weight: 500;
-}
 .item-icon-top img {
   width: 64px;
   height: 65px;
-  margin-top: 15px;
 }
 
 .item-icon-bottom img {
-  width: 150px;
-  margin-top: 15px;
+  width: 90px;
 }
 .item-icon-bottom h4 {
   font-family: 'Montserrat';
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
 }
 
@@ -103,8 +95,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .container-objectif {
@@ -129,8 +119,15 @@
 
 .objectif-title h2 {
   font-weight: 800;
+  font-size: 45px;
+  margin: 0;
+}
+
+.objectif-title h3 {
+  font-weight: 400;
   font-size: 30px;
   margin: 0;
+  color: #757575;
 }
 
 .container-objectif-paragraphes {
@@ -161,26 +158,38 @@ span.paragraphe1 {
   font-size: 19px;
 }
 
+.container-mission{
+  padding-left: 30%;
+  padding-right: 30%;
+  text-align: center;
+}
+
 .container-intervention {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url(../../assets/images/homepage/bandeau-mission.jpg);
+  width: 1870px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 50px;
+}
+
+.section-mission p{
+  text-align: center;
 }
 
 .intervention-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
-  font-size: 45px;
+  font-size: 40px;
   margin: 0 auto;
   width: 100%;
   text-align: center;
 }
 
 .container-item-intervention {
-  margin-top: 2%;
-  margin-bottom: 5%;
   width: 90%;
   display: flex;
   flex-direction: row;
@@ -189,7 +198,6 @@ span.paragraphe1 {
 
 .container-nos-formules {
   width: 100%;
-  background-color: #EBEBE9;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -197,8 +205,17 @@ span.paragraphe1 {
   padding-top: max(161px);
 }
 
+.container-intervention p {
+  text-align: center;
+}
+
+.container-intervention{
+  width: 100%;
+}
+
 .container-formule-item {
   background-color: #fff;
+  border: 1px solid #bbbbbb;
   border-radius: 10px;
   width: 500px;
   height: 480px;
@@ -207,17 +224,17 @@ span.paragraphe1 {
   justify-content: end;
   align-items: center;
   /* margin-top: 13%; */
-  margin-bottom: 10%;
+  margin-bottom: 3%;
 
   position: relative;
   z-index: 1;
 }
 
 .container-formule-item img {
-  width: 250px;
+  width: 200px;
   position: absolute;
   z-index: 999;
-  top: -25%;
+  top: -21%;
 }
 
 .container-formule-item h2 {
@@ -225,12 +242,21 @@ span.paragraphe1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 35px;
+  margin-top: 0;
 }
 
 .container-formule-item h2 span {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+}
+
+.bleu{
+  color: #B9E8E8;
+}
+
+.rose{
+  color: #D9C5C4;
 }
 
 .descriptionBoxFormules {
@@ -245,17 +271,28 @@ span.paragraphe1 {
   font-size: 18px;
 }
 
+.moreInfo-text{
+  font-size: 14px;
+}
+
 @media screen and (min-width: 320px) and (max-width: 400px) {
   .container-item-intervention {
     position: relative;
     width: 320px;
   }
   .container-intervention p {
-    text-align: justify;
-    margin-left: 10%;
-    margin-right: 10%;
+    text-align: center;
+    width: 100%;
   }
   }
+
+@media screen and (min-width: 350px) and (max-width: 800px){
+  .container-mission{
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+  }
+}
   
 @media screen and (min-width: 401px) and (max-width: 1179px) {
 .container-item-intervention {
@@ -263,9 +300,11 @@ span.paragraphe1 {
   width: 400px;
 }
 .container-intervention p {
-  text-align: justify;
-  margin-left: 10%;
-  margin-right: 10%
+  text-align: center;
+  width: 100%;
+}
+.item-icon-bottom img {
+  width: 170px;
 }
 }
 
