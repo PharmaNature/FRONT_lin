@@ -153,15 +153,15 @@ const dataMoyen = {
                     <img src={historyIMG} alt='Histoire Laboratoire' />
                 </div>
                 <div className='container-history-text'>
-                    <h2 className='history-text'>{texts["txt1-0"]}</h2>
-                    <h3 className='history-text'>{texts["txt1-1"]}</h3>
+                    <h2 className='history-text-title'>{texts["txt1-0"]}</h2>
+                    <h3 className='history-text-subtitle'>{texts["txt1-1"]}</h3>
                     <p className='history-text'>{texts["txt1-2"]}</p>
-                    <h3 className='history-text'>{texts["txt1-3"]}</h3>
+                    <h3 className='history-text bold'>{texts["txt1-3"]}</h3>
                 </div>
             </div>
             <div className='container-metiers'>
                 <div className='container-metiers-title'>
-                    <h2>{texts["txt2-0"]}</h2>
+                    <h2 className='title-metier'>{texts["txt2-0"]}</h2>
                     <div className='cercle-metier'></div>
                 </div>
 
