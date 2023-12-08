@@ -7,9 +7,11 @@
   position: relative;
   overflow-x: hidden;
 }
-a{
+
+a {
   text-decoration: none;
 }
+
 .divTitle {
   position: absolute;
   display: flex;
@@ -19,10 +21,11 @@ a{
 }
 
 .centered-title {
-  margin-bottom: 20px ;
+  margin-bottom: 20px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
 }
+
 .title-bold {
   font-family: 'Montserrat', sans-serif;
   font-weight: 800;
@@ -46,6 +49,7 @@ a{
   font-size: 96px;
   line-height: 91px;
 }
+
 /* NOTRE FORMULE */
 
 .sub-container {
@@ -55,9 +59,9 @@ a{
   justify-content: center;
   align-items: center;
   gap: 1%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin: 5%
 }
+
 .sub-container-text {
   margin-top: -78px;
   width: 20%;
@@ -66,6 +70,7 @@ a{
   justify-content: center;
   align-items: center;
 }
+
 .plus-sign {
   color: #D9C5C4;
   font-size: 10em;
@@ -80,10 +85,12 @@ a{
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 }
+
 .container-formula {
   width: 100%;
   text-align: center;
 }
+
 h1.NotreFormula {
   font-family: 'Montserrat', sans-serif;
   color: #D9C5C4;
@@ -93,11 +100,13 @@ h1.NotreFormula {
   line-height: 46px;
   text-align: center;
 }
+
 .container-packaging {
   display: flex;
   justify-content: center;
   line-height: 45px;
 }
+
 h1.packaging {
   font-size: 3em;
   font-weight: bold;
@@ -127,15 +136,24 @@ h2.NotreCatalogue {
   font-family: 'Montserrat', sans-serif;
 }
 
+.text-intro {
+  font-size: 17px;
+  margin: 0;
+  color: #757575;
+}
+
 .text-rose {
   color: #D1A9A7;
-  font-size: 22px;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 0
 }
 
 .vertical-line-fb {
   border-left: 2px solid #000;
   display: inline-block;
-  height: 130px;
+  height: 75px;
   margin: 0 20px;
 }
 
@@ -150,49 +168,56 @@ h2.NotreCatalogue {
 
 .container-process-carousel {
   position: relative;
-  height: 258px;
+  height: 230px;
   width: 50%;
   max-width: 785px;
   margin-top: 3%;
 }
-.container-process-title h2{
+
+.container-process-title h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 45px;
   font-weight: 100;
+  margin: 30px
 }
+
 .container-pCard {
   width: 100%;
   align-items: center;
   display: flex;
   flex-direction: column;
 }
+
 .p-card {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.container-pCard h2{
+
+.container-pCard h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   font-weight: bold;
   line-height: 45px;
 }
+
 .btn-pcarousel-left {
   position: absolute;
-    left: 2%;
-    top: 12%;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+  left: 5%;
+  top: 25%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
+
 .btn-pcarousel-right {
   position: absolute;
-    right: 2%;
-    top: 12%;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+  right: 5%;
+  top: 25%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 /* NOS DIVERSES FORMES GALENIQUES */
@@ -213,6 +238,7 @@ h2.NotreCatalogue {
   font-family: 'Montserrat', sans-serif;
   font-size: 45px;
   font-weight: 100;
+  margin: 30px
 }
 
 
@@ -239,12 +265,15 @@ h2.NotreCatalogue {
   font-weight: 500;
   font-family: 'Montserrat';
   text-align: center;
+  margin: 5px
 }
+
 .card-content p {
   font-family: 'Montserrat';
   font-weight: 200;
   font-size: 16px;
 }
+
 /* NOTRE CHOIX DE CONDITIONNEMENT */
 
 .container-condition-item {
@@ -252,8 +281,6 @@ h2.NotreCatalogue {
   display: flex;
   justify-content: center;
   gap: 10%;
-  margin-top: 4%;
-
 }
 
 .condition-item p {
@@ -273,6 +300,7 @@ h2.NotreCatalogue {
   font-family: 'Montserrat', sans-serif;
   font-size: 50px;
   font-weight: 100;
+  margin: 20px
 }
 
 .container-condition-title h3 {
@@ -297,6 +325,7 @@ h2.NotreCatalogue {
 .expertise-title h2 {
   font-size: 40px;
   font-weight: 100;
+  margin: 10px;
 }
 
 
@@ -339,7 +368,7 @@ h2.NotreCatalogue {
   color: #D9C5C4;
 }
 
-.card-content img{
+.card-content img {
   height: 176px;
   width: 265px;
 }
@@ -355,9 +384,11 @@ h2.NotreCatalogue {
     flex-direction: row;
     flex-wrap: nowrap;
   }
+
   .sub-container-text {
     width: 40%;
   }
+
   .container-formula {
     width: 100%;
     margin-top: 2%;
@@ -373,6 +404,7 @@ h2.NotreCatalogue {
     width: 100%;
     font-size: 24px;
   }
+
   .plus-sign {
     font-size: 9em;
   }
@@ -403,28 +435,36 @@ h2.NotreCatalogue {
   }
 
 
-}@media screen and (min-width: 1180px) and (max-width: 1523px){
-  .sub-container-text{
+}
+
+@media screen and (min-width: 1180px) and (max-width: 1523px) {
+  .sub-container-text {
     width: 26%;
   }
+
   h1.NotreFormula {
     font-size: 3em;
   }
+
   h2.NotreCatalogue {
     font-size: 27px;
   }
+
   h1.packaging {
     font-size: 2.7em;
   }
- .equal-sign {
-      width: 15%;
-    }
-    .sub-container-img {
-      width: 45%;
+
+  .equal-sign {
+    width: 15%;
   }
+
+  .sub-container-img {
+    width: 45%;
+  }
+
   .sub-container-img img {
     width: 100%;
-}
+  }
 
 }
 
@@ -436,7 +476,7 @@ h2.NotreCatalogue {
 
 @media screen and (min-width: 1181px) and (max-width: 1478px) {
   .galenique {
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -453,6 +493,7 @@ h2.NotreCatalogue {
   }
 
 }
+
 /* FORMAT MOBILE */
 @media screen and (max-width: 1300px) {
   .divTitle {
@@ -542,7 +583,7 @@ h2.NotreCatalogue {
   .container-process-title h2 {
     font-size: 24px;
     font-weight: 100;
-}
+  }
 
   .container-formes {
     width: 100%;
@@ -595,6 +636,7 @@ h2.NotreCatalogue {
     background-color: transparent;
     border: none;
   }
+
   .AreaOfExpertise {
     width: 100%;
   }
@@ -630,15 +672,17 @@ h2.NotreCatalogue {
   .container-process-carousel {
     width: 94%;
   }
+
   .container-pCard h2 {
     font-size: 23px;
     line-height: 45px;
     margin-bottom: 0
   }
+
   .g-card {
     width: 265px;
     height: 390px;
-}
+  }
 }
 
 @media screen and (max-width: 530px) {
@@ -667,172 +711,222 @@ h2.NotreCatalogue {
 }
 
 @media screen and (min-width: 1300px) {
-  
+
   .g-card {
     width: 265px;
     height: 370px;
   }
+}
+
+@media (max-width: 850px) {
+  .text-rose{
+    font-size: 25px;
   }
-  .buttonTitle{
+
+  .text-intro{
+    font-size: 19px;
+    font-weight: 400;
+  }
+
+  .formula-text p{
+    color: black;
+    font-size: 19px;
+  }
+
+  .text-intro{
+    width: 100%;
     display: flex;
     justify-content: center;
   }
-  
-  
-  
-  .buttonTitle.desktopSizebut {
-    
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    width: 185px;
-    margin-left: 5px;
-    margin-right: 5px;
-    text-align: left;
-    border-width: 1px 0 0 0;
-    /* épaisseur de bordure : haut 1px, autres côtés 0 */
-    border-style: solid;
-    /* style de bordure : solide */
-    border-color: black;
+
+  .container-process-title h2{
+    font-size: 25px;;
   }
-  
-  .buttonTitle.horizontalTabSizebut {
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-width: 1px 0 0 0;
-    /* épaisseur de bordure : haut 1px, autres côtés 0 */
-    border-style: solid;
-    /* style de bordure : solide */
-    border-color: black;
-    width: 180px;
-    font-size: 14px;
-    text-align: left;
+
+  .container-pCard h2 {
+    font-size: 25px;
+    margin-bottom: 0
   }
-  
-  
-  .buttonTitle.verticalTabSizebut {
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-width: 1px 0 0 0;
-    /* épaisseur de bordure : haut 1px, autres côtés 0 */
-    border-style: solid;
-    /* style de bordure : solide */
-    border-color: black;
-    width: 170px;
-    font-size: 12px;
-    text-align: left;
+
+  .container-formes-title h2 {
+    font-size: 25px;
+    font-weight: 100;
   }
-  
-  .buttonTitle.telSizebut {
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-width: 1px 0 0 0;
-    /* épaisseur de bordure : haut 1px, autres côtés 0 */
-    border-style: solid;
-    /* style de bordure : solide */
-    border-color: black;
-    width: 155px;
-    font-size: 11px;
-    text-align: left;
+
+  .card-content p {
+    font-size: 19px;
   }
-  .buttonTitle{
-    transition: 0.5s;
-    cursor: pointer;
+
+  .container-process-carousel{
+    height: 210px;
   }
-  .buttonTitle:hover{
-    background-color: #000;
-    color: white;
+
+  .container-condition-title h2{
+    font-size: 25px;
   }
-  
-  .divmiddlebouton{
-    display: flex;
-    justify-content: center;
-  }
-  
-  .buttonTitle{
-    display: flex;
-    justify-content: center;
-  }
-  
-  
-  
-  .buttonTitle2.desktopSizebut {
-    
-    background-color: #ffffff;
-    color: rgb(0, 0, 0);
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    width: 250px;
-    margin-left: 5px;
-    margin-right: 5px;
-    text-align: left;
-    border-width: 1px 0 0 0;
-    /* épaisseur de bordure : haut 1px, autres côtés 0 */
-    border-style: solid;
-    /* style de bordure : solide */
-    border-color: black;
-  }
-  
-  .buttonTitle2.horizontalTabSizebut {
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-width: 1px 0 0 0;
-    /* épaisseur de bordure : haut 1px, autres côtés 0 */
-    border-style: solid;
-    /* style de bordure : solide */
-    border-color: black;
-    width: 180px;
-    font-size: 14px;
-    text-align: left;
-  }
-  
-  
-  .buttonTitle2.verticalTabSizebut {
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-width: 1px 0 0 0;
-    /* épaisseur de bordure : haut 1px, autres côtés 0 */
-    border-style: solid;
-    /* style de bordure : solide */
-    border-color: black;
-    width: 170px;
-    font-size: 12px;
-    text-align: left;
-  }
-  
-  .buttonTitle2.telSizebut {
-    color: rgb(0, 0, 0);
-    background-color: #ffffff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    border-width: 1px 0 0 0;
-    /* épaisseur de bordure : haut 1px, autres côtés 0 */
-    border-style: solid;
-    /* style de bordure : solide */
-    border-color: black;
-    width: 155px;
-    font-size: 11px;
-    text-align: left;
-  }
-  .buttonTitle2{
-    transition: 0.5s;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-  }
-  .buttonTitle2:hover{
-    background-color: #000;
-    color: white;
-    
-  }
+
+}
+
+.buttonTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonTitle.desktopSizebut {
+
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 185px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: left;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+}
+
+.buttonTitle.horizontalTabSizebut {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+  width: 180px;
+  font-size: 14px;
+  text-align: left;
+}
+
+
+.buttonTitle.verticalTabSizebut {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+  width: 170px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.buttonTitle.telSizebut {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+  width: 155px;
+  font-size: 11px;
+  text-align: left;
+}
+
+.buttonTitle {
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.buttonTitle:hover {
+  background-color: #000;
+  color: white;
+}
+
+.divmiddlebouton {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.buttonTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonTitle2.desktopSizebut {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 250px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: left;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+}
+
+.buttonTitle2.horizontalTabSizebut {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+  width: 180px;
+  font-size: 14px;
+  text-align: left;
+}
+
+
+.buttonTitle2.verticalTabSizebut {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+  width: 170px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.buttonTitle2.telSizebut {
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-width: 1px 0 0 0;
+  /* épaisseur de bordure : haut 1px, autres côtés 0 */
+  border-style: solid;
+  /* style de bordure : solide */
+  border-color: black;
+  width: 155px;
+  font-size: 11px;
+  text-align: left;
+}
+
+.buttonTitle2 {
+  transition: 0.5s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonTitle2:hover {
+  background-color: #000;
+  color: white;
+
+}

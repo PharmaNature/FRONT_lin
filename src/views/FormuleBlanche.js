@@ -195,7 +195,7 @@ function FormuleBlanche(props) {
       <div className="sub-container">
         <div className='sub-container-text'>
           <div className='container-formula'>
-            <h1 className='NotreFormula'>{texts["txt0-3"]}</h1>
+            <h1 className='treFormula'>{texts["txt0-3"]}</h1>
             <h2 className='NotreCatalogue'>{texts["txt0-4"]} <br />{texts["txt0-5"]}</h2>
           </div>
           <div className='plus-sign'> + </div>
@@ -208,10 +208,10 @@ function FormuleBlanche(props) {
           <img src={formulaIMG} alt='Votre marque blanche' />
         </div>
       </div>
-      <div className='container-formula-text'>
+      <div className='text-intro'>
         <div className='formula-text'>
           <h3 className='text-rose'>{texts["txt7"]}</h3>
-          <h3>{texts["txt1-0"]}
+          <h3 className='text-intro'>{texts["txt1-0"]}
             <br /><br />{texts["txt1-1"]}</h3>
           <br />
           <p>{texts["txt1-2"]}</p>

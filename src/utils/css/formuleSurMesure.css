@@ -1,12 +1,13 @@
 .centered-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    position: relative; 
-    overflow-x: hidden;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
 /* 
   .centered-title {
     position: absolute; 
@@ -16,101 +17,107 @@
     font-weight: 500;
   } */
 
-  .title-bold {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-  }
+.title-bold {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+}
 
-  /* Taille de title par taille écran */
-  /* .telSize {
+/* Taille de title par taille écran */
+/* .telSize {
     font-size: 1.5em;
     text-align: center;
   /* } 
   .verticalTabSize {
     font-size: 2.1em;
   } */
-  .horizontalTabSize {
-    font-size: 4em;
-  }
-  /* .desktopSize {
+.horizontalTabSize {
+  font-size: 4em;
+}
+
+/* .desktopSize {
     font-size: 4em;
   } */
 
 
-  /* VOTRE FORMULE */
+/* VOTRE FORMULE */
 
-  h1.NotreFormula-mesure {
-    font-family: 'Montserrat', sans-serif;
-    color: #B9E8E8;
-    font-weight: 800;
-    font-size: 3.7em;
-    width: 99%;
-    line-height: 46px;
-    text-align: center;
+h1.NotreFormula-mesure {
+  font-family: 'Montserrat', sans-serif;
+  color: #B9E8E8;
+  font-weight: 800;
+  font-size: 3.7em;
+  width: 99%;
+  line-height: 46px;
+  text-align: center;
 }
 
-  .plus-sign-mesure {
-    color: #B9E8E8;
-    font-size: 10em;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-    margin-top: -21px;
-  }
-  
-  .equal-sign-mesure {
-    color: #B9E8E8;
-    font-size: 10em;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
-  }
+.plus-sign-mesure {
+  color: #B9E8E8;
+  font-size: 10em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-top: -21px;
+}
 
-  .index {
-    position: absolute;
-    /* left: 37%; */
-    top: -21%;
-    font-size: 30px;
-    font-family: montserrat;
-    font-weight: bold;
-  }
+.equal-sign-mesure {
+  color: #B9E8E8;
+  font-size: 10em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
 
-  .bleu {
-    color: #B9E8E8;
-  }
-  .text-blue{
-    color: #8BCFCF;
-    font-size: 22px;
-  }
+.index {
+  position: absolute;
+  /* left: 37%; */
+  top: -21%;
+  font-size: 30px;
+  font-family: montserrat;
+  font-weight: bold;
+}
 
-  .formula-text p {
-    font-size: 18px;
-  }
-  
+.bleu {
+  color: #B9E8E8;
+}
+
+.text-blue {
+  color: #8BCFCF;
+  font-size: 22px;
+}
+
+.formula-text p {
+  font-size: 17px;
+  margin: 0px;
+}
+
 @media screen and (max-width: 768px) {
-  .index{
+  .index {
     top: -13%;
     font-size: 25px;
   }
 }
 
-@media screen and (min-width: 738px) and (max-width: 1181px){
+@media screen and (min-width: 738px) and (max-width: 1181px) {
   .galenique {
     gap: 18%;
-}
+  }
 }
 
-@media screen and (min-width: 1180px) and (max-width: 1523px){
+@media screen and (min-width: 1180px) and (max-width: 1523px) {
   h1.NotreFormula-mesure {
     font-size: 3em;
   }
+
   h2.NotreCatalogue-mesure {
     font-size: 27px;
   }
+
   h1.packaging {
     font-size: 2.7em;
   }
- .equal-sign-mesure {
-      width: 15%;
-    }
+
+  .equal-sign-mesure {
+    width: 15%;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -131,6 +138,7 @@
   h1.NotreFormula-mesure {
     font-size: 33px;
   }
+
   .plus-sign-mesure {
     font-size: 110px;
     line-height: 84px;
@@ -149,4 +157,12 @@
     font-size: 15px;
   }
 
+}
+
+@media (max-width: 850px) {
+
+  .formula-text p {
+    color: black;
+    font-size: 19px;
   }
+}
