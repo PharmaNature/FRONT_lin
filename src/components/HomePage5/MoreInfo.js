@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useGlobalState } from '../../views/GlobalStateContext';
 import { Link } from "react-router-dom";
 import global from '../../assets/global'
 
 function MoreInfo(props) {
-  const langue = global["global"]
-  const texts = global[langue]["Other"]
+  const { globalVariable } = useGlobalState()
+  const texts = global[globalVariable]["Other"]
   const myParagraphRef = useRef(null);
   const lineRef = useRef(null);
   const [paragraphSize, setParagraphSize] = useState({ width: 0, height: 0 });

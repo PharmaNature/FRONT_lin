@@ -7,7 +7,7 @@ import GaleniqueCard from '../components/Formules/GaleniqueCard';
 import ProcessCard from '../components/Formules/ProcessCard';
 import TextGroup from '../components/Formules/AreaOfExpertise';
 import plus from '../assets/pictogrammes/plus.svg'
-import { Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 // Imports de toutes les images
@@ -38,9 +38,9 @@ import { useGlobalState } from '../views/GlobalStateContext';
 
 
 function FormuleSurMesure(props) {
-  const {globalVariable} = useGlobalState()
+  const { globalVariable } = useGlobalState()
   const texts = global[globalVariable]["SurMesure"]
-  
+
   document.title = props.pageName;
 
   const { chooseImage, chooseSizeTitle } = ResponsiveSize();
@@ -227,8 +227,8 @@ function FormuleSurMesure(props) {
             <br /><br />
             {texts["txt1-1"]}
             <br /><br />
-            </h3>
-            <h3>
+          </h3>
+          <h3>
             {texts["txt1-2"]}
             <br /><br />
             {texts["txt1-3"]}
@@ -239,10 +239,10 @@ function FormuleSurMesure(props) {
           <div className='divmiddlebouton'>
             <Link
               to={"/contact"}
-              dangerouslySetInnerHTML={{ __html: "<h3>DEMANDEZ <br /> NOTRE CATALOGUE</h3>" }}
+              dangerouslySetInnerHTML={{ __html: `<h3>${texts['txt7-14']} <br />${texts['txt7-15']}</h3>` }}
               className={"buttonTitle2 " + titleSizeChoice + "but "}
-              />
-              </div>
+            />
+          </div>
         </div>
       </div>
 
@@ -335,16 +335,12 @@ function FormuleSurMesure(props) {
 
               </div>
             ))}
-
           </div>
-
         </div>
-
         <div className='AreaOfExpertise'>
           <div className='expertise-title'>
             <h2>{texts["txt6-0"]}<br /> <span className='title-bold' >{texts["txt6-1"]} <br />{texts["txt6-2"]}</span></h2>
           </div>
-
           <div className={`expertise-list ${horizontalScroll ? 'horizontal-scroll' : ''}`}>
             {textGroups.map((group, index) => (
               <React.Fragment key={index}>

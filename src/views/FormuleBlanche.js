@@ -32,7 +32,6 @@ import formulation from '../assets/pictogrammes/formule-blanche-formulation.png'
 import global from '../assets/global.js'
 import { useGlobalState } from '../views/GlobalStateContext';
 
-
 function FormuleBlanche(props) {
   const {globalVariable} = useGlobalState()
   const texts = global[globalVariable]["MarqueBlanche"]
@@ -220,7 +219,7 @@ function FormuleBlanche(props) {
           <div className='divmiddlebouton'>
             <Link
               to={"/contact"}
-              dangerouslySetInnerHTML={{ __html: "<h3>DEMANDEZ <br /> NOTRE CATALOGUE</h3>" }}
+              dangerouslySetInnerHTML={{ __html: `<h3>${texts["txt7-14"]} <br /> ${texts["txt7-15"]}</h3>"` }}
               className={"buttonTitle2 " + titleSizeChoice + "but "}
               />
               </div>
