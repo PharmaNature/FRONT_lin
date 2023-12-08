@@ -158,13 +158,13 @@ function Homepage(props) {
       <div className='big-container-objectif'>
         <div className='container-objectif'>
           <div className='objectif-title'>
-            <h1>
-              {texts["txt0-0"]}<br />
-            </h1>
             <h2>
+              {texts["txt0-0"]}<br />
+            </h2>
+            <h3>
               {texts["txt0-1"]}<br />
               {texts["txt0-2"]}
-            </h2>
+            </h3>
           </div>
           <div className='container-objectif-paragraphes'>
             <div className='objectif-paragraphe1'>
@@ -196,15 +196,15 @@ function Homepage(props) {
           <MoreInfo link="notre-labo" />
         </div>
       </div>
-
       <div className='container-intervention'>
-        <h2 className='intervention-title'>
-          {texts["txt3-0"]}
-        </h2>
-        <p>
-          {texts["txt3-1"]}
-        </p>
-
+        <div className='container-mission'>
+          <h2 className='intervention-title'>
+            {texts["txt3-0"]}
+          </h2>
+          <p>
+            {texts["txt3-1"]}
+          </p>
+        </div>
         {windowWidth >= 1179 ? (
           <div className='container-item-intervention'>
             {Object.values(dataMetier).map((item, index) => (
@@ -228,7 +228,7 @@ function Homepage(props) {
 
       <div className='container-nos-formules'>
         {Object.values(nosFormules).map((item, index) => (
-          <BoxFormule key={index} titleLine1={item['titleLine1']} titleLine2={item['titleLine2']} titleLine3={item['titleLine3']} description={item['description']} urlImage={item['urlImage']} link={item.link} />
+          <BoxFormule color={index === 0 ? 'rose' : 'bleu'} key={index} titleLine1={item['titleLine1']} titleLine2={item['titleLine2']} titleLine3={item['titleLine3']} description={item['description']} urlImage={item['urlImage']} link={item.link} />
         ))}
       </div>
 

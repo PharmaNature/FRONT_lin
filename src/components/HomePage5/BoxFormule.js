@@ -7,7 +7,7 @@ function BoxFormule(props) {
             <img src={props.urlImage} alt="Formule"/>
             <h2>
                 {props.titleLine1} <br />
-                <span>
+                <span className={`${props.color}`}>
                     {props.titleLine2} <br />
                     {props.titleLine3} <br />
                 </span>
@@ -15,7 +15,7 @@ function BoxFormule(props) {
             <p className="descriptionBoxFormules">
                 {props.description}
             </p>
-                <MoreInfo link={props.link} />
+                <MoreInfo className="moreInfo-text" link={props.link} />
         </div>
     )
 }
