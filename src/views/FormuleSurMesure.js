@@ -217,7 +217,7 @@ function FormuleSurMesure(props) {
         </div>
         <div className='equal-sign-mesure'>=</div>
         <div className='sub-container-img'>
-          <img src={surMesureIMG} alt='Votre formule sur mesure' />
+          <img className="sur-mesure" src={surMesureIMG} alt='Votre formule sur mesure' />
         </div>
       </div>
       <div className='container-formula-text'>
@@ -228,7 +228,7 @@ function FormuleSurMesure(props) {
             {texts["txt1-1"]}
             <br /><br />
           </h3>
-          <h3>
+          <h3 className='text-subtitle'>
             {texts["txt1-2"]}
             <br /><br />
             {texts["txt1-3"]}
@@ -331,7 +331,7 @@ function FormuleSurMesure(props) {
             {cData.map((item, index) => (
               <div key={index} className='condition-item'>
                 <p>{item.title}</p>
-                <img src={item.img} alt={item.title} />
+                <img className="img-conditionnement" src={item.img} alt={item.title} />
 
               </div>
             ))}
