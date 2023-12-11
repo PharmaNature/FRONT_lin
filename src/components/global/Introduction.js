@@ -12,8 +12,8 @@ function Introduction(props) {
 
     if (props.format === "image") {
         return (
-            <div className='centered-image'>
-                <img src={props.imageChoice} className='imgBG' alt={props.alt} />
+            <div className='centered-imageT' style={{ backgroundImage: `url(${props.imageChoice})`}}>
+                {/* <img src={props.imageChoice} className='imgBG' alt={props.alt} /> */}
                 <div className="divTitle ">
                     <h1 className={'centered-title ' + props.titleSizeChoice}>
                         <span className='title-bold'>

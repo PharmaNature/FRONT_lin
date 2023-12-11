@@ -8,6 +8,11 @@
   overflow-x: hidden;
 }
 
+.img-conditionnement{
+  max-height: 150px;
+  ;
+}
+
 /* 
   .centered-title {
     position: absolute; 
@@ -43,7 +48,7 @@
 
 h1.NotreFormula-mesure {
   font-family: 'Montserrat', sans-serif;
-  color: #B9E8E8;
+  color: #6E9CD2;
   font-weight: 800;
   font-size: 3.7em;
   width: 99%;
@@ -52,7 +57,7 @@ h1.NotreFormula-mesure {
 }
 
 .plus-sign-mesure {
-  color: #B9E8E8;
+  color: #6E9CD2;
   font-size: 10em;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -60,7 +65,7 @@ h1.NotreFormula-mesure {
 }
 
 .equal-sign-mesure {
-  color: #B9E8E8;
+  color: #6E9CD2;
   font-size: 10em;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -76,17 +81,31 @@ h1.NotreFormula-mesure {
 }
 
 .bleu {
-  color: #B9E8E8;
+  color: #6E9CD2;
 }
 
 .text-blue {
-  color: #8BCFCF;
-  font-size: 22px;
+  color: #6E9CD2;
+  font-size: 30px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 0;
 }
 
 .formula-text p {
   font-size: 17px;
   margin: 0px;
+}
+
+.text-subtitle{
+  font-weight: normal;
+  margin: 0;
+}
+
+.sur-mesure{
+  max-width: 550px;
+  margin-left: -5%;
+  margin-right: -10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -104,7 +123,7 @@ h1.NotreFormula-mesure {
 
 @media screen and (min-width: 1180px) and (max-width: 1523px) {
   h1.NotreFormula-mesure {
-    font-size: 3em;
+    font-size: 45px;
   }
 
   h2.NotreCatalogue-mesure {
@@ -112,11 +131,12 @@ h1.NotreFormula-mesure {
   }
 
   h1.packaging {
-    font-size: 2.7em;
+    font-size: 45px;
   }
 
   .equal-sign-mesure {
-    width: 15%;
+    width: 10%;
+    text-align: right;
   }
 }
 
@@ -128,7 +148,7 @@ h1.NotreFormula-mesure {
   }
 
   h1.packaging {
-    font-size: 30px;
+    font-size: 45px;
     font-weight: bold;
     width: 80%;
     margin-top: 2px;
@@ -136,7 +156,7 @@ h1.NotreFormula-mesure {
   }
 
   h1.NotreFormula-mesure {
-    font-size: 33px;
+    font-size: 45px;
   }
 
   .plus-sign-mesure {
@@ -164,5 +184,14 @@ h1.NotreFormula-mesure {
   .formula-text p {
     color: black;
     font-size: 19px;
+  }
+
+  .text-blue{
+    font-size: 25px;
+    margin: 0;
+  }
+
+  .text-subtitle{
+    font-size: 19px
   }
 }

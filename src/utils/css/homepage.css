@@ -151,7 +151,7 @@ span.text-home {
 }
 span.paragraphe1 {
   font-weight: 700;
-  font-size: 19px;
+  font-size: 17px;
 }
 
 .container-mission{
@@ -249,7 +249,7 @@ span.paragraphe1 {
 }
 
 .bleu{
-  color: #B9E8E8;
+  color: #6E9CD2;
 }
 
 .rose{
@@ -312,8 +312,14 @@ span.paragraphe1 {
 @media (max-width: 1179px) {
 
   .objectif-title h2 {
-    margin-top: 20px;
+    margin-top: 25px;
     font-size: 25px;
+    padding: 0;
+  }
+
+  .objectif-title h3 {
+    margin-top: 10px;
+    font-size: 20px;
   }
 
   .intervention-title {
@@ -349,6 +355,7 @@ span.paragraphe1 {
     justify-content: center;
     align-items: center;
     padding-top: 4%;
+    padding-bottom: 4%;
   }
 
   .container-formule-item {
