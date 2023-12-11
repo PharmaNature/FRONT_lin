@@ -13,6 +13,10 @@
   ;
 }
 
+.arrow-blue{
+  filter: brightness(0) saturate(100%) invert(60%) sepia(74%) saturate(382%) hue-rotate(181deg) brightness(88%) contrast(86%);
+}
+
 /* 
   .centered-title {
     position: absolute; 
