@@ -266,10 +266,10 @@ function FormuleSurMesure(props) {
               couleur={"bleu"}
             />
             <button onClick={handlePrevp} className='btn-pcarousel-left'>
-              <img src={arrowLeftMesure} alt='arrow left' />
+              <img className="arrow-blue" src={arrowLeftMesure} alt='arrow left' />
             </button>
             <button onClick={handleNextp} className='btn-pcarousel-right'>
-              <img src={arrowRightMesure} alt='arrow right' />
+              <img className="arrow-blue" src={arrowRightMesure} alt='arrow right' />
             </button>
 
           </div>
