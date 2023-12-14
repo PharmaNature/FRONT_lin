@@ -71,7 +71,7 @@ function Contact(props) {
           }
         </div>
         <div>
-          <h2>CONTACTEZ NOUS</h2>
+          <h2 className='contact-title'>CONTACTEZ NOUS</h2>
           <form ref={form} onSubmit={sendEmail} >
             <div className={isMobile ? ('form') : ('formMobile')}>
               <div className='div_moit-form'>

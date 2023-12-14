@@ -46,8 +46,8 @@ a {
 }
 
 .desktopSize {
-  font-size: 96px;
-  line-height: 91px;
+  font-size: 80px;
+  line-height: 79px;
 }
 
 /* NOTRE FORMULE */
@@ -502,7 +502,7 @@ h2.NotreCatalogue {
 }
 
 /* FORMAT MOBILE */
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 750px) {
   .divTitle {
     transform: translate(0%, -50%);
     align-items: center;
@@ -792,9 +792,8 @@ h2.NotreCatalogue {
 }
 
 .buttonTitle.desktopSizebut {
-
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  background-color: black;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   width: 185px;
@@ -809,8 +808,8 @@ h2.NotreCatalogue {
 }
 
 .buttonTitle.horizontalTabSizebut {
-  color: rgb(0, 0, 0);
-  background-color: #ffffff;
+  color: rgb(255, 255, 255);
+  background-color: black;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-width: 1px 0 0 0;
@@ -823,10 +822,9 @@ h2.NotreCatalogue {
   text-align: left;
 }
 
-
 .buttonTitle.verticalTabSizebut {
-  color: rgb(0, 0, 0);
-  background-color: #ffffff;
+  color: rgb(255, 255, 255);
+  background-color: black;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-width: 1px 0 0 0;
@@ -840,8 +838,8 @@ h2.NotreCatalogue {
 }
 
 .buttonTitle.telSizebut {
-  color: rgb(0, 0, 0);
-  background-color: #ffffff;
+  color: rgb(255, 255, 255);
+  background-color: black;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-width: 1px 0 0 0;
@@ -860,8 +858,8 @@ h2.NotreCatalogue {
 }
 
 .buttonTitle:hover {
-  background-color: #000;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
 }
 
 .divmiddlebouton {
