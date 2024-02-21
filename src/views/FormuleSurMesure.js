@@ -203,7 +203,7 @@ function FormuleSurMesure(props) {
 
   return (
     <div className='big-container'>
-      <Introduction format='image' bouton={true} imageChoice={imageChoice} alt={"Formule sur mesure"} titleSizeChoice={titleSizeChoice} titleBold1={texts["txt0-0"]} title1={texts["txt0-1"]} />
+      <Introduction format='image' bouton={false} imageChoice={imageChoice} alt={"Formule sur mesure"} titleSizeChoice={titleSizeChoice} titleBold1={texts["txt0-0"]} title1={texts["txt0-1"]} />
       <div className="sub-container">
         <div className='sub-container-text'>
           <div className='container-formula'>

@@ -199,10 +199,8 @@ const global = {
             "txt7-11": "SOMMEIL & SERENITE",
             "txt7-12": "GAMME FEMME",
             "txt7-13": "VOIES RESPIRATOIRES ET IMMUNITE",
-            "txt7-14": "DEMANDER",
+            "txt7-14": "DEMANDEZ",
             "txt7-15": "NOTRE CATALOGUE"
-
-
         },
         "MarqueBlanche": {
             "txt0-0": "NOS FORMULES",
@@ -214,7 +212,7 @@ const global = {
             "txt0-6": "VOTRE PACKAGING",
             "txt1-0": "Nous disposons d’un large choix de formules innovantes. Ces formulations ont été élaborées par nos équipes de recherche et développement afin de répondre aux divers besoins du marché.",
             "txt1-1": "Vous accédez à des produits clé en main, prêts à être mis sur le marché.",
-            "txt1-2": "Le seuil minimum de commande pour cette offre est de 250 unités.",
+            "txt1-2": "Le seuil minimum de commande pour cette offre est de 500 unités.",
             "txt1-3": "Ce service peut être complémentaire à nos services de développement sur-mesure, afin de garantir que votre marque conserve son caractère unique.",
             "txt2-0": "NOS PROCESSUS",
             "txt2-1": " DE FABRICATION ",
@@ -260,7 +258,7 @@ const global = {
             "txt6-12": "GAMME FEMME",
             "txt6-13": "VOIES RESPIRATOIRES ET IMMUNITE",
             "txt7": "Vous souhaitez créer et commercialiser de nouveaux produits avec des concepts déjà développés et approuvés sur le marché ?",
-            "txt7-14": "DEMANDER",
+            "txt7-14": "DEMANDEZ",
             "txt7-15": "NOTRE CATALOGUE"
         },
         "Qualite": {
@@ -295,6 +293,19 @@ const global = {
         },
         "Other": {
             "txt0-0": "EN SAVOIR +"
+        }, 
+        "Contact":{
+            "txt0-0":"Mail envoyé avec succès !",
+            "txt0-1":"CONTACTEZ NOUS",
+            "txt0-2":"Sujet",
+            "txt0-3":"Nom",
+            "txt0-4":"Société",
+            "txt0-5":"Pays",
+            "txt0-6":"Téléphone",
+            "txt0-7":"Email",
+            "txt0-8":"Votre demande",
+            "txt0-9":"Envoyer",
+            "txt0-10":"Sélectionnez un pays",
         }
     },
     "ENGLISH": {
@@ -504,7 +515,7 @@ const global = {
             "txt0-6": "YOUR PACKAGING",
             "txt1-0": "We have a wide choice of innovative formulas. These formulations were developed by our research and development teams to meet the various needs of the market.",
             "txt1-1": "You have access to turnkey products ready to be launched on the market.",
-            "txt1-2": "The minimum order threshold for this offer is 250 units. This service can complement our custom development services to ensure that your brand maintains its unique character.",
+            "txt1-2": "The minimum order threshold for this offer is 500 units. This service can complement our custom development services to ensure that your brand maintains its unique character.",
             "txt2-0": "OUR MANUFACTURING",
             "txt2-1": "PROCESSES",
             "txt2-2": "CHOOSING A",
@@ -584,7 +595,21 @@ const global = {
         },
         "Other": {
             "txt0-0": "READ MORE+"
+        },
+        "Contact": {
+            "txt0-0": "Mail sent successfully!",
+            "txt0-1": "CONTACT US",
+            "txt0-2": "Subject",
+            "txt0-3": "Name",
+            "txt0-4": "Company",
+            "txt0-5": "Country",
+            "txt0-6": "Phone",
+            "txt0-7": "Email",
+            "txt0-8": "Your inquiry",
+            "txt0-9": "Send",
+            "txt0-10": "Select a country"
         }
+        
     },
     "中国人": {
         "Header": {
@@ -789,7 +814,7 @@ const global = {
             "txt0-6": "您的包装",
             "txt1-0": "我们拥有广泛的“标准配方”。这些配方是由我们的研发团队开发，以满足市场的多样需求。",
             "txt1-1": "您可以访问已经准备好在市场上推出的即插即用产品。",
-            "txt1-2": "此服务的最低订单数量为250个单位。这项服务可以与我们的定制开发服务相结合，以确保您的品牌保持其独特性。",
+            "txt1-2": "此服务的最低订单数量为500个单位。这项服务可以与我们的定制开发服务相结合，以确保您的品牌保持其独特性。",
             "txt2-0": "我们的制造",
             "txt2-1": "流程",
             "txt2-2": "选择一个",
@@ -869,7 +894,21 @@ const global = {
         },
         "Other": {
             "txt0-0": "了解更多"
+        },
+        "Contact": {
+            "txt0-0": "邮件发送成功！",
+            "txt0-1": "联系我们",
+            "txt0-2": "主题",
+            "txt0-3": "姓名",
+            "txt0-4": "公司",
+            "txt0-5": "国家",
+            "txt0-6": "电话",
+            "txt0-7": "邮箱",
+            "txt0-8": "您的咨询",
+            "txt0-9": "发送",
+            "txt0-10": "选择一个国家"
         }
+        
     }
 }
 

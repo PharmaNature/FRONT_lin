@@ -8,7 +8,7 @@ import imageFR from '../assets/images/Group 188.png'
 
 function Contact(props) {
   const { globalVariable } = useGlobalState();
-  const texts = global[globalVariable]["HomePage"];
+  const texts = global[globalVariable]["Contact"];
 
   document.title = props.pageName;
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -28,14 +28,22 @@ function Contact(props) {
   const form = useRef();
 
   const sendEmail = (e) => {
+    setSubject('')
+    setName('')
+    setCompany('')
+    setCountry('')
+    setPhone('')
+    setEmail('')
+    setMessage('')
+    setMessageMailEnvoie(texts["txt0-0"])
     e.preventDefault();
 
-    emailjs.sendForm('service_wgsu43b', 'template_agfbylo', form.current, 'KqiX34UbVki7utDCT')
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
+    // emailjs.sendForm('service_wgsu43b', 'template_agfbylo', form.current, 'KqiX34UbVki7utDCT')
+    //   .then((result) => {
+    //     console.log(result.text);
+    //   }, (error) => {
+    //     console.log(error.text);
+    //   });
   };
 
   const countryList = Object.values(countries);
@@ -46,6 +54,7 @@ function Contact(props) {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [messageMailEnvoie, setMessageMailEnvoie] = useState('');
 
   const isMobile = windowWidth > 1110
 
@@ -71,12 +80,12 @@ function Contact(props) {
           }
         </div>
         <div>
-          <h2 className='contact-title'>CONTACTEZ NOUS</h2>
+          <h2 className='contact-title'>{texts["txt0-1"]}</h2>
           <form ref={form} onSubmit={sendEmail} >
             <div className={isMobile ? ('form') : ('formMobile')}>
               <div className='div_moit-form'>
                 <div className='div-input'>
-                  <label htmlFor="subject" className="input-label">Sujet <span className='required'>*</span></label>
+                  <label htmlFor="subject" className="input-label">{texts["txt0-2"]} <span className='required'>*</span></label>
                   <input
                     type="text"
                     id="subject"
@@ -88,7 +97,7 @@ function Contact(props) {
                 </div>
 
                 <div className='div-input'>
-                  <label htmlFor="name" className="input-label">Nom <span className='required'>*</span></label>
+                  <label htmlFor="name" className="input-label">{texts["txt0-3"]} <span className='required'>*</span></label>
                   <input
                     type="text"
                     id="name"
@@ -101,7 +110,7 @@ function Contact(props) {
                 </div>
 
                 <div className='div-input'>
-                  <label htmlFor="company" className="input-label">Société</label>
+                  <label htmlFor="company" className="input-label">{texts["txt0-4"]}</label>
                   <input
                     type="text"
                     id="company"
@@ -112,7 +121,7 @@ function Contact(props) {
                   />
                 </div>
                 <div className='div-input'>
-                  <label htmlFor="country" className="input-label">Pays <span className='required'>*</span></label>
+                  <label htmlFor="country" className="input-label">{texts["txt0-5"]} <span className='required'>*</span></label>
                   <select
                     id="country"
                     className="input-field"
@@ -121,7 +130,7 @@ function Contact(props) {
                     onChange={(e) => setCountry(e.target.value)}
                     required
                   >
-                    <option value="">Sélectionnez un pays</option>
+                    <option value="">{texts["txt0-10"]}</option>
                     {countryList.map((country) => (
                       <option key={country.name} value={country.name}>
                         {country.name}
@@ -132,7 +141,7 @@ function Contact(props) {
               </div>
               <div className='div_moit-form'>
                 <div className='div-input'>
-                  <label htmlFor="phone" className="input-label">Téléphone</label>
+                  <label htmlFor="phone" className="input-label">{texts["txt0-6"]}</label>
                   <input
                     type="tel"
                     id="phone"
@@ -144,7 +153,7 @@ function Contact(props) {
                 </div>
 
                 <div className='div-input'>
-                  <label htmlFor="email" className="input-label">Email <span className='required'>*</span></label>
+                  <label htmlFor="email" className="input-label">{texts["txt0-7"]} <span className='required'>*</span></label>
                   <input
                     type="email"
                     id="email"
@@ -157,7 +166,7 @@ function Contact(props) {
                 </div>
 
                 <div className='div-input'>
-                  <label htmlFor="message" className="input-label">Votre demande <span className='required'>*</span></label>
+                  <label htmlFor="message" className="input-label">{texts["txt0-8"]} <span className='required'>*</span></label>
                   <textarea
                     id="message"
                     className="input-field"
@@ -170,7 +179,10 @@ function Contact(props) {
               </div>
             </div>
             <div className='div-bouton'>
-              <button type="submit" value="Send">Envoyer</button>
+              <button type="submit" value="Send">{texts["txt0-9"]}</button>
+            </div>
+            <div className='div-p'>
+              <p>{messageMailEnvoie}</p>
             </div>
           </form>
         </div>

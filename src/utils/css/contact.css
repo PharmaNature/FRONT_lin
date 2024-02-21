@@ -66,6 +66,11 @@ button[type="submit"] {
 
 }
 
+.div-p{
+  display: flex;
+  justify-content: center;
+}
+
 .contact-title{
   text-align: center;
 }
