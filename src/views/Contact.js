@@ -38,12 +38,12 @@ function Contact(props) {
     setMessageMailEnvoie(texts["txt0-0"])
     e.preventDefault();
 
-    // emailjs.sendForm('service_wgsu43b', 'template_agfbylo', form.current, 'KqiX34UbVki7utDCT')
-    //   .then((result) => {
-    //     console.log(result.text);
-    //   }, (error) => {
-    //     console.log(error.text);
-    //   });
+    emailjs.sendForm('service_wgsu43b', 'template_agfbylo', form.current, 'KqiX34UbVki7utDCT')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
   };
 
   const countryList = Object.values(countries);
