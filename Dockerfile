@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:current-alpine3.18
 
 WORKDIR /site_web_lin
 
